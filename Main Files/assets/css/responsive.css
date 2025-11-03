@@ -1,0 +1,62 @@
+/* Responsive styles for the dental clinic website template */
+
+/* Mobile Styles */
+@media (max-width: 767.98px) {
+    /* Adjustments for mobile devices */
+    body {
+        font-size: 14px;
+    }
+    
+    .navbar {
+        padding: 10px;
+    }
+
+    .hero {
+        height: 300px;
+        background-size: cover;
+    }
+
+    .service-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Adjustments for tablet devices */
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .service-item {
+        margin-bottom: 30px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    /* Adjustments for desktop devices */
+    body {
+        font-size: 18px;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .service-item {
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,13 @@
+Icons and Images Credits:
+- Icons made by Freepik from www.flaticon.com
+- Images from Unsplash (unsplash.com) and Pexels (pexels.com)
+- Custom images created by [Your Name/Your Company]
+
+Fonts Credits:
+- Google Fonts: Roboto, Open Sans
+
+Special Thanks:
+- Bootstrap team for the framework
+- AOS library for scroll animations
+
+Please ensure to check the licenses of the respective resources used in this project.
