@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,134 +9,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .hero-bg {
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f9ff"/><path d="M30,30 L70,30 L70,70 L30,70 Z" fill="none" stroke="%23e0f2fe" stroke-width="2"/></svg>');
-            background-size: cover;
-        }
-        
-        .appointment-card {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        
-        .appointment-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        
-        .time-slot {
-            transition: all 0.2s ease;
-        }
-        
-        .time-slot:hover {
-            background-color: #e0f2fe;
-            border-color: #0ea5e9;
-        }
-        
-        .time-slot.selected {
-            background-color: #0ea5e9;
-            color: white;
-            border-color: #0ea5e9;
-        }
-        
-        .step-indicator {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        
-        .step-indicator.active {
-            background-color: #0ea5e9;
-            color: white;
-        }
-        
-        .step-indicator.inactive {
-            background-color: #e2e8f0;
-            color: #64748b;
-        }
-        
-        .step-indicator.completed {
-            background-color: #10b981;
-            color: white;
-        }
-        
-        /* Pulse animation for CTA buttons */
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(14, 165, 233, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
-        }
-        
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-        
-        /* Custom animation for calendar dates */
-        @keyframes date-pop {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        
-        .date-pop {
-            animation: date-pop 0.3s ease-out;
-        }
-        
-        /* Custom animation for time slots */
-        @keyframes time-slide {
-            0% { transform: translateX(-10px); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-        
-        .time-slide {
-            animation: time-slide 0.3s ease-out;
-        }
-        
-        /* Custom animation for doctor cards */
-        @keyframes doctor-card {
-            0% { transform: translateY(20px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-        
-        .doctor-card-anim {
-            animation: doctor-card 0.4s ease-out;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
 </head>
+
 <body>
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50" data-aos="fade-down" data-aos-duration="800">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center">
-                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2">
+                <div
+                    class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2">
                     D
                 </div>
                 <span class="text-2xl font-bold text-blue-600">Dentic</span>
             </a>
-            
+
             <nav class="hidden md:flex space-x-8">
                 <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
                 <a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
                 <a href="index.html#doctors" class="text-gray-600 hover:text-blue-600 transition-colors">Doctors</a>
                 <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-                <a href="index.html#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
+                <a href="index.html#testimonials"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
                 <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
-                <a href="book-appointment.html" class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1">Book Appointment</a>
+                <a href="book-appointment.html" class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1">Book
+                    Appointment</a>
             </nav>
-            
+
             <div class="flex items-center space-x-4">
-                <button class="hidden md:block bg-blue-500 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-600 transition-colors pulse-animation">
+                <button
+                    class="hidden md:block bg-blue-500 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-600 transition-colors pulse-animation">
                     Book Appointment
                 </button>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
@@ -143,18 +48,24 @@
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white py-4 px-4 shadow-lg">
             <div class="flex flex-col space-y-4">
                 <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Home</a>
-                <a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Services</a>
-                <a href="index.html#doctors" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Doctors</a>
+                <a href="index.html#services"
+                    class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Services</a>
+                <a href="index.html#doctors"
+                    class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Doctors</a>
                 <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">About</a>
-                <a href="index.html#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Testimonials</a>
-                <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Contact</a>
-                <a href="book-appointment.html" class="text-blue-600 font-medium border-l-4 border-blue-600 pl-2">Book Appointment</a>
-                <button class="bg-blue-500 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-600 transition-colors w-full mt-2">
+                <a href="index.html#testimonials"
+                    class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Testimonials</a>
+                <a href="index.html#contact"
+                    class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Contact</a>
+                <a href="book-appointment.html" class="text-blue-600 font-medium border-l-4 border-blue-600 pl-2">Book
+                    Appointment</a>
+                <button
+                    class="bg-blue-500 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-600 transition-colors w-full mt-2">
                     Book Appointment
                 </button>
             </div>
@@ -166,7 +77,8 @@
         <div class="container mx-auto px-4">
             <div class="text-center" data-aos="fade-up" data-aos-duration="800">
                 <h1 class="text-4xl font-bold text-gray-800 mb-4">Book Your Appointment</h1>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Schedule your visit with our expert dental team. We're here to help you achieve your best smile.</p>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Schedule your visit with our expert dental team.
+                    We're here to help you achieve your best smile.</p>
             </div>
         </div>
     </section>
@@ -187,11 +99,11 @@
                                 <p class="font-medium">Service Selection</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex-1 h-1 bg-gray-200 mx-4">
                             <div class="h-1 bg-green-500 w-full"></div>
                         </div>
-                        
+
                         <div class="flex items-center">
                             <div class="step-indicator active">
                                 2
@@ -201,11 +113,11 @@
                                 <p class="font-medium">Date & Time</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex-1 h-1 bg-gray-200 mx-4">
                             <div class="h-1 bg-gray-200 w-0"></div>
                         </div>
-                        
+
                         <div class="flex items-center">
                             <div class="step-indicator inactive">
                                 3
@@ -217,26 +129,29 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="flex flex-col lg:flex-row gap-8">
                     <!-- Appointment Form -->
                     <div class="lg:w-2/3">
-                        <div class="appointment-card bg-white rounded-lg p-6" data-aos="fade-right" data-aos-duration="800">
+                        <div class="appointment-card bg-white rounded-lg p-6" data-aos="fade-right"
+                            data-aos-duration="800">
                             <h2 class="text-2xl font-bold text-gray-800 mb-6">Select Date & Time</h2>
-                            
+
                             <!-- Service Summary -->
-                            <div class="bg-blue-50 rounded-lg p-4 mb-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                            <div class="bg-blue-50 rounded-lg p-4 mb-6" data-aos="fade-up" data-aos-duration="800"
+                                data-aos-delay="200">
                                 <div class="flex justify-between items-center">
                                     <div>
                                         <h3 class="font-semibold text-gray-800">Dental Checkup & Cleaning</h3>
-                                        <p class="text-gray-600 text-sm">Comprehensive oral examination and professional cleaning</p>
+                                        <p class="text-gray-600 text-sm">Comprehensive oral examination and professional
+                                            cleaning</p>
                                     </div>
                                     <button class="text-blue-500 hover:text-blue-700 text-sm font-medium">
                                         Change Service
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <!-- Calendar Section -->
                             <div class="mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                                 <h3 class="text-lg font-semibold text-gray-800 mb-4">Select Date</h3>
@@ -248,46 +163,76 @@
                                     <div class="text-center text-gray-500 font-medium text-sm py-2">Thu</div>
                                     <div class="text-center text-gray-500 font-medium text-sm py-2">Fri</div>
                                     <div class="text-center text-gray-500 font-medium text-sm py-2">Sat</div>
-                                    
+
                                     <!-- Previous month dates (disabled) -->
                                     <div class="text-center text-gray-300 py-2">28</div>
                                     <div class="text-center text-gray-300 py-2">29</div>
                                     <div class="text-center text-gray-300 py-2">30</div>
                                     <div class="text-center text-gray-300 py-2">31</div>
-                                    
+
                                     <!-- Current month dates -->
-                                    <div class="text-center text-gray-500 py-2 date-pop" style="animation-delay: 0ms">1</div>
-                                    <div class="text-center text-gray-500 py-2 date-pop" style="animation-delay: 50ms">2</div>
-                                    <div class="text-center text-gray-500 py-2 date-pop" style="animation-delay: 100ms">3</div>
-                                    <div class="text-center text-gray-800 bg-blue-100 rounded-full py-2 font-medium date-pop" style="animation-delay: 150ms">4</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 200ms">5</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 250ms">6</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 300ms">7</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 350ms">8</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 400ms">9</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 450ms">10</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 500ms">11</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 550ms">12</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 600ms">13</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 650ms">14</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 700ms">15</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 750ms">16</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 800ms">17</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 850ms">18</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 900ms">19</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 950ms">20</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1000ms">21</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1050ms">22</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1100ms">23</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1150ms">24</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1200ms">25</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1250ms">26</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1300ms">27</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1350ms">28</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1400ms">29</div>
-                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop" style="animation-delay: 1450ms">30</div>
+                                    <div class="text-center text-gray-500 py-2 date-pop" style="animation-delay: 0ms">1
+                                    </div>
+                                    <div class="text-center text-gray-500 py-2 date-pop" style="animation-delay: 50ms">2
+                                    </div>
+                                    <div class="text-center text-gray-500 py-2 date-pop" style="animation-delay: 100ms">
+                                        3</div>
+                                    <div class="text-center text-gray-800 bg-blue-100 rounded-full py-2 font-medium date-pop"
+                                        style="animation-delay: 150ms">4</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 200ms">5</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 250ms">6</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 300ms">7</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 350ms">8</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 400ms">9</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 450ms">10</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 500ms">11</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 550ms">12</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 600ms">13</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 650ms">14</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 700ms">15</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 750ms">16</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 800ms">17</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 850ms">18</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 900ms">19</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 950ms">20</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1000ms">21</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1050ms">22</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1100ms">23</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1150ms">24</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1200ms">25</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1250ms">26</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1300ms">27</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1350ms">28</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1400ms">29</div>
+                                    <div class="text-center text-gray-800 py-2 hover:bg-gray-100 rounded-full cursor-pointer date-pop"
+                                        style="animation-delay: 1450ms">30</div>
                                 </div>
-                                
+
                                 <div class="flex justify-between">
                                     <button class="text-blue-500 hover:text-blue-700 font-medium flex items-center">
                                         <i class="fas fa-chevron-left mr-1"></i> Previous Week
@@ -297,56 +242,70 @@
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <!-- Time Slots -->
                             <div class="mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                                 <h3 class="text-lg font-semibold text-gray-800 mb-4">Available Time Slots</h3>
                                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 0ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 0ms">
                                         9:00 AM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 50ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 50ms">
                                         9:30 AM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 100ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 100ms">
                                         10:00 AM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 150ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 150ms">
                                         10:30 AM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 200ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 200ms">
                                         11:00 AM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 250ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 250ms">
                                         11:30 AM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 300ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 300ms">
                                         2:00 PM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer selected time-slide" style="animation-delay: 350ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer selected time-slide"
+                                        style="animation-delay: 350ms">
                                         2:30 PM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 400ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 400ms">
                                         3:00 PM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 450ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 450ms">
                                         3:30 PM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 500ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 500ms">
                                         4:00 PM
                                     </div>
-                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide" style="animation-delay: 550ms">
+                                    <div class="time-slot border border-gray-300 rounded-lg py-3 text-center cursor-pointer time-slide"
+                                        style="animation-delay: 550ms">
                                         4:30 PM
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Doctor Selection -->
                             <div class="mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                                 <h3 class="text-lg font-semibold text-gray-800 mb-4">Select Dentist (Optional)</h3>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="border border-gray-300 rounded-lg p-4 flex items-center cursor-pointer hover:bg-gray-50 doctor-card-anim" style="animation-delay: 0ms">
-                                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4">
+                                    <div class="border border-gray-300 rounded-lg p-4 flex items-center cursor-pointer hover:bg-gray-50 doctor-card-anim"
+                                        style="animation-delay: 0ms">
+                                        <div
+                                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4">
                                             <i class="fas fa-user-md"></i>
                                         </div>
                                         <div>
@@ -354,8 +313,10 @@
                                             <p class="text-sm text-gray-500">General Dentist</p>
                                         </div>
                                     </div>
-                                    <div class="border border-gray-300 rounded-lg p-4 flex items-center cursor-pointer hover:bg-gray-50 doctor-card-anim" style="animation-delay: 100ms">
-                                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-500 mr-4">
+                                    <div class="border border-gray-300 rounded-lg p-4 flex items-center cursor-pointer hover:bg-gray-50 doctor-card-anim"
+                                        style="animation-delay: 100ms">
+                                        <div
+                                            class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-500 mr-4">
                                             <i class="fas fa-user-md"></i>
                                         </div>
                                         <div>
@@ -363,8 +324,10 @@
                                             <p class="text-sm text-gray-500">Orthodontist</p>
                                         </div>
                                     </div>
-                                    <div class="border border-gray-300 rounded-lg p-4 flex items-center cursor-pointer hover:bg-gray-50 doctor-card-anim" style="animation-delay: 200ms">
-                                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mr-4">
+                                    <div class="border border-gray-300 rounded-lg p-4 flex items-center cursor-pointer hover:bg-gray-50 doctor-card-anim"
+                                        style="animation-delay: 200ms">
+                                        <div
+                                            class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mr-4">
                                             <i class="fas fa-user-md"></i>
                                         </div>
                                         <div>
@@ -372,8 +335,10 @@
                                             <p class="text-sm text-gray-500">Pediatric Dentist</p>
                                         </div>
                                     </div>
-                                    <div class="border border-gray-300 rounded-lg p-4 flex items-center cursor-pointer hover:bg-gray-50 doctor-card-anim" style="animation-delay: 300ms">
-                                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 mr-4">
+                                    <div class="border border-gray-300 rounded-lg p-4 flex items-center cursor-pointer hover:bg-gray-50 doctor-card-anim"
+                                        style="animation-delay: 300ms">
+                                        <div
+                                            class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 mr-4">
                                             <i class="fas fa-user-md"></i>
                                         </div>
                                         <div>
@@ -383,24 +348,28 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Navigation Buttons -->
-                            <div class="flex justify-between" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                                <a href="service-selection.html" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-300 transition-colors flex items-center">
+                            <div class="flex justify-between" data-aos="fade-up" data-aos-duration="800"
+                                data-aos-delay="600">
+                                <a href="service-selection.html"
+                                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-300 transition-colors flex items-center">
                                     <i class="fas fa-arrow-left mr-2"></i> Back
                                 </a>
-                                <a href="patient-details.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors flex items-center pulse-animation">
+                                <a href="patient-details.html"
+                                    class="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors flex items-center pulse-animation">
                                     Continue <i class="fas fa-arrow-right ml-2"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Summary Sidebar -->
                     <div class="lg:w-1/3">
-                        <div class="appointment-card bg-white rounded-lg p-6 sticky top-24" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                        <div class="appointment-card bg-white rounded-lg p-6 sticky top-24" data-aos="fade-left"
+                            data-aos-duration="800" data-aos-delay="200">
                             <h2 class="text-xl font-bold text-gray-800 mb-6">Appointment Summary</h2>
-                            
+
                             <div class="space-y-4 mb-6">
                                 <div class="flex justify-between">
                                     <span class="text-gray-600">Service:</span>
@@ -423,7 +392,7 @@
                                     <span class="font-medium">Not selected</span>
                                 </div>
                             </div>
-                            
+
                             <div class="border-t border-gray-200 pt-4 mb-6">
                                 <div class="flex justify-between mb-2">
                                     <span class="text-gray-600">Service Fee:</span>
@@ -438,8 +407,9 @@
                                     <span>$130</span>
                                 </div>
                             </div>
-                            
-                            <div class="bg-blue-50 rounded-lg p-4" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+
+                            <div class="bg-blue-50 rounded-lg p-4" data-aos="zoom-in" data-aos-duration="800"
+                                data-aos-delay="400">
                                 <h3 class="font-semibold text-gray-800 mb-2">What's Included:</h3>
                                 <ul class="text-sm text-gray-600 space-y-1">
                                     <li class="flex items-start">
@@ -461,14 +431,17 @@
                                 </ul>
                             </div>
                             <!-- Help Card -->
-                            <div class="appointment-card bg-white rounded-lg p-6 mt-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                            <div class="appointment-card bg-white rounded-lg p-6 mt-6" data-aos="fade-up"
+                                data-aos-duration="800" data-aos-delay="600">
                                 <div class="flex items-start">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4">
                                         <i class="fas fa-question"></i>
                                     </div>
                                     <div>
                                         <h3 class="font-semibold text-gray-800 mb-2">Need Help?</h3>
-                                        <p class="text-gray-600 text-sm mb-3">Our team is here to assist you with booking.</p>
+                                        <p class="text-gray-600 text-sm mb-3">Our team is here to assist you with
+                                            booking.</p>
                                         <div class="flex items-center text-blue-500 font-medium">
                                             <i class="fas fa-phone mr-2"></i>
                                             <span>(123) 456-7890</span>
@@ -477,7 +450,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -488,27 +461,36 @@
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12" data-aos="fade-up" data-aos-duration="800">Frequently Asked Questions</h2>
-                
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12" data-aos="fade-up"
+                    data-aos-duration="800">Frequently Asked Questions</h2>
+
                 <div class="space-y-6">
-                    <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-duration="800"
+                        data-aos-delay="200">
                         <h3 class="font-semibold text-gray-800 mb-2">What should I bring to my appointment?</h3>
-                        <p class="text-gray-600">Please bring your ID, insurance card (if applicable), and a list of any medications you're currently taking.</p>
+                        <p class="text-gray-600">Please bring your ID, insurance card (if applicable), and a list of any
+                            medications you're currently taking.</p>
                     </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+
+                    <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-duration="800"
+                        data-aos-delay="300">
                         <h3 class="font-semibold text-gray-800 mb-2">How early should I arrive for my appointment?</h3>
-                        <p class="text-gray-600">We recommend arriving 10-15 minutes early to complete any necessary paperwork.</p>
+                        <p class="text-gray-600">We recommend arriving 10-15 minutes early to complete any necessary
+                            paperwork.</p>
                     </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+
+                    <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-duration="800"
+                        data-aos-delay="400">
                         <h3 class="font-semibold text-gray-800 mb-2">What is your cancellation policy?</h3>
-                        <p class="text-gray-600">We require 24 hours notice for cancellations. Late cancellations may incur a fee.</p>
+                        <p class="text-gray-600">We require 24 hours notice for cancellations. Late cancellations may
+                            incur a fee.</p>
                     </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+
+                    <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-duration="800"
+                        data-aos-delay="500">
                         <h3 class="font-semibold text-gray-800 mb-2">Do you accept dental insurance?</h3>
-                        <p class="text-gray-600">Yes, we accept most major dental insurance plans. Please contact us to verify your coverage.</p>
+                        <p class="text-gray-600">Yes, we accept most major dental insurance plans. Please contact us to
+                            verify your coverage.</p>
                     </div>
                 </div>
             </div>
@@ -521,35 +503,42 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div data-aos="fade-up" data-aos-duration="800">
                     <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2">
+                        <div
+                            class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2">
                             D
                         </div>
                         <span class="text-2xl font-bold">Dentic</span>
                     </div>
                     <p class="text-gray-400">Your trusted partner for dental health and beautiful smiles.</p>
                 </div>
-                
+
                 <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="index.html#doctors" class="text-gray-400 hover:text-white transition-colors">Doctors</a></li>
-                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="book-appointment.html" class="text-gray-400 hover:text-white transition-colors">Book Appointment</a></li>
+                        <li><a href="index.html#services"
+                                class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="index.html#doctors"
+                                class="text-gray-400 hover:text-white transition-colors">Doctors</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition-colors">About
+                                Us</a></li>
+                        <li><a href="book-appointment.html"
+                                class="text-gray-400 hover:text-white transition-colors">Book Appointment</a></li>
                     </ul>
                 </div>
-                
+
                 <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">General Dentistry</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">General Dentistry</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a>
+                        </li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Orthodontics</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Implants</a></li>
                     </ul>
                 </div>
-                
+
                 <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
                     <ul class="space-y-2">
@@ -568,7 +557,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>&copy; 2023 Dentic. All rights reserved.</p>
             </div>
@@ -577,58 +566,7 @@
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuButton = document.getElementById('mobile-menu-button');
-            
-            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-
-        // Time slot selection
-        document.querySelectorAll('.time-slot').forEach(slot => {
-            slot.addEventListener('click', function() {
-                // Remove selected class from all time slots
-                document.querySelectorAll('.time-slot').forEach(s => {
-                    s.classList.remove('selected');
-                });
-                
-                // Add selected class to clicked time slot
-                this.classList.add('selected');
-            });
-        });
-
-        // Date selection
-        document.querySelectorAll('.text-gray-800.py-2').forEach(date => {
-            if (!date.classList.contains('bg-blue-100')) {
-                date.addEventListener('click', function() {
-                    // Remove background from all dates
-                    document.querySelectorAll('.text-gray-800.py-2').forEach(d => {
-                        d.classList.remove('bg-blue-100', 'rounded-full', 'font-medium');
-                    });
-                    
-                    // Add background to clicked date
-                    this.classList.add('bg-blue-100', 'rounded-full', 'font-medium');
-                });
-            }
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
