@@ -3,219 +3,1034 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dentica - Your Dental Clinic</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Dentic - Your Dental Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f9ff"/><path d="M30,30 L70,30 L70,70 L30,70 Z" fill="none" stroke="%23e0f2fe" stroke-width="2"/></svg>');
+            background-size: cover;
+        }
+        
+        .feature-card, .service-card, .doctor-card, .testimonial-card {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Feature Card Hover Effects */
+        .feature-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #0ea5e9;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .feature-card:hover::before {
+            left: 100%;
+        }
+        
+        .feature-card .feature-icon {
+            transition: all 0.4s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Service Card Hover Effects */
+        .service-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0ea5e9, #10b981);
+            transition: width 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-card:hover::after {
+            width: 100%;
+        }
+        
+        .service-card .service-icon {
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.15);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card .learn-more {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .learn-more {
+            transform: translateX(5px);
+            color: #0ea5e9;
+        }
+        
+        /* Doctor Card Hover Effects */
+        .doctor-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .doctor-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        
+        .doctor-card:hover::before {
+            opacity: 1;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #0ea5e9;
+        }
+        
+        .doctor-card .doctor-image {
+            transition: all 0.4s ease;
+        }
+        
+        .doctor-card:hover .doctor-image {
+            transform: scale(1.05);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .doctor-card .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .doctor-card .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Testimonial Card Hover Effects */
+        .testimonial-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 80px;
+            color: rgba(14, 165, 233, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+            transition: all 0.4s ease;
+        }
+        
+        .testimonial-card:hover::before {
+            color: rgba(14, 165, 233, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+        }
+        
+        .testimonial-card .user-avatar {
+            transition: all 0.4s ease;
+        }
+        
+        .testimonial-card:hover .user-avatar {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Contact Form Hover Effects */
+        .contact-input {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.1);
+        }
+        
+        /* Button Hover Effects */
+        .btn-primary {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.4);
+        }
+        
+        .btn-outline {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-outline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #0ea5e9;
+            transition: width 0.4s ease;
+            z-index: -1;
+        }
+        
+        .btn-outline:hover::before {
+            width: 100%;
+        }
+        
+        .btn-outline:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.2);
+            color: white;
+            border-color: #0ea5e9;
+        }
+        
+        /* Navigation Hover Effects */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0ea5e9;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Floating animation for elements */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Pulse animation for CTA buttons */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(14, 165, 233, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Number counter animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .contact-bg {
+            background: linear-gradient(rgba(14, 165, 233, 0.05), rgba(14, 165, 233, 0.05)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8fafc"/><path d="M30,30 L70,30 L70,70 L30,70 Z" fill="none" stroke="%23e2e8f0" stroke-width="2"/></svg>');
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Dentica</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="appointments.html">Appointments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pricing.html">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="testimonials.html">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50" data-aos="fade-down" data-aos-duration="800">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center group">
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2 transition-all duration-300 group-hover:bg-blue-600 group-hover:scale-110">
+                    D
+                </div>
+                <span class="text-2xl font-bold text-blue-600 transition-colors group-hover:text-blue-700">Dentic</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1">Home</a>
+                <a href="#services" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                <a href="#doctors" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Doctors</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#testimonials" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                <a href="book-appointment.html" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Book Appointment</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block btn-primary bg-blue-500 text-white px-5 py-2 rounded-full font-medium">
+                    Book Appointment
+                </button>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-500 transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-        </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="text-blue-600 font-medium border-l-4 border-blue-600 pl-2">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Services</a>
+                <a href="#doctors" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Doctors</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">About</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Testimonials</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors pl-2">Contact</a>
+                <button class="btn-primary bg-blue-500 text-white px-5 py-2 rounded-full font-medium w-full mt-2">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="hero bg-primary text-white text-center py-5">
-            <div class="container">
-                <h1 class="display-4">Welcome to Dentica</h1>
-                <p class="lead">Your smile is our priority!</p>
-                <a href="appointments.html" class="btn btn-light btn-lg">Book an Appointment</a>
-            </div>
-        </section>
-
-        <section class="about py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>About Us</h2>
-                        <p>Welcome to Dentica, where we are dedicated to providing you with the highest quality of dental care. Our clinic was founded in 2010 with the mission of creating a comfortable and welcoming environment for our patients. We believe that a healthy smile is a beautiful smile, and we are committed to helping you achieve both.</p>
-                        <p>Our team of experienced and compassionate dental professionals uses the latest technology and techniques to ensure that you receive the best possible care. We offer a wide range of services, from routine check-ups and cleanings to advanced cosmetic and restorative procedures. At Dentica, your oral health is our top priority, and we look forward to serving you and your family for years to come.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="assets/img/about-us.jpg" alt="About Us" class="img-fluid rounded">
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero-bg py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4" data-aos="fade-right" data-aos-duration="1000">
+                    Helping You to Bring Back Your Happy Smile
+                </h1>
+                <p class="text-xl text-blue-500 mb-4 font-semibold" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    The Best Dental Clinic That You Can Trust
+                </p>
+                <p class="text-lg text-gray-600 mb-8" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                    Helping Your Dental Problems
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <button class="btn-primary bg-blue-500 text-white px-6 py-3 rounded-full font-medium text-lg pulse-animation">
+                        Book Appointment
+                    </button>
+                    <button class="btn-outline border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-full font-medium text-lg">
+                        Learn More
+                    </button>
                 </div>
             </div>
-        </section>
-
-        <section class="services bg-light py-5">
-            <div class="container">
-                <h2 class="text-center">Our Services</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="service-item text-center">
-                            <i class="fas fa-tooth fa-3x text-primary mb-3"></i>
-                            <h3>Teeth Whitening</h3>
-                            <p>Brighten your smile with our professional teeth whitening services.</p>
-                        </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center floating" data-aos="zoom-in" data-aos-duration="1000">
+                        <i class="fas fa-tooth text-blue-300 text-8xl"></i>
                     </div>
-                    <div class="col-md-4">
-                        <div class="service-item text-center">
-                            <i class="fas fa-tooth fa-3x text-primary mb-3"></i>
-                            <h3>Dental Implants</h3>
-                            <p>Restore your smile with our advanced dental implant solutions.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="service-item text-center">
-                            <i class="fas fa-tooth fa-3x text-primary mb-3"></i>
-                            <h3>Orthodontics</h3>
-                            <p>Achieve a straighter smile with our orthodontic treatments.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="team py-5">
-            <div class="container">
-                <h2 class="text-center">Our Team</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="assets/img/doctors/doctor-1.jpg" class="card-img-top" alt="Doctor 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Dr. John Doe</h5>
-                                <p class="card-text">Dr. John Doe is a graduate of the University of Pennsylvania School of Dental Medicine. He has been practicing for over 15 years and is a member of the American Dental Association.</p>
+                    <div class="absolute -bottom-4 -right-4 bg-white shadow-lg rounded-lg p-4 w-64" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="flex items-center mb-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-500 mr-3 transition-all duration-300 hover:scale-110 hover:bg-green-200">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Expert Dentists</p>
+                                <p class="text-sm text-gray-500">15+ years experience</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="assets/img/doctors/doctor-2.jpg" class="card-img-top" alt="Doctor 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Dr. Jane Smith</h5>
-                                <p class="card-text">Dr. Jane Smith received her DDS from the University of California, San Francisco. She is passionate about providing her patients with the best possible care and is a member of the California Dental Association.</p>
+                        <div class="flex items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-3 transition-all duration-300 hover:scale-110 hover:bg-blue-200">
+                                <i class="fas fa-star"></i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="assets/img/doctors/doctor-3.jpg" class="card-img-top" alt="Doctor 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Dr. Peter Jones</h5>
-                                <p class="card-text">Dr. Peter Jones is a graduate of the New York University College of Dentistry. He is dedicated to staying up-to-date on the latest advancements in dentistry and is a member of the New York State Dental Association.</p>
+                            <div>
+                                <p class="font-medium">4.9 Rating</p>
+                                <p class="text-sm text-gray-500">Based on 850+ reviews</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="testimonials bg-light py-5">
-            <div class="container">
-                <h2 class="text-center">Testimonials</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="testimonial-item">
-                            <p>"I have been a patient at Dentica for over 5 years and I have always been impressed with the quality of care I have received. The staff is friendly and professional, and the office is clean and modern. I would highly recommend Dentica to anyone looking for a great dental experience."</p>
-                            <p class="testimonial-author">- John Smith</p>
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-duration="800">Why Choose Dentic?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">We provide comprehensive dental care with the latest technology and a patient-centered approach.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mb-4 feature-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <i class="fas fa-teeth text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">General Dentistry</h3>
+                    <p class="text-gray-600">Regular checkups, cleanings, fillings, and preventive care to maintain your oral health.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-green-500 mb-4 feature-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                        <i class="fas fa-tooth text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Cosmetic Dentistry</h3>
+                    <p class="text-gray-600">Teeth whitening, veneers, and other treatments to enhance your smile's appearance.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mb-4 feature-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+                        <i class="fas fa-teeth-open text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Orthodontics</h3>
+                    <p class="text-gray-600">Braces and aligners to correct misaligned teeth and improve your bite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-duration="800">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">We offer a wide range of dental services to meet all your oral health needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg" data-aos="flip-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mb-4 service-icon">
+                        <i class="fas fa-tooth text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Teeth Cleaning</h3>
+                    <p class="text-gray-600 mb-4">Professional cleaning to remove plaque and tartar for healthier teeth and gums.</p>
+                    <a href="#" class="text-blue-500 font-medium flex items-center learn-more">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-green-500 mb-4 service-icon">
+                        <i class="fas fa-teeth text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Dental Fillings</h3>
+                    <p class="text-gray-600 mb-4">Restore damaged teeth with tooth-colored fillings that look natural.</p>
+                    <a href="#" class="text-blue-500 font-medium flex items-center learn-more">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg" data-aos="flip-left" data-aos-duration="800" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mb-4 service-icon">
+                        <i class="fas fa-teeth-open text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Root Canal</h3>
+                    <p class="text-gray-600 mb-4">Save infected teeth with our painless root canal treatments.</p>
+                    <a href="#" class="text-blue-500 font-medium flex items-center learn-more">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg" data-aos="flip-left" data-aos-duration="800" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 mb-4 service-icon">
+                        <i class="fas fa-gem text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Teeth Whitening</h3>
+                    <p class="text-gray-600 mb-4">Brighten your smile with our professional teeth whitening treatments.</p>
+                    <a href="#" class="text-blue-500 font-medium flex items-center learn-more">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-red-500 mb-4 service-icon">
+                        <i class="fas fa-teeth text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Dental Implants</h3>
+                    <p class="text-gray-600 mb-4">Replace missing teeth with durable and natural-looking dental implants.</p>
+                    <a href="#" class="text-blue-500 font-medium flex items-center learn-more">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg" data-aos="flip-left" data-aos-duration="800" data-aos-delay="700">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-500 mb-4 service-icon">
+                        <i class="fas fa-smile text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Veneers</h3>
+                    <p class="text-gray-600 mb-4">Transform your smile with custom-made porcelain veneers.</p>
+                    <a href="#" class="text-blue-500 font-medium flex items-center learn-more">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-duration="800">Our Expert Dentists</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Meet our team of experienced and caring dental professionals.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="doctor-card bg-white p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <div class="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mx-auto mb-4 doctor-image floating">
+                        <i class="fas fa-user-md text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. Sarah Johnson</h3>
+                    <p class="text-blue-500 mb-3">General Dentist</p>
+                    <p class="text-gray-600 text-sm mb-4">15+ years of experience in general and cosmetic dentistry.</p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="doctor-card bg-white p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <div class="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center text-green-500 mx-auto mb-4 doctor-image floating">
+                        <i class="fas fa-user-md text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. Michael Chen</h3>
+                    <p class="text-blue-500 mb-3">Orthodontist</p>
+                    <p class="text-gray-600 text-sm mb-4">Specialized in braces and aligners for all age groups.</p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="doctor-card bg-white p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                    <div class="w-32 h-32 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mx-auto mb-4 doctor-image floating">
+                        <i class="fas fa-user-md text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. Emily Rodriguez</h3>
+                    <p class="text-blue-500 mb-3">Pediatric Dentist</p>
+                    <p class="text-gray-600 text-sm mb-4">Creating positive dental experiences for children and teens.</p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="doctor-card bg-white p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                    <div class="w-32 h-32 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 mx-auto mb-4 doctor-image floating">
+                        <i class="fas fa-user-md text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. James Wilson</h3>
+                    <p class="text-blue-500 mb-3">Oral Surgeon</p>
+                    <p class="text-gray-600 text-sm mb-4">Expert in dental implants, extractions, and oral surgery.</p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-right" data-aos-duration="800">About Dentic</h2>
+                    <p class="text-gray-600 mb-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">Dentic has been providing exceptional dental care to our community for over 15 years. Our mission is to deliver comprehensive, personalized dental services in a comfortable and welcoming environment.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                            <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3 mt-1 transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <p class="text-gray-600">State-of-the-art technology and equipment</p>
+                        </div>
+                        <div class="flex items-start" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
+                            <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3 mt-1 transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <p class="text-gray-600">Committed to continuing education and training</p>
+                        </div>
+                        <div class="flex items-start" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">
+                            <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3 mt-1 transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <p class="text-gray-600">Focus on preventive care and patient education</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="testimonial-item">
-                            <p>"I was very nervous about getting dental work done, but the team at Dentica made me feel at ease. They were very patient and explained everything to me in detail. I am so happy with the results of my treatment and I would definitely recommend Dentica to anyone."</p>
-                            <p class="testimonial-author">- Jane Doe</p>
+                    
+                    <div class="flex space-x-4">
+                        <div class="text-center group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                            <p class="text-3xl font-bold text-blue-500 transition-all duration-300 group-hover:scale-110 counter" id="years-counter">0</p>
+                            <p class="text-gray-600 transition-colors group-hover:text-blue-500">Years Experience</p>
+                        </div>
+                        <div class="text-center group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                            <p class="text-3xl font-bold text-blue-500 transition-all duration-300 group-hover:scale-110 counter" id="patients-counter">0</p>
+                            <p class="text-gray-600 transition-colors group-hover:text-blue-500">Happy Patients</p>
+                        </div>
+                        <div class="text-center group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                            <p class="text-3xl font-bold text-blue-500 transition-all duration-300 group-hover:scale-110 counter" id="rating-counter">0</p>
+                            <p class="text-gray-600 transition-colors group-hover:text-blue-500">Average Rating</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="testimonial-item">
-                            <p>"I have been to many dentists in my life, but I have never been to one as good as Dentica. The staff is amazing and the dentists are top-notch. I would recommend Dentica to anyone looking for a great dental experience."</p>
-                            <p class="testimonial-author">- Peter Jones</p>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-blue-100 rounded-lg flex items-center justify-center floating" data-aos="zoom-in" data-aos-duration="1000">
+                            <i class="fas fa-tooth text-blue-300 text-8xl"></i>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white shadow-lg rounded-lg p-6 w-64" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white mr-4 transition-all duration-300 hover:scale-110">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Award Winning</p>
+                                    <p class="text-sm text-gray-500">Best Dental Clinic 2023</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="contact py-5">
-            <div class="container">
-                <h2 class="text-center">Contact Us</h2>
-                <div class="row">
-                    <div class="col-md-6">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-duration="800">What Our Patients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Don't just take our word for it. Here's what our patients have to say about their experiences.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4 user-avatar">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Robert Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"I've been coming to Dentic for years. The staff is always friendly and professional. Dr. Sarah made my root canal completely painless!"</p>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-500 mr-4 user-avatar">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Jennifer Martinez</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The teeth whitening treatment transformed my smile! I feel so much more confident now. Thank you, Dentic team!"</p>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mr-4 user-avatar">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Thomas Williams</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"My dental implants look and feel completely natural. The entire process was smooth, and the results exceeded my expectations."</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="btn-primary bg-blue-500 text-white px-6 py-3 rounded-full font-medium pulse-animation" data-aos="fade-up" data-aos-duration="800">
+                    Read More Testimonials
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 contact-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-duration="800">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Get in touch with us to schedule your appointment or ask any questions.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm" data-aos="fade-right" data-aos-duration="800">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Send us a Message</h3>
                         <form>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            <div class="mb-4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+                                <label class="block text-gray-700 mb-2" for="name">Full Name</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 contact-input" type="text" id="name" placeholder="Your Name">
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <div class="mb-4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                                <label class="block text-gray-700 mb-2" for="email">Email Address</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 contact-input" type="email" id="email" placeholder="Your Email">
                             </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            <div class="mb-4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
+                                <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 contact-input" type="tel" id="phone" placeholder="Your Phone">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="mb-4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">
+                                <label class="block text-gray-700 mb-2" for="message">Message</label>
+                                <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 contact-input" id="message" rows="4" placeholder="Your Message"></textarea>
+                            </div>
+                            <button class="w-full btn-primary bg-blue-500 text-white py-3 rounded-lg font-medium pulse-animation" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                                Send Message
+                            </button>
                         </form>
                     </div>
-                    <div class="col-md-6">
-                        <div class="contact-info">
-                            <h3>Contact Information</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, USA</p>
-                            <p><i class="fas fa-phone"></i> (555) 555-5555</p>
-                            <p><i class="fas fa-envelope"></i> info@dentica.com</p>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm h-full" data-aos="fade-left" data-aos-duration="800">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Visit Our Clinic</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4 transition-all duration-300 hover:scale-110">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Address</h4>
+                                    <p class="text-gray-600">123 Dental Street, Health District, City, State 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4 transition-all duration-300 hover:scale-110">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">(123) 456-7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4 transition-all duration-300 hover:scale-110">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@dentic.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start" data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4 transition-all duration-300 hover:scale-110">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Working Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-600">Saturday: 9:00 AM - 2:00 PM</p>
+                                    <p class="text-gray-600">Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white social-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white social-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white social-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-white social-icon" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2023 Dentica. All rights reserved.</p>
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4" data-aos="fade-up" data-aos-duration="800">Ready to Improve Your Smile?</h2>
+            <p class="text-blue-100 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Schedule your appointment today and take the first step towards better dental health.</p>
+            <button class="btn-primary bg-white text-blue-600 px-8 py-3 rounded-full font-medium text-lg pulse-animation" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                Book Your Visit Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex items-center mb-4 group">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2 transition-all duration-300 group-hover:bg-blue-600 group-hover:scale-110">
+                            D
+                        </div>
+                        <span class="text-2xl font-bold transition-colors group-hover:text-blue-400">Dentic</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted partner for dental health and beautiful smiles.</p>
                 </div>
-                <div class="col-md-6 text-md-right">
-                    <a href="#" class="text-white">Privacy Policy</a> |
-                    <a href="#" class="text-white">Terms of Use</a>
+                
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#doctors" class="text-gray-400 hover:text-white transition-colors">Doctors</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
                 </div>
+                
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">General Dentistry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Orthodontics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Implants</a></li>
+                    </ul>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
+                            123 Dental Street, City
+                        </li>
+                        <li class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
+                            <i class="fas fa-phone mr-2 text-blue-400"></i>
+                            (123) 456-7890
+                        </li>
+                        <li class="flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer">
+                            <i class="fas fa-envelope mr-2 text-blue-400"></i>
+                            info@dentic.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Dentic. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('mobile-menu-button');
+            
+            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Number counter animation
+        function animateCounter(elementId, finalValue, duration = 2000) {
+            const element = document.getElementById(elementId);
+            const startValue = 0;
+            const increment = finalValue / (duration / 16); // 60fps
+            
+            let currentValue = startValue;
+            
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= finalValue) {
+                    clearInterval(timer);
+                    currentValue = finalValue;
+                }
+                
+                if (elementId === 'rating-counter') {
+                    element.textContent = currentValue.toFixed(1);
+                } else {
+                    element.textContent = Math.floor(currentValue).toLocaleString() + '+';
+                }
+            }, 16);
+        }
+
+        // Intersection Observer to trigger counters when in view
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Start counters with different durations for variety
+                    animateCounter('years-counter', 15, 1500);
+                    animateCounter('patients-counter', 5000, 2000);
+                    animateCounter('rating-counter', 4.9, 1800);
+                    
+                    // Stop observing after animation starts
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe the about section
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            observer.observe(aboutSection);
+        }
+    </script>
 </body>
 </html>

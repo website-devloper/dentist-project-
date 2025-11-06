@@ -4,28 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation - Dentica</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        section {
+            background: #fff;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        a {
+            color: #333;
+        }
+
+        a:hover {
+            color: #555;
+        }
+
+        nav {
+            background: #444;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        nav a:hover {
+            background: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Dentica Template Documentation</h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#editing">Editing</a></li>
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#404">404 Page</a></li>
+        </ul>
+    </nav>
     <main>
-        <section>
+        <section id="installation">
             <h2>Installation</h2>
-            <p>To install the Dentica template, simply download the zip file and extract it to your desired location. Open the <code>index.html</code> file in your web browser to view the homepage.</p>
+            <p>To install the Dentica template, simply download the zip file and extract it to your desired location. Open the <code>Main Files/index.html</code> file in your web browser to view the homepage.</p>
         </section>
-        <section>
+        <section id="editing">
             <h2>Editing</h2>
-            <p>You can edit the HTML files located in the <code>Main Files</code> directory to customize the content of your website. Use any text editor or IDE of your choice.</p>
+            <p>You can edit the HTML files located in the <code>Main Files</code> directory to customize the content of your website. Use any text editor or IDE of your choice. The main files to edit are:</p>
+            <ul>
+                <li><code>index.html</code> - The main homepage.</li>
+                <li><code>book-appointment.html</code> - The appointment booking page.</li>
+            </ul>
         </section>
-        <section>
+        <section id="customization">
             <h2>Customization</h2>
-            <p>For styling, you can modify the <code>style.css</code> file located in <code>Documentation/assets/css</code> or <code>Main Files/assets/css</code>. You can also add your own CSS files in these directories.</p>
+            <p>For styling, you can modify the <code>style.css</code> file located in <code>Main Files/assets/css</code>. You can also add your own CSS files in this directory. The main CSS file is <code>style.css</code>, and the responsive styles are in <code>responsive.css</code>.</p>
         </section>
-        <section>
+        <section id="images">
             <h2>Images</h2>
-            <p>Place any images you want to use in the <code>Documentation/assets/img</code> directory. Ensure to reference them correctly in your HTML files.</p>
+            <p>Place any images you want to use in the <code>Main Files/assets/img</code> directory. The images are organized into subdirectories based on their purpose (e.g., <code>doctors</code>, <code>hero</code>, <code>logos</code>, <code>services</code>, <code>testimonials</code>). Ensure to reference them correctly in your HTML files.</p>
+        </section>
+        <section id="404">
+            <h2>404 Page</h2>
+            <p>A `404.html` page has been included in the `Documentation` folder. You can customize this page and move it to the root of your website to handle "page not found" errors.</p>
         </section>
     </main>
     <footer>
