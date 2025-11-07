@@ -465,3 +465,28 @@ body {
 .doctor-card-anim {
     animation: doctor-card 0.4s ease-out;
 }
+
+/* Watch Video button animation (no color changes) */
+.btn-watch {
+    transition: transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s;
+    position: relative;
+    /* keep existing background/text colors unchanged */
+}
+.btn-watch:hover {
+    transform: translateY(-6px);
+    /* subtle neutral shadow to avoid changing visual color */
+    box-shadow: 0 12px 30px rgba(2,6,23,0.12);
+}
+.btn-watch .btn-icon {
+    display: inline-block;
+    transition: transform 0.28s cubic-bezier(.2,.8,.2,1);
+}
+.btn-watch:hover .btn-icon {
+    transform: translateX(6px) rotate(8deg);
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(45deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

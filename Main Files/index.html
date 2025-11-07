@@ -67,15 +67,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg py-12 md:py-20 bg-gradient-to-b from-blue-50 to-white">
-        <div class="container mx-auto px-4 relative">
+    <section class="hero-bg py-12 md:py-32 bg-gradient-to-b from-blue-50 to-white">
+        <div class="container mx-auto px-4">
             <div class="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl mx-auto">
                 <!-- Left Column -->
                 <div class="w-full md:w-1/2 mt-8 md:mt-0 text-center md:text-left">
                     <!-- Top Badge -->
                     <div class="inline-flex items-center bg-blue-100 rounded-full px-3 py-1 mb-4 mx-auto md:mx-0">
                         <i class="fas fa-check-circle mr-2 text-blue-600"></i>
-                        <span class="text-sm font-medium text-blue-700">Top-Notch Dental Care, Just for You</span>
+                        <span class="text-sm font-medium text-gradient">Top-Notch Dental Care, Just for You</span>
                     </div>
 
                     <!-- Main Heading -->
@@ -90,14 +90,14 @@
                     <!-- CTA Buttons (stack on small, inline on md+) -->
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                         <a href="book-appointment.html"
-                           class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105 text-center">
-                            Book Appointment
-                        </a>
+                                class="inline-block btn-primary bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105 text-center">
+                                Book Appointment
+                            </a>
                         <button
-                            class="inline-flex items-center justify-center bg-white border border-gray-200 text-gray-700 px-5 py-3 rounded-lg hover:shadow-sm transition">
-                            <i class="fas fa-play mr-2 text-blue-500"></i>
-                            Watch Video
-                        </button>
+                                class="inline-flex items-center justify-center bg-white border border-gray-200 text-gray-700 px-5 py-3 rounded-lg hover:shadow-sm transition btn-watch">
+                                <i class="fas fa-play mr-2 text-blue-500 btn-icon"></i>
+                                Watch Video
+                            </button>
                     </div>
                 </div>
 
@@ -106,56 +106,58 @@
                     <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                         <div class="hero-blur-circle absolute inset-0 -z-10 rounded-full opacity-40"></div>
                         <img src="assets/img/hero_image.png" alt="Professional Doctor"
-                             class="w-full h-auto object-contain mx-auto" data-aos="zoom-in" data-aos-duration="1000">
+                            class="w-full h-auto object-contain mx-auto" data-aos="zoom-in" data-aos-duration="1000">
                     </div>
                 </div>
             </div>
 
-            <!-- Appointment Form (responsive placement) -->
             <div
-                class="appointment-form bg-white rounded-lg shadow-lg p-4 sm:p-6 mt-6 md:mt-10 w-full md:w-[88%] mx-auto md:mx-0 md:absolute md:left-1/2 md:-translate-x-1/2 md:bottom-[-40px] z-20">
+                class="appointment-form bg-white rounded-lg shadow-lg p-4 sm:p-6 mt-6 w-full md:w-[80%] mx-auto">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-3">
                     <!-- Name Input -->
                     <label class="relative">
                         <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
                         <input aria-label="Name" type="text" placeholder="Name"
-                               class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </label>
 
                     <!-- Phone Input -->
                     <label class="relative">
                         <i class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
                         <input aria-label="Phone" type="tel" placeholder="Phone Number"
-                               class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </label>
 
                     <!-- Date Input -->
                     <label class="relative">
                         <i class="fas fa-calendar absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
                         <input aria-label="Preferred date" type="date"
-                               class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </label>
 
                     <!-- Time Input -->
                     <label class="relative">
                         <i class="fas fa-clock absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
                         <input aria-label="Preferred time" type="time"
-                               class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </label>
                 </div>
 
                 <!-- Action Buttons -->
                 <div class="flex flex-col sm:flex-row gap-3">
-                    <button class="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105 flex-1 text-center">
+                    <button
+                        class="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105 flex-1 text-center btn-watch">
                         Book an Appointment
                     </button>
-                    <button class="w-full sm:w-auto bg-gray-50 hover:bg-gray-100 text-gray-700 font-medium px-6 py-3 rounded-lg border border-gray-200 transition flex items-center justify-center gap-2">
+                    <button
+                        class="w-full sm:w-auto bg-gray-50 hover:bg-gray-100 text-gray-700 font-medium px-6 py-3 rounded-lg border border-gray-200 transition flex items-center justify-center gap-2">
                         <i class="fas fa-comments text-blue-500"></i>
                         Request Callback
                     </button>
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- Features Section -->
