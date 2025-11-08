@@ -69,7 +69,7 @@
     <!-- Hero Section -->
     <section class="hero-bg py-12 md:py-32 bg-gradient-to-b from-blue-50 to-white">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl mx-auto">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-center max-w-6xl mx-auto">
                 <!-- Left Column -->
                 <div class="w-full md:w-1/2 mt-8 md:mt-0 text-center md:text-left">
                     <!-- Top Badge -->
@@ -90,70 +90,77 @@
                     <!-- CTA Buttons (stack on small, inline on md+) -->
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                         <a href="book-appointment.html"
-                                class="inline-block btn-primary bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105 text-center">
-                                Book Appointment
-                            </a>
-                        <button
-                                class="inline-flex items-center justify-center bg-white border border-gray-200 text-gray-700 px-5 py-3 rounded-lg hover:shadow-sm transition btn-watch">
-                                <i class="fas fa-play mr-2 text-blue-500 btn-icon"></i>
-                                Watch Video
-                            </button>
+                            class="inline-block btn-primary bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105 text-center">
+                            Book Appointment
+                        </a>
                     </div>
                 </div>
 
                 <!-- Right Column - Doctor Image -->
                 <div class="w-full md:w-1/2 flex justify-center md:justify-end">
                     <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-                        <div class="hero-blur-circle absolute inset-0 -z-10 rounded-full opacity-40"></div>
-                        <img src="assets/img/hero_image.png" alt="Professional Doctor"
-                            class="w-full h-auto object-contain mx-auto" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="hero-blur-circle absolute inset-0 -z-10 bg-blue-500 rounded-full opacity-40"></div>
+                        <img src="assets/img/heroImage.png" alt="Professional Doctor"
+                            class="w-300 h-300 object-contain mx-auto" data-aos="zoom-in" data-aos-duration="1000">
                     </div>
                 </div>
             </div>
 
-            <div
-                class="appointment-form bg-white rounded-lg shadow-lg p-4 sm:p-6 mt-6 w-full md:w-[80%] mx-auto">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+            <div class="appointment-form bg-white rounded-lg shadow-lg p-4 sm:p-6 mt-6 w-full md:w-[80%] mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 items-end">
                     <!-- Name Input -->
-                    <label class="relative">
-                        <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
-                        <input aria-label="Name" type="text" placeholder="Name"
-                            class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </label>
+                    <div>
+                        <label for="appointment-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <input type="text" id="appointment-name" placeholder="Your Name"
+                                class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
 
                     <!-- Phone Input -->
-                    <label class="relative">
-                        <i class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
-                        <input aria-label="Phone" type="tel" placeholder="Phone Number"
-                            class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </label>
+                    <div>
+                        <label for="appointment-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-phone text-gray-400"></i>
+                            </div>
+                            <input type="tel" id="appointment-phone" placeholder="Phone Number"
+                                class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
 
                     <!-- Date Input -->
-                    <label class="relative">
-                        <i class="fas fa-calendar absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
-                        <input aria-label="Preferred date" type="date"
-                            class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </label>
+                    <div>
+                        <label for="appointment-date" class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-calendar text-gray-400"></i>
+                            </div>
+                            <input type="date" id="appointment-date"
+                                class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
 
                     <!-- Time Input -->
-                    <label class="relative">
-                        <i class="fas fa-clock absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
-                        <input aria-label="Preferred time" type="time"
-                            class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </label>
-                </div>
+                    <div>
+                        <label for="appointment-time" class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-clock text-gray-400"></i>
+                            </div>
+                            <input type="time" id="appointment-time"
+                                class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
 
-                <!-- Action Buttons -->
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <button
-                        class="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105 flex-1 text-center btn-watch">
-                        Book an Appointment
-                    </button>
-                    <button
-                        class="w-full sm:w-auto bg-gray-50 hover:bg-gray-100 text-gray-700 font-medium px-6 py-3 rounded-lg border border-gray-200 transition flex items-center justify-center gap-2">
-                        <i class="fas fa-comments text-blue-500"></i>
-                        Request Callback
-                    </button>
+                    <!-- Action Button -->
+                    <a href="book-appointment.html"
+                        class="btn-primary bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-2.5 rounded-lg transition transform hover:scale-105 text-center w-full">
+                        Book Appointment
+                    </a>
                 </div>
             </div>
         </div>
@@ -161,47 +168,48 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-24 bg-slate-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-duration="800">Why Choose
-                    Dentic?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800"
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
+                    <h2 class="text-4xl font-bold text-gray-900">Why Choose Dentic?</h2>
+                </div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-duration="800"
                     data-aos-delay="200">We provide comprehensive dental care with the latest technology and a
                     patient-centered approach.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="feature-card bg-white p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="200">
-                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mb-4 feature-icon"
+                <div class="feature-card bg-white text-gray-800 p-8 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gradient-to-br hover:from-blue-800 hover:to-[#2563eb] hover:text-white"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-6 feature-icon shadow-lg shadow-blue-500/30"
                         data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
-                        <i class="fas fa-teeth text-2xl"></i>
+                        <i class="fas fa-teeth text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">General Dentistry</h3>
-                    <p class="text-gray-600">Regular checkups, cleanings, fillings, and preventive care to maintain your
+                    <h3 class="text-xl font-semibold mb-3">General Dentistry</h3>
+                    <p class="opacity-80">Regular checkups, cleanings, fillings, and preventive care to maintain your
                         oral health.</p>
                 </div>
 
-                <div class="feature-card bg-white p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="400">
-                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-green-500 mb-4 feature-icon"
+                <div class="feature-card bg-white text-gray-800 p-8 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gradient-to-br hover:from-blue-800 hover:to-[#2563eb] hover:text-white"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-6 feature-icon shadow-lg shadow-blue-500/30"
                         data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
-                        <i class="fas fa-tooth text-2xl"></i>
+                        <i class="fas fa-tooth text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Cosmetic Dentistry</h3>
-                    <p class="text-gray-600">Teeth whitening, veneers, and other treatments to enhance your smile's
+                    <h3 class="text-xl font-semibold mb-3">Cosmetic Dentistry</h3>
+                    <p class="opacity-80">Teeth whitening, veneers, and other treatments to enhance your smile's
                         appearance.</p>
                 </div>
 
-                <div class="feature-card bg-white p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="600">
-                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mb-4 feature-icon"
+                <div class="feature-card bg-white text-gray-800 p-8 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gradient-to-br hover:from-blue-800 hover:to-[#2563eb] hover:text-white"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-6 feature-icon shadow-lg shadow-blue-500/30"
                         data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
-                        <i class="fas fa-teeth-open text-2xl"></i>
+                        <i class="fas fa-teeth-open text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Orthodontics</h3>
-                    <p class="text-gray-600">Braces and aligners to correct misaligned teeth and improve your bite.</p>
+                    <h3 class="text-xl font-semibold mb-3">Orthodontics</h3>
+                    <p class="opacity-80">Braces and aligners to correct misaligned teeth and improve your bite.</p>
                 </div>
             </div>
         </div>
