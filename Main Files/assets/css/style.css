@@ -84,6 +84,7 @@ body {
     background: white;
     border: 1px solid #e2e8f0;
     position: relative;
+    transition: all 0.4s ease;
 }
 
 .service-card > * {
@@ -91,23 +92,14 @@ body {
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: #2563eb;
+    color: white;
 }
 
-.service-card::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-
-}
-
-.service-card:hover::after {
-    opacity: 0.1;
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover a {
+    color: white;
 }
 
 .service-card .service-icon {
@@ -115,6 +107,8 @@ body {
 }
 
 .service-card:hover .service-icon {
+    background-color: white;
+    color: #2563eb;
     transform: scale(1.15);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
@@ -125,7 +119,6 @@ body {
 
 .service-card:hover .learn-more {
     transform: translateX(5px);
-    color: #0ea5e9;
 }
 
 /* Doctor Card Hover Effects */
@@ -133,38 +126,26 @@ body {
     background: white;
     border: 1px solid #e2e8f0;
     position: relative;
-}
-
-.doctor-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-}
-
-.doctor-card:hover::before {
-    opacity: 1;
+    overflow: visible; /* Allow icon to be visible outside */
+    padding-top: 4rem; /* Create space for the icon */
+    transition: background-color 0.4s ease;
 }
 
 .doctor-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    border-color: #0ea5e9;
+    background-color: #eff6ff; /* Light blue background on hover */
+    border-color: #3b82f6;
 }
 
 .doctor-card .doctor-image {
-    transition: all 0.4s ease;
+    position: absolute;
+    top: -4rem; /* Move icon half way out */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 0.4s ease;
 }
 
 .doctor-card:hover .doctor-image {
-    transform: scale(1.05);
-    box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.15);
+    top: 1.5rem; /* Return icon inside on hover */
 }
 
 .doctor-card .social-icon {
@@ -513,3 +494,21 @@ body {
     background-position: 0% 50%;
   }
 }
+#doctors .doctor-card {
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#doctors .doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+#doctors .doctor-card img {
+    transition: transform 0.3s ease;
+}
+
+#doctors .doctor-card:hover img {
+    transform: scale(1.05);
+}
+

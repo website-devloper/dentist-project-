@@ -332,114 +332,120 @@
     </section>
 
     <!-- Doctors Section -->
-    <section id="doctors" class="py-16 bg-gray-50">
+    <section id="doctors" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-duration="800">Our Expert
-                    Dentists</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="200">Meet our team of experienced and caring dental professionals.</p>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800">Meet Our Expert Dentists</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Our team of dedicated and experienced dental professionals is here to provide you with exceptional care.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="doctor-card bg-white p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-duration="800"
-                    data-aos-delay="200">
-                    <div
-                        class="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mx-auto mb-4 doctor-image floating">
-                        <i class="fas fa-user-md text-5xl"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Doctor 1 -->
+                <div class="relative mt-12 bg-white rounded-lg shadow-lg group" data-aos="zoom-in" data-aos-delay="100">
+                    <!-- Initial state -->
+                    <div class="transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg" class="w-full h-72 object-cover rounded-t-lg">
+                        <div class="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-700 ">
+                            <h3 class="text-xl font-bold text-white">Dr. Sarah Johnson</h3>
+                            <p class="text-md text-white">General Dentist</p>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. Sarah Johnson</h3>
-                    <p class="text-blue-500 mb-3">General Dentist</p>
-                    <p class="text-gray-600 text-sm mb-4">15+ years of experience in general and cosmetic dentistry.</p>
-                    <div class="flex justify-center space-x-2">
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="doctor-card bg-white p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-duration="800"
-                    data-aos-delay="300">
-                    <div
-                        class="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center text-green-500 mx-auto mb-4 doctor-image floating">
-                        <i class="fas fa-user-md text-5xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. Michael Chen</h3>
-                    <p class="text-blue-500 mb-3">Orthodontist</p>
-                    <p class="text-gray-600 text-sm mb-4">Specialized in braces and aligners for all age groups.</p>
-                    <div class="flex justify-center space-x-2">
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                
+                    <!-- Hover state -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <img src="https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white object-cover">
+                        <div class="flex flex-col items-center text-center justify-center h-full pt-12">
+                            <h3 class="text-xl font-bold">Dr. Sarah Johnson</h3>
+                            <p class="text-md mb-4">General Dentist</p>
+                            <p class="text-center text-md mb-4">15+ years of experience in general and cosmetic dentistry.</p>
+                            <div class="flex justify-center space-x-3">
+                                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="doctor-card bg-white p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-duration="800"
-                    data-aos-delay="400">
-                    <div
-                        class="w-32 h-32 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mx-auto mb-4 doctor-image floating">
-                        <i class="fas fa-user-md text-5xl"></i>
+                <!-- Doctor 2 -->
+                <div class="relative mt-12 bg-white rounded-lg shadow-lg group" data-aos="zoom-in" data-aos-delay="200">
+                    <!-- Initial state -->
+                    <div class="transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-on-grey_651396-974.jpg" class="w-full h-72 object-cover rounded-t-lg">
+                        <div class="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-700 bg-blue-700">
+                            <h3 class="text-xl font-bold text-white">Dr. Michael Chen</h3>
+                            <p class="text-md text-white">Orthodontist</p>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. Emily Rodriguez</h3>
-                    <p class="text-blue-500 mb-3">Pediatric Dentist</p>
-                    <p class="text-gray-600 text-sm mb-4">Creating positive dental experiences for children and teens.
-                    </p>
-                    <div class="flex justify-center space-x-2">
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                
+                    <!-- Hover state -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-on-grey_651396-974.jpg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white object-cover">
+                        <div class="flex flex-col items-center text-center justify-center h-full pt-12">
+                            <h3 class="text-xl font-bold">Dr. Michael Chen</h3>
+                            <p class="text-md mb-4">Orthodontist</p>
+                            <p class="text-center text-md mb-4">Specialized in braces and aligners for all age groups.</p>
+                            <div class="flex justify-center space-x-3">
+                                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="doctor-card bg-white p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-duration="800"
-                    data-aos-delay="500">
-                    <div
-                        class="w-32 h-32 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 mx-auto mb-4 doctor-image floating">
-                        <i class="fas fa-user-md text-5xl"></i>
+                <!-- Doctor 3 -->
+                <div class="relative mt-12 bg-white rounded-lg shadow-lg group" data-aos="zoom-in" data-aos-delay="300">
+                    <!-- Initial state -->
+                    <div class="transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg" class="w-full h-72 object-cover rounded-t-lg">
+                        <div class="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-700">
+                            <h3 class="text-xl font-bold text-white">Dr. Emily Rodriguez</h3>
+                            <p class="text-md text-white">Pediatric Dentist</p>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. James Wilson</h3>
-                    <p class="text-blue-500 mb-3">Oral Surgeon</p>
-                    <p class="text-gray-600 text-sm mb-4">Expert in dental implants, extractions, and oral surgery.</p>
-                    <div class="flex justify-center space-x-2">
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                
+                    <!-- Hover state -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <img src="https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white object-cover">
+                        <div class="flex flex-col items-center text-center justify-center h-full pt-12">
+                            <h3 class="text-xl font-bold">Dr. Emily Rodriguez</h3>
+                            <p class="text-md mb-4">Pediatric Dentist</p>
+                            <p class="text-center text-md mb-4">Creating positive dental experiences for children and teens.</p>
+                            <div class="flex justify-center space-x-3">
+                                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 4 -->
+                <div class="relative mt-12 bg-white rounded-lg shadow-lg group" data-aos="zoom-in" data-aos-delay="400">
+                    <!-- Initial state -->
+                    <div class="transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg" class="w-full h-72 object-cover rounded-t-lg">
+                        <div class="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-700 ">
+                            <h3 class="text-xl font-bold text-white">Dr. James Wilson</h3>
+                            <p class="text-md text-white">Oral Surgeon</p>
+                        </div>
+                    </div>
+                    <!-- Hover state -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <img src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white object-cover">
+                        <div class="flex flex-col items-center text-center justify-center h-full pt-12">
+                            <h3 class="text-xl font-bold">Dr. James Wilson</h3>
+                            <p class="text-md mb-4">Oral Surgeon</p>
+                            <p class="text-center text-md mb-4">Expert in dental implants, extractions, and oral surgery.</p>
+                            <div class="flex justify-center space-x-3">
+                                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
