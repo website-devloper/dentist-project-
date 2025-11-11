@@ -522,6 +522,14 @@ body {
     transform: translateX(5px);
 }
 
+#testimonials .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#testimonials .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
 /* Swiper Testimonial Carousel */
 .testimonial-swiper {
     width: 100%;
