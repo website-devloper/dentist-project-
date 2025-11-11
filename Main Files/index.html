@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="httpss://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/hero-styles.css">
@@ -343,107 +344,90 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                 <!-- Doctor 1 -->
-                <div class="relative mt-12 bg-white rounded-lg shadow-lg group" data-aos="zoom-in" data-aos-delay="100">
-                    <!-- Initial state -->
-                    <div class="transition-opacity duration-300 group-hover:opacity-0">
-                        <img src="https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg" class="w-full h-72 object-cover rounded-t-lg">
-                        <div class="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-700 ">
-                            <h3 class="text-xl font-bold text-white">Dr. Sarah Johnson</h3>
-                            <p class="text-md text-white">General Dentist</p>
-                        </div>
-                    </div>
-                
-                    <!-- Hover state -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                        <img src="https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white object-cover">
-                        <div class="flex flex-col items-center text-center justify-center h-full pt-12">
-                            <h3 class="text-xl font-bold">Dr. Sarah Johnson</h3>
-                            <p class="text-md mb-4">General Dentist</p>
-                            <p class="text-center text-md mb-4">15+ years of experience in general and cosmetic dentistry.</p>
-                            <div class="flex justify-center space-x-3">
-                                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110" alt="Dr. Sarah Johnson">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold">Dr. Sarah Johnson</h3>
+                                <p class="text-lg">General Dentist</p>
+                                <div class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
+                                    <p class="my-4 text-base">15+ years of experience in general and cosmetic dentistry.</p>
+                                    <div class="flex justify-center space-x-4">
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+            
+            
                 </div>
 
                 <!-- Doctor 2 -->
-                <div class="relative mt-12 bg-white rounded-lg shadow-lg group" data-aos="zoom-in" data-aos-delay="200">
-                    <!-- Initial state -->
-                    <div class="transition-opacity duration-300 group-hover:opacity-0">
-                        <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-on-grey_651396-974.jpg" class="w-full h-72 object-cover rounded-t-lg">
-                        <div class="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-700 bg-blue-700">
-                            <h3 class="text-xl font-bold text-white">Dr. Michael Chen</h3>
-                            <p class="text-md text-white">Orthodontist</p>
-                        </div>
-                    </div>
-                
-                    <!-- Hover state -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                        <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-on-grey_651396-974.jpg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white object-cover">
-                        <div class="flex flex-col items-center text-center justify-center h-full pt-12">
-                            <h3 class="text-xl font-bold">Dr. Michael Chen</h3>
-                            <p class="text-md mb-4">Orthodontist</p>
-                            <p class="text-center text-md mb-4">Specialized in braces and aligners for all age groups.</p>
-                            <div class="flex justify-center space-x-3">
-                                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-on-grey_651396-974.jpg" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110" alt="Dr. Michael Chen">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold">Dr. Michael Chen</h3>
+                                <p class="text-lg">Orthodontist</p>
+                                <div class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
+                                    <p class="my-4 text-base">Specialized in braces and aligners for all age groups.</p>
+                                    <div class="flex justify-center space-x-4">
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Doctor 3 -->
-                <div class="relative mt-12 bg-white rounded-lg shadow-lg group" data-aos="zoom-in" data-aos-delay="300">
-                    <!-- Initial state -->
-                    <div class="transition-opacity duration-300 group-hover:opacity-0">
-                        <img src="https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg" class="w-full h-72 object-cover rounded-t-lg">
-                        <div class="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-700">
-                            <h3 class="text-xl font-bold text-white">Dr. Emily Rodriguez</h3>
-                            <p class="text-md text-white">Pediatric Dentist</p>
-                        </div>
-                    </div>
-                
-                    <!-- Hover state -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                        <img src="https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white object-cover">
-                        <div class="flex flex-col items-center text-center justify-center h-full pt-12">
-                            <h3 class="text-xl font-bold">Dr. Emily Rodriguez</h3>
-                            <p class="text-md mb-4">Pediatric Dentist</p>
-                            <p class="text-center text-md mb-4">Creating positive dental experiences for children and teens.</p>
-                            <div class="flex justify-center space-x-3">
-                                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110" alt="Dr. Emily Rodriguez">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold">Dr. Emily Rodriguez</h3>
+                                <p class="text-lg">Pediatric Dentist</p>
+                                <div class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
+                                    <p class="my-4 text-base">Creating positive dental experiences for children and teens.</p>
+                                    <div class="flex justify-center space-x-4">
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Doctor 4 -->
-                <div class="relative mt-12 bg-white rounded-lg shadow-lg group" data-aos="zoom-in" data-aos-delay="400">
-                    <!-- Initial state -->
-                    <div class="transition-opacity duration-300 group-hover:opacity-0">
-                        <img src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg" class="w-full h-72 object-cover rounded-t-lg">
-                        <div class="p-6 text-center bg-gradient-to-br from-blue-500 to-blue-700 ">
-                            <h3 class="text-xl font-bold text-white">Dr. James Wilson</h3>
-                            <p class="text-md text-white">Oral Surgeon</p>
-                        </div>
-                    </div>
-                    <!-- Hover state -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                        <img src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg" class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white object-cover">
-                        <div class="flex flex-col items-center text-center justify-center h-full pt-12">
-                            <h3 class="text-xl font-bold">Dr. James Wilson</h3>
-                            <p class="text-md mb-4">Oral Surgeon</p>
-                            <p class="text-center text-md mb-4">Expert in dental implants, extractions, and oral surgery.</p>
-                            <div class="flex justify-center space-x-3">
-                                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110" alt="Dr. James Wilson">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold">Dr. James Wilson</h3>
+                                <p class="text-lg">Oral Surgeon</p>
+                                <div class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
+                                    <p class="my-4 text-base">Expert in dental implants, extractions, and oral surgery.</p>
+                                    <div class="flex justify-center space-x-4">
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -453,81 +437,73 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-24 bg-gradient-to-b from-blue-50 to-white">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-right" data-aos-duration="800">
-                        About Dentic</h2>
-                    <p class="text-gray-600 mb-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
-                        Dentic has been providing exceptional dental care to our community for over 15 years. Our
-                        mission is to deliver comprehensive, personalized dental services in a comfortable and welcoming
-                        environment.</p>
-
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start" data-aos="fade-right" data-aos-duration="800"
-                            data-aos-delay="300">
-                            <div
-                                class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3 mt-1 transition-all duration-300 hover:scale-110">
-                                <i class="fas fa-check text-xs"></i>
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <!-- Image Content -->
+                <div class="w-full lg:w-5/12" data-aos="fade-right" data-aos-duration="800">
+                    <div class="relative">
+                        <img src="https://img.freepik.com/free-photo/smiling-dentist-with-patient-looking-camera_23-2148739937.jpg" alt="Patient in dental chair" class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                        <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-2 sm:p-4 rounded-xl shadow-lg flex items-center gap-2 sm:gap-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 text-white rounded-full flex items-center justify-center">
+                                <i class="fas fa-award text-xl sm:text-2xl"></i>
                             </div>
-                            <p class="text-gray-600">State-of-the-art technology and equipment</p>
-                        </div>
-                        <div class="flex items-start" data-aos="fade-right" data-aos-duration="800"
-                            data-aos-delay="400">
-                            <div
-                                class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3 mt-1 transition-all duration-300 hover:scale-110">
-                                <i class="fas fa-check text-xs"></i>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm sm:text-base">Top-Rated Clinic</p>
+                                <p class="text-xs sm:text-sm text-gray-600">Awarded for Excellence</p>
                             </div>
-                            <p class="text-gray-600">Committed to continuing education and training</p>
-                        </div>
-                        <div class="flex items-start" data-aos="fade-right" data-aos-duration="800"
-                            data-aos-delay="500">
-                            <div
-                                class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3 mt-1 transition-all duration-300 hover:scale-110">
-                                <i class="fas fa-check text-xs"></i>
-                            </div>
-                            <p class="text-gray-600">Focus on preventive care and patient education</p>
-                        </div>
-                    </div>
-
-                    <div class="flex space-x-4">
-                        <div class="text-center group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                            <p class="text-3xl font-bold text-blue-500 transition-all duration-300 group-hover:scale-110 counter"
-                                id="years-counter">0</p>
-                            <p class="text-gray-600 transition-colors group-hover:text-blue-500">Years Experience</p>
-                        </div>
-                        <div class="text-center group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-                            <p class="text-3xl font-bold text-blue-500 transition-all duration-300 group-hover:scale-110 counter"
-                                id="patients-counter">0</p>
-                            <p class="text-gray-600 transition-colors group-hover:text-blue-500">Happy Patients</p>
-                        </div>
-                        <div class="text-center group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                            <p class="text-3xl font-bold text-blue-500 transition-all duration-300 group-hover:scale-110 counter"
-                                id="rating-counter">0</p>
-                            <p class="text-gray-600 transition-colors group-hover:text-blue-500">Average Rating</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="relative">
-                        <div class="w-80 h-80 bg-blue-100 rounded-lg flex items-center justify-center floating"
-                            data-aos="zoom-in" data-aos-duration="1000">
-                            <i class="fas fa-tooth text-blue-300 text-8xl"></i>
-                        </div>
-                        <div class="absolute -bottom-6 -right-6 bg-white shadow-lg rounded-lg p-6 w-64"
-                            data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
-                            <div class="flex items-center">
-                                <div
-                                    class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white mr-4 transition-all duration-300 hover:scale-110">
-                                    <i class="fas fa-award"></i>
-                                </div>
-                                <div>
-                                    <p class="font-bold">Award Winning</p>
-                                    <p class="text-sm text-gray-500">Best Dental Clinic 2023</p>
-                                </div>
+                <!-- Text Content -->
+                <div class="w-full lg:w-6/12" data-aos="fade-left" data-aos-duration="800">
+                    <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
+                        <h2 class="text-4xl font-bold text-gray-900">Your Smile, Our Passion</h2>
+                    </div>
+                    <p class="text-gray-600 text-lg mb-6">
+                        For over 15 years, Dentic has been the cornerstone of exceptional dental care in our community. We blend cutting-edge technology with a personal touch to create a dental experience that's both comfortable and effective.
+                    </p>
+
+                    <div class="space-y-5 mb-8">
+                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-microscope text-xl"></i>
                             </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Advanced Technology</h3>
+                                <p class="text-gray-600">Utilizing state-of-the-art equipment for precise diagnostics and treatment.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-user-friends text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Patient-Centered Care</h3>
+                                <p class="text-gray-600">Your comfort and health are our top priorities, from start to finish.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-graduation-cap text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Expert Team</h3>
+                                <p class="text-gray-600">Our professionals are continuously trained to provide the best care.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-6 items-center">
+                        <div class="flex -space-x-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patient 1" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Patient 2" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient 3" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Join 10,000+ Happy Patients</p>
+                            <p class="text-gray-600">Start your journey to a healthier smile today.</p>
                         </div>
                     </div>
                 </div>
@@ -546,72 +522,77 @@
                     their experiences.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="200">
-                    <div class="flex items-center mb-4">
-                        <div
-                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4 user-avatar">
-                            <i class="fas fa-user text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Robert Johnson</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+            <!-- Swiper -->
+            <div class="swiper-container testimonial-swiper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card p-6 rounded-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/100x100" alt="Robert Johnson" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold">Robert Johnson</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
+                            <p class="text-gray-600 italic">"I've been coming to Dentic for years. The staff is always friendly
+                                and professional. Dr. Sarah made my root canal completely painless!"</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"I've been coming to Dentic for years. The staff is always friendly
-                        and professional. Dr. Sarah made my root canal completely painless!"</p>
-                </div>
 
-                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="400">
-                    <div class="flex items-center mb-4">
-                        <div
-                            class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-500 mr-4 user-avatar">
-                            <i class="fas fa-user text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Jennifer Martinez</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card p-6 rounded-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/100x100" alt="Jennifer Martinez" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold">Jennifer Martinez</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
+                            <p class="text-gray-600 italic">"The teeth whitening treatment transformed my smile! I feel so much
+                                more confident now. Thank you, Dentic team!"</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"The teeth whitening treatment transformed my smile! I feel so much
-                        more confident now. Thank you, Dentic team!"</p>
-                </div>
 
-                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="600">
-                    <div class="flex items-center mb-4">
-                        <div
-                            class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mr-4 user-avatar">
-                            <i class="fas fa-user text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Thomas Williams</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card p-6 rounded-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/100x100" alt="Thomas Williams" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold">Thomas Williams</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
+                            <p class="text-gray-600 italic">"My dental implants look and feel completely natural. The entire
+                                process was smooth, and the results exceeded my expectations."</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"My dental implants look and feel completely natural. The entire
-                        process was smooth, and the results exceeded my expectations."</p>
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
 
             <div class="text-center mt-12">
@@ -840,6 +821,7 @@
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="httpss://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
 </body>
