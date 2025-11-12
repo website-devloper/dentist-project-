@@ -14,6 +14,39 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/hero-styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Satoshi:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Satoshi', 'Manrope', 'Outfit', sans-serif;
+        }
+
+        p,
+        a,
+        li,
+        span,
+        div,
+        label,
+        input,
+        button,
+        textarea {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Keep the original font for the logo 'D' */
+        .group .font-bold.text-xl {
+            font-family: sans-serif;
+            /* Or your original font */
+        }
+    </style>
 </head>
 
 <body>
@@ -67,113 +100,132 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg py-12 md:py-32 bg-gradient-to-b from-blue-50 to-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col-reverse md:flex-row items-center justify-center max-w-6xl mx-auto">
-                <!-- Left Column -->
-                <div class="w-full md:w-1/2 mt-8 md:mt-0 text-center md:text-left">
-                    <!-- Top Badge -->
-                    <div class="inline-flex items-center bg-blue-100 rounded-full px-3 py-1 mb-4 mx-auto md:mx-0">
-                        <i class="fas fa-check-circle mr-2 text-blue-600"></i>
-                        <span class="text-sm font-medium text-gradient">Top-Notch Dental Care, Just for You</span>
+    <section class="hero-bg py-16 md:py-24 lg:py-32 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto">
+                <!-- Hero Content -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
+                    <div class="inline-flex items-center bg-blue-100 rounded-full px-4 py-2 mb-6 shadow-sm">
+                        <i class="fas fa-check-circle mr-2 text-blue-600 text-lg"></i>
+                        <span class="text-sm font-semibold text-blue-700">Your Smile, Our Priority</span>
                     </div>
 
-                    <!-- Main Heading -->
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-                        Your Best <span class="text-blue-600">Dental Experience</span> Awaits
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
+                        Exceptional Dental Care for a <span class="text-blue-600 ">Healthier, Brighter Smile</span>
                     </h1>
 
-                    <p class="text-gray-600 mb-6 max-w-xl mx-auto md:mx-0">
-                        We provide comfortable, modern dental care using the latest techniques — tailored to your needs.
+                    <p class="text-lg text-gray-700 mb-8 max-w-xl mx-auto lg:mx-0">
+                        Experience compassionate and advanced dental treatments tailored to your unique needs. We're
+                        dedicated to your comfort and oral health.
                     </p>
 
-                    <!-- CTA Buttons (stack on small, inline on md+) -->
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="book-appointment.html"
-                            class="inline-block btn-primary bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105 text-center">
-                            Book Appointment
+                            class="btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+                            Book an Appointment
+                        </a>
+                        <a href="#services"
+                            class="btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+                            Our Services
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Column - Doctor Image -->
-                <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-                    <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-                        <div class="hero-blur-circle absolute inset-0 -z-10 bg-blue-500 rounded-full opacity-40"></div>
-                        <img src="assets/img/heroImage.png" alt="Professional Doctor"
-                            class="w-300 h-300 object-contain mx-auto" data-aos="zoom-in" data-aos-duration="1000">
+                <!-- Hero Image -->
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
+                    <div class="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
+                        <img src="assets/img/dentist.jpg" alt="Professional Dentist"
+                            class="w-full h-auto object-cover rounded-xl shadow-2xl transform rotate-3" data-aos="zoom-in"
+                            data-aos-duration="1000">
+                        <div
+                            class="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000">
+                        </div>
+                        <div
+                            class="absolute -top-8 right-0 w-40 h-40 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="appointment-form bg-white rounded-lg shadow-lg p-4 sm:p-6 mt-6 w-full md:w-[80%] mx-auto">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 items-end">
-                    <!-- Name Input -->
+            <!-- Appointment Form -->
+            <div
+                class="appointment-form bg-white rounded-2xl shadow-2xl p-6 sm:p-8 mt-16 max-w-6xl mx-auto relative z-20 border border-blue-100 transform transition-all duration-500 hover:shadow-blue-300/50">
+                <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-end">
                     <div>
-                        <label for="appointment-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <label for="appointment-name" class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
                         <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <i class="fas fa-user text-gray-400"></i>
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <i class="fas fa-user text-blue-700"></i>
                             </div>
                             <input type="text" id="appointment-name" placeholder="Your Name"
-                                class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
                         </div>
                     </div>
 
-                    <!-- Phone Input -->
                     <div>
-                        <label for="appointment-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <label for="appointment-phone"
+                            class="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
                         <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <i class="fas fa-phone text-gray-400"></i>
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <i class="fas fa-phone text-blue-700"></i>
                             </div>
                             <input type="tel" id="appointment-phone" placeholder="Phone Number"
-                                class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
                         </div>
                     </div>
 
-                    <!-- Date Input -->
                     <div>
-                        <label for="appointment-date" class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                        <label for="appointment-date" class="block text-sm font-semibold text-gray-700 mb-2">Date</label>
                         <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <i class="fas fa-calendar text-gray-400"></i>
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <i class="fas fa-calendar-alt text-blue-700"></i>
                             </div>
                             <input type="date" id="appointment-date"
-                                class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
                         </div>
                     </div>
 
-                    <!-- Time Input -->
                     <div>
-                        <label for="appointment-time" class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                        <label for="appointment-time" class="block text-sm font-semibold text-gray-700 mb-2">Time</label>
                         <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <i class="fas fa-clock text-gray-400"></i>
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <i class="fas fa-clock text-blue-700"></i>
                             </div>
                             <input type="time" id="appointment-time"
-                                class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
                         </div>
                     </div>
 
-                    <!-- Action Button -->
-                    <a href="book-appointment.html"
-                        class="btn-primary bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-2.5 rounded-lg transition transform hover:scale-105 text-center w-full">
-                        Book Appointment
-                    </a>
-                </div>
+                    <button type="submit"
+                        class="btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105 w-full">
+                        Book Now
+                    </button>
+                </form>
             </div>
         </div>
-
+        <!-- Background Blobs (for visual interest) -->
+        <div
+            class="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute -bottom-8 left-1/4 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000">
+        </div>
+        <div
+            class="absolute top-1/2 left-1/2 w-56 h-56 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-1000 transform -translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 right-1/4 w-60 h-60 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-3000">
+        </div>
     </section>
 
-    <!-- Features Section -->
     <section class="py-24 bg-slate-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
                 <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
-                    <h2 class="text-4xl font-bold text-gray-900">Why Choose Dentic?</h2>
+                    <h2 class="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-gray-900">Why Choose Dentic?</h2>
                 </div>
                 <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-duration="800"
                     data-aos-delay="200">We provide comprehensive dental care with the latest technology and a
@@ -187,7 +239,7 @@
                         data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
                         <i class="fas fa-teeth text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">General Dentistry</h3>
+                    <h3 class="text-xl font-bold mb-3">General Dentistry</h3>
                     <p class="opacity-80">Regular checkups, cleanings, fillings, and preventive care to maintain your
                         oral health.</p>
                 </div>
@@ -198,7 +250,7 @@
                         data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
                         <i class="fas fa-tooth text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Cosmetic Dentistry</h3>
+                    <h3 class="text-xl font-bold mb-3">Cosmetic Dentistry</h3>
                     <p class="opacity-80">Teeth whitening, veneers, and other treatments to enhance your smile's
                         appearance.</p>
                 </div>
@@ -209,7 +261,7 @@
                         data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
                         <i class="fas fa-teeth-open text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Orthodontics</h3>
+                    <h3 class="text-xl font-bold mb-3">Orthodontics</h3>
                     <p class="opacity-80">Braces and aligners to correct misaligned teeth and improve your bite.</p>
                 </div>
             </div>
@@ -229,9 +281,10 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2" data-aos="flip-left" data-aos-duration="400"
-                    data-aos-delay="200">
-                    <div class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
+                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2"
+                    data-aos="flip-left" data-aos-duration="400" data-aos-delay="200">
+                    <div
+                        class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
                         <i class="fas fa-tooth"></i>
                     </div>
                     <div
@@ -239,16 +292,18 @@
                         <i class="fas fa-tooth text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-gray-800">Teeth Cleaning</h3>
-                    <p class="text-white mb-4 group-hover:text-gray-600">Professional cleaning to remove plaque and tartar for healthier teeth
+                    <p class="text-white mb-4 group-hover:text-gray-600">Professional cleaning to remove plaque and
+                        tartar for healthier teeth
                         and gums.</p>
                     <a href="#" class="text-white font-medium flex items-center learn-more group-hover:text-blue-500">
                         Learn More <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
-                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2" data-aos="flip-left" data-aos-duration="400"
-                    data-aos-delay="300">
-                    <div class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
+                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2"
+                    data-aos="flip-left" data-aos-duration="400" data-aos-delay="300">
+                    <div
+                        class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
                         <i class="fas fa-box-tissue"></i>
                     </div>
                     <div
@@ -256,16 +311,18 @@
                         <i class="fas fa-box-tissue text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-gray-800">Dental Fillings</h3>
-                    <p class="text-white mb-4 group-hover:text-gray-600">Restore damaged teeth with tooth-colored fillings that look natural.
+                    <p class="text-white mb-4 group-hover:text-gray-600">Restore damaged teeth with tooth-colored
+                        fillings that look natural.
                     </p>
                     <a href="#" class="text-white font-medium flex items-center learn-more group-hover:text-blue-500">
                         Learn More <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
-                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2" data-aos="flip-left" data-aos-duration="400"
-                    data-aos-delay="400">
-                    <div class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
+                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2"
+                    data-aos="flip-left" data-aos-duration="400" data-aos-delay="400">
+                    <div
+                        class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
                         <i class="fas fa-microscope"></i>
                     </div>
                     <div
@@ -273,15 +330,17 @@
                         <i class="fas fa-microscope text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-gray-800">Root Canal</h3>
-                    <p class="text-white mb-4 group-hover:text-gray-600">Save infected teeth with our painless root canal treatments.</p>
+                    <p class="text-white mb-4 group-hover:text-gray-600">Save infected teeth with our painless root
+                        canal treatments.</p>
                     <a href="#" class="text-white font-medium flex items-center learn-more group-hover:text-blue-500">
                         Learn More <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
-                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2" data-aos="flip-left" data-aos-duration="400"
-                    data-aos-delay="500">
-                    <div class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
+                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2"
+                    data-aos="flip-left" data-aos-duration="400" data-aos-delay="500">
+                    <div
+                        class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
                         <i class="fas fa-gem"></i>
                     </div>
                     <div
@@ -289,16 +348,18 @@
                         <i class="fas fa-gem text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-gray-800">Teeth Whitening</h3>
-                    <p class="text-white mb-4 group-hover:text-gray-600">Brighten your smile with our professional teeth whitening treatments.
+                    <p class="text-white mb-4 group-hover:text-gray-600">Brighten your smile with our professional teeth
+                        whitening treatments.
                     </p>
                     <a href="#" class="text-white font-medium flex items-center learn-more group-hover:text-blue-500">
                         Learn More <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
-                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2" data-aos="flip-left" data-aos-duration="400"
-                    data-aos-delay="600">
-                    <div class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
+                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2"
+                    data-aos="flip-left" data-aos-duration="400" data-aos-delay="600">
+                    <div
+                        class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
                         <i class="fas fa-bone"></i>
                     </div>
                     <div
@@ -306,16 +367,18 @@
                         <i class="fas fa-bone text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-gray-800">Dental Implants</h3>
-                    <p class="text-white mb-4 group-hover:text-gray-600">Replace missing teeth with durable and natural-looking dental
+                    <p class="text-white mb-4 group-hover:text-gray-600">Replace missing teeth with durable and
+                        natural-looking dental
                         implants.</p>
                     <a href="#" class="text-white font-medium flex items-center learn-more group-hover:text-blue-500">
                         Learn More <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
-                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2" data-aos="flip-left" data-aos-duration="400"
-                    data-aos-delay="700">
-                    <div class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
+                <div class="service-card relative bg-gradient-to-r from-[#2563eb] to-blue-700 hover:bg-gradient-to-b hover:from-blue-50 hover:to-blue-100 p-6 rounded-lg group transition transform hover:scale-105 hover:-translate-y-2"
+                    data-aos="flip-left" data-aos-duration="400" data-aos-delay="700">
+                    <div
+                        class="absolute top-0 right-0 text-white text-8xl opacity-20 -mr-4 mt-4 group-hover:opacity-10 transition-opacity duration-300">
                         <i class="fas fa-user-md"></i>
                     </div>
                     <div
@@ -323,7 +386,8 @@
                         <i class="fas fa-user-md text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-gray-800">Veneers</h3>
-                    <p class="text-white mb-4 group-hover:text-gray-600">Transform your smile with custom-made porcelain veneers.</p>
+                    <p class="text-white mb-4 group-hover:text-gray-600">Transform your smile with custom-made porcelain
+                        veneers.</p>
                     <a href="#" class="text-white font-medium flex items-center learn-more group-hover:text-blue-500">
                         Learn More <i class="fas fa-arrow-right ml-2"></i>
                     </a>
@@ -332,56 +396,73 @@
         </div>
     </section>
 
-    <!-- Doctors Section -->
     <section id="doctors" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-bold text-gray-800">Meet Our Expert Dentists</h2>
                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Our team of dedicated and experienced dental professionals is here to provide you with exceptional care.
+                    Our team of dedicated and experienced dental professionals is here to provide you with exceptional
+                    care.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- Doctor 1 -->
-                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110" alt="Dr. Sarah Johnson">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                        alt="Dr. Sarah Johnson">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold">Dr. Sarah Johnson</h3>
                                 <p class="text-lg">General Dentist</p>
-                                <div class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
-                                    <p class="my-4 text-base">15+ years of experience in general and cosmetic dentistry.</p>
+                                <div
+                                    class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
+                                    <p class="my-4 text-base">15+ years of experience in general and cosmetic dentistry.
+                                    </p>
                                     <div class="flex justify-center space-x-4">
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-            
-            
+
+
                 </div>
 
-                <!-- Doctor 2 -->
-                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-on-grey_651396-974.jpg" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110" alt="Dr. Michael Chen">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-on-grey_651396-974.jpg"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                        alt="Dr. Michael Chen">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold">Dr. Michael Chen</h3>
                                 <p class="text-lg">Orthodontist</p>
-                                <div class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
+                                <div
+                                    class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
                                     <p class="my-4 text-base">Specialized in braces and aligners for all age groups.</p>
                                     <div class="flex justify-center space-x-4">
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -389,21 +470,30 @@
                     </div>
                 </div>
 
-                <!-- Doctor 3 -->
-                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110" alt="Dr. Emily Rodriguez">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in"
+                    data-aos-delay="300">
+                    <img src="https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                        alt="Dr. Emily Rodriguez">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold">Dr. Emily Rodriguez</h3>
                                 <p class="text-lg">Pediatric Dentist</p>
-                                <div class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
-                                    <p class="my-4 text-base">Creating positive dental experiences for children and teens.</p>
+                                <div
+                                    class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
+                                    <p class="my-4 text-base">Creating positive dental experiences for children and
+                                        teens.</p>
                                     <div class="flex justify-center space-x-4">
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -411,21 +501,30 @@
                     </div>
                 </div>
 
-                <!-- Doctor 4 -->
-                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110" alt="Dr. James Wilson">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in"
+                    data-aos-delay="400">
+                    <img src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg"
+                        class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                        alt="Dr. James Wilson">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-blue-700 via-transparent to-transparent group-hover:bg-gradient-to-b group-hover:from-blue-700 group-hover:to-blue-500 transition-all duration-300">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:bottom-1/2 group-hover:translate-y-1/2">
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold">Dr. James Wilson</h3>
                                 <p class="text-lg">Oral Surgeon</p>
-                                <div class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
-                                    <p class="my-4 text-base">Expert in dental implants, extractions, and oral surgery.</p>
+                                <div
+                                    class="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-300 delay-200">
+                                    <p class="my-4 text-base">Expert in dental implants, extractions, and oral surgery.
+                                    </p>
                                     <div class="flex justify-center space-x-4">
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-white hover:text-blue-200"><i
+                                                class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -436,16 +535,17 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-24 bg-gradient-to-b from-blue-50 to-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                <!-- Image Content -->
                 <div class="w-full lg:w-5/12" data-aos="fade-right" data-aos-duration="800">
                     <div class="relative">
-                        <img src="/Main Files/assets/img/dentist.jpg" alt="Patient in dental chair" class="rounded-2xl shadow-2xl w-full h-auto object-cover">
-                        <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-2 sm:p-4 rounded-xl shadow-lg flex items-center gap-2 sm:gap-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 text-white rounded-full flex items-center justify-center">
+                        <img src="/Main Files/assets/img/dentist.jpg" alt="Patient in dental chair"
+                            class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                        <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-2 sm:p-4 rounded-xl shadow-lg flex items-center gap-2 sm:gap-4"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 text-white rounded-full flex items-center justify-center">
                                 <i class="fas fa-award text-xl sm:text-2xl"></i>
                             </div>
                             <div>
@@ -456,50 +556,60 @@
                     </div>
                 </div>
 
-                <!-- Text Content -->
                 <div class="w-full lg:w-6/12" data-aos="fade-left" data-aos-duration="800">
                     <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
                         <h2 class="text-4xl font-bold text-gray-900">Your Smile, Our Passion</h2>
                     </div>
                     <p class="text-gray-600 text-lg mb-6">
-                        For over 15 years, Dentic has been the cornerstone of exceptional dental care in our community. We blend cutting-edge technology with a personal touch to create a dental experience that's both comfortable and effective.
+                        For over 15 years, Dentic has been the cornerstone of exceptional dental care in our community.
+                        We blend cutting-edge technology with a personal touch to create a dental experience that's both
+                        comfortable and effective.
                     </p>
 
                     <div class="space-y-5 mb-8">
                         <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <i class="fas fa-microscope text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="font-semibold text-gray-800">Advanced Technology</h3>
-                                <p class="text-gray-600">Utilizing state-of-the-art equipment for precise diagnostics and treatment.</p>
+                                <p class="text-gray-600">Utilizing state-of-the-art equipment for precise diagnostics
+                                    and treatment.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <i class="fas fa-user-friends text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="font-semibold text-gray-800">Patient-Centered Care</h3>
-                                <p class="text-gray-600">Your comfort and health are our top priorities, from start to finish.</p>
+                                <p class="text-gray-600">Your comfort and health are our top priorities, from start to
+                                    finish.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div
+                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <i class="fas fa-graduation-cap text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="font-semibold text-gray-800">Expert Team</h3>
-                                <p class="text-gray-600">Our professionals are continuously trained to provide the best care.</p>
+                                <p class="text-gray-600">Our professionals are continuously trained to provide the best
+                                    care.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-6 items-center">
                         <div class="flex -space-x-4">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patient 1" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Patient 2" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient 3" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patient 1"
+                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Patient 2"
+                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient 3"
+                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
                         </div>
                         <div>
                             <p class="font-bold text-gray-800">Join 10,000+ Happy Patients</p>
@@ -511,7 +621,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials" class="py-24 bg-blue-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
@@ -522,12 +631,15 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-600 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-600 transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center mb-6">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-16 h-16 rounded-full shadow-md" alt="Robert Johnson">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                            class="w-16 h-16 rounded-full shadow-md" alt="Robert Johnson">
                         <div class="ml-4">
-                            <h4 class="text-lg font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Robert Johnson</h4>
+                            <h4
+                                class="text-lg font-bold text-gray-800 group-hover:text-white transition-colors duration-300">
+                                Robert Johnson</h4>
                             <div class="flex text-yellow-400 mt-1">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -537,15 +649,20 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic group-hover:text-gray-200 transition-colors duration-300">"I've been coming to Dentic for years. The staff is always friendly and professional. Dr. Sarah made my root canal completely painless!"</p>
+                    <p class="text-gray-600 italic group-hover:text-gray-200 transition-colors duration-300">"I've been
+                        coming to Dentic for years. The staff is always friendly and professional. Dr. Sarah made my
+                        root canal completely painless!"</p>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-600 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-600 transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center mb-6">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-16 h-16 rounded-full shadow-md" alt="Jennifer Martinez">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                            class="w-16 h-16 rounded-full shadow-md" alt="Jennifer Martinez">
                         <div class="ml-4">
-                            <h4 class="text-lg font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Jennifer Martinez</h4>
+                            <h4
+                                class="text-lg font-bold text-gray-800 group-hover:text-white transition-colors duration-300">
+                                Jennifer Martinez</h4>
                             <div class="flex text-yellow-400 mt-1">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -555,15 +672,20 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic group-hover:text-gray-200 transition-colors duration-300">"The teeth whitening treatment transformed my smile! I feel so much more confident now. Thank you, Dentic team!"</p>
+                    <p class="text-gray-600 italic group-hover:text-gray-200 transition-colors duration-300">"The teeth
+                        whitening treatment transformed my smile! I feel so much more confident now. Thank you, Dentic
+                        team!"</p>
                 </div>
 
-                <!-- Testimonial 3 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-600 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-600 transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center mb-6">
-                        <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-16 h-16 rounded-full shadow-md" alt="Thomas Williams">
+                        <img src="https://randomuser.me/api/portraits/men/46.jpg"
+                            class="w-16 h-16 rounded-full shadow-md" alt="Thomas Williams">
                         <div class="ml-4">
-                            <h4 class="text-lg font-bold text-gray-800 group-hover:text-white transition-colors duration-300">Thomas Williams</h4>
+                            <h4
+                                class="text-lg font-bold text-gray-800 group-hover:text-white transition-colors duration-300">
+                                Thomas Williams</h4>
                             <div class="flex text-yellow-400 mt-1">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -573,23 +695,29 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic group-hover:text-gray-200 transition-colors duration-300">"My dental implants look and feel completely natural. The entire process was smooth, and the results exceeded my expectations."</p>
+                    <p class="text-gray-600 italic group-hover:text-gray-200 transition-colors duration-300">"My dental
+                        implants look and feel completely natural. The entire process was smooth, and the results
+                        exceeded my expectations."</p>
                 </div>
             </div>
 
             <div class="text-center mt-12">
-                <button class="btn-primary bg-blue-500 text-white px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 hover:bg-blue-600" data-aos="fade-up">
+                <button
+                    class="btn-primary bg-blue-500 text-white px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 hover:bg-blue-600"
+                    data-aos="fade-up">
                     Read More Reviews
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="relative py-20 bg-blue-900" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+    <section id="contact" class="relative py-20 bg-blue-900"
+        style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-blue-800 opacity-80"></div>
         <div class="container mx-auto px-4 relative">
             <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden md:flex">
-                <div class="w-full md:w-2/5 bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8" data-aos="fade-right">
+                <div class="w-full md:w-2/5 bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8"
+                    data-aos="fade-right">
                     <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
                     <p class="opacity-90 mb-8">
                         We're here to help you achieve the perfect smile. Contact us for appointments or any inquiries.
@@ -624,23 +752,32 @@
                     <form>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
                             <div>
-                                <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                                <input type="text" id="contact-name" placeholder="John Doe" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <label for="contact-name"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="contact-name" placeholder="John Doe"
+                                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div>
-                                <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                <input type="email" id="contact-email" placeholder="john.doe@example.com" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <label for="contact-email"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="contact-email" placeholder="john.doe@example.com"
+                                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                         </div>
                         <div class="mb-5">
-                            <label for="contact-subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                            <input type="text" id="contact-subject" placeholder="Appointment Inquiry" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <label for="contact-subject"
+                                class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="contact-subject" placeholder="Appointment Inquiry"
+                                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div class="mb-6">
-                            <label for="contact-message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea id="contact-message" placeholder="Your message..." rows="4" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            <label for="contact-message"
+                                class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="contact-message" placeholder="Your message..." rows="4"
+                                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                         </div>
-                        <button class="w-full btn-primary bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105">
+                        <button
+                            class="w-full btn-primary bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition transform hover:scale-105">
                             Submit Now
                         </button>
                     </form>
@@ -649,13 +786,16 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-blue-700 to-blue-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full -translate-x-1/4 -translate-y-1/4" aria-hidden="true"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full translate-x-1/4 translate-y-1/4" aria-hidden="true"></div>
+        <div class="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full -translate-x-1/4 -translate-y-1/4"
+            aria-hidden="true"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full translate-x-1/4 translate-y-1/4"
+            aria-hidden="true"></div>
         <div class="container mx-auto px-4 text-center relative">
-            <h2 class="text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="800">Ready to Improve Your Smile?</h2>
-            <p class="text-blue-200 max-w-2xl mx-auto mb-8 text-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <h2 class="text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="800">Ready to Improve Your Smile?
+            </h2>
+            <p class="text-blue-200 max-w-2xl mx-auto mb-8 text-lg" data-aos="fade-up" data-aos-duration="800"
+                data-aos-delay="200">
                 Schedule your appointment today and take the first step towards better dental health.
             </p>
             <a href="book-appointment.html" role="button"
@@ -729,10 +869,8 @@
         </div>
     </footer>
 
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="httpss://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
 </body>
 

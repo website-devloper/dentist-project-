@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Satoshi:wght@400;500;700&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Satoshi', 'Manrope', 'Outfit', sans-serif;
+}
+p, a, li, span, div, label, input, button, textarea {
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-bg {
