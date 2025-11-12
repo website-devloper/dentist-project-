@@ -40,55 +40,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Number counter animation
-function animateCounter(elementId, finalValue, duration = 2000) {
-    const element = document.getElementById(elementId);
-    const startValue = 0;
-    const increment = finalValue / (duration / 16); // 60fps
-
-    let currentValue = startValue;
-
-    const timer = setInterval(() => {
-        currentValue += increment;
-        if (currentValue >= finalValue) {
-            clearInterval(timer);
-            currentValue = finalValue;
-        }
-
-        if (elementId === 'rating-counter') {
-            element.textContent = currentValue.toFixed(1);
-        } else {
-            element.textContent = Math.floor(currentValue).toLocaleString() + '+';
-        }
-    }, 16);
-}
-
-// Intersection Observer to trigger counters when in view
-const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Start counters with different durations for variety
-            animateCounter('years-counter', 15, 1500);
-            animateCounter('patients-counter', 5000, 2000);
-            animateCounter('rating-counter', 4.9, 1800);
-
-            // Stop observing after animation starts
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe the about section
-const aboutSection = document.getElementById('about');
-if (aboutSection) {
-    observer.observe(aboutSection);
-}
-
 // Form submission handler
 document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', function (e) {
@@ -145,5 +96,30 @@ document.querySelectorAll('.text-gray-800.py-2').forEach(date => {
             // Add background to clicked date
             this.classList.add('bg-blue-100', 'rounded-full', 'font-medium');
         });
+    }
+});
+
+// Testimonial Swiper
+var swiper = new Swiper('.testimonial-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
     }
 });

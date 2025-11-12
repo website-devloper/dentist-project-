@@ -8,8 +8,15 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Satoshi', 'Manrope', 'Outfit', sans-serif;
+}
+p, a, li, span, div, label, input, button, textarea {
+    font-family: 'Poppins', sans-serif;
 }
 
 .navbar-brand {
