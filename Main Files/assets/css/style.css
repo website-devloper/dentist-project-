@@ -582,4 +582,25 @@ p, a, li, span, div, label, input, button, textarea {
     color: #007aff;
 }
 
+/* Work Process Hover Effects */
+.work-step {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.work-step:hover {
+    transform: translateY(-10px);
+}
+
+.work-step .step-icon {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.work-step:hover .step-icon {
+    background-color: #1D4ED8; /* blue-500 */
+    color: white;
+    transform: rotate(360deg) scale(1.1);
+}
+
+.work-step:hover .step-icon i {
+    color: white;
+}
