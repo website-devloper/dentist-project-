@@ -13,11 +13,11 @@ p, a, li, span, div, label, input, button, textarea {
     font-family: 'Poppins', sans-serif;
 }
 
-.hero-bg {
+/* .hero-bg {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     position: relative;
     overflow: hidden;
-}
+} */
 
 .hero-form-input {
     @apply bg-gray-50 px-4 py-2 rounded-lg w-full;
