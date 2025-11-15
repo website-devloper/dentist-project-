@@ -19,6 +19,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Satoshi:wght@400;500;700&display=swap"
         rel="stylesheet">
+    <!-- Fancybox CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
     <style>
         h1,
         h2,
@@ -72,6 +76,8 @@
                     class="nav-link  font-semibold text-gray-600 hover:text-blue-600 transition-colors">About</a>
                 <a href="#testimonials"
                     class="nav-link text-gray-600 font-semibold hover:text-blue-600 transition-colors">Testimonials</a>
+                <a href="#gallery"
+                    class="nav-link text-gray-600 font-semibold hover:text-blue-600 transition-colors">Gallery</a>
                 <a href="#contact"
                     class="nav-link font-semibold text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
                 <a href="book-appointment.html"
@@ -238,16 +244,111 @@
         </div>
     </section>
 
-    <section class="py-24 bg-slate-50">
+
+
+
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="w-full lg:w-5/12" data-aos="fade-right" data-aos-duration="800">
+                    <div class="relative">
+                        <img src="assets/img/dentist.jpg" alt="Patient in dental chair"
+                            class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                        <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-2 sm:p-4 rounded-xl shadow-lg flex items-center gap-2 sm:gap-4"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 text-white rounded-full flex items-center justify-center">
+                                <i class="fas fa-award text-xl sm:text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm sm:text-base">Top-Rated Clinic</p>
+                                <p class="text-xs sm:text-sm text-gray-600 ">Awarded for Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-6/12" data-aos="fade-left" data-aos-duration="800">
+                    <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                            Your <span class="text-blue-600">Smile</span>, Our <span
+                                class="text-blue-600">Passion</span>
+                        </h2>
+                    </div>
+
+                    <p class="text-gray-600 text-lg mb-6">
+                        For over 15 years, Dentic has been the cornerstone of exceptional dental care in our community.
+                        We blend cutting-edge technology with a personal touch to create a dental experience that's both
+                        comfortable and effective.
+                    </p>
+
+                    <div class="space-y-5 mb-8">
+                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
+                            <div
+                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-microscope text-xl text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold text-gray-800">Advanced Technology</h3>
+                                <p class="text-gray-600">Utilizing state-of-the-art equipment for precise diagnostics
+                                    and treatment.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-user-friends text-xl text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold text-gray-800">Patient-Centered Care</h3>
+                                <p class="text-gray-600 ">Your comfort and health are our top priorities, from start to
+                                    finish.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
+                            <div
+                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-graduation-cap text-xl text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold text-gray-800">Expert Team</h3>
+                                <p class="text-gray-600">Our professionals are continuously trained to provide the best
+                                    care.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-6 items-center">
+                        <div class="flex -space-x-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patient 1"
+                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Patient 2"
+                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient 3"
+                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Join 10,000+ Happy Patients</p>
+                            <p class="text-gray-600">Start your journey to a healthier smile today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-24 bg-gradient-to-b from-blue-50 to-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
                 <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
-                    <h2 class="text-2xl sm:text-4xl lg:text-4xl font-extrabold text-gray-900">Why Choose Dentic?</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                        Why Choose <span class="text-blue-600">Dentic</span> for Your <span
+                            class="text-blue-600">Smile?</span>
+                    </h2>
                 </div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="200">We provide comprehensive dental care with the latest technology and a
-                    patient-centered approach.</p>
             </div>
+
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="feature-card bg-gradient-to-b from-white to-blue-100 text-gray-800 p-8 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gradient-to-br hover:from-blue-800 hover:to-[#2563eb] hover:text-white"
@@ -285,13 +386,16 @@
         </div>
     </section>
 
-    <section id="services" class="py-16 bg-white">
+    <section id="services" class="py-16 bg-blue-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
-                    <h2 class="text-4xl font-extrabold text-gray-800" data-aos="fade-up" data-aos-duration="800">Our
-                        Services</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight" data-aos="fade-up"
+                        data-aos-duration="800">
+                        Our <span class="text-blue-600">Services</span>
+                    </h2>
                 </div>
+
                 <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800"
                     data-aos-delay="200">We offer a wide range of dental services to meet all your oral health needs.
                 </p>
@@ -415,7 +519,9 @@
     <section id="doctors" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-extrabold text-gray-800">Meet Our Expert Dentists</h2>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                    Meet Our <span class="text-blue-600">Expert</span> Dentists
+                </h2>
                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
                     Our team of dedicated and experienced dental professionals is here to provide you with exceptional
                     care.
@@ -425,7 +531,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                 <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in"
                     data-aos-delay="100">
-                    <img src="https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg"
+                    <img src="assets/img/doctor1.jpg"
                         class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
                         alt="Dr. Sarah Johnson">
 
@@ -461,7 +567,7 @@
 
                 <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in"
                     data-aos-delay="200">
-                    <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-on-grey_651396-974.jpg"
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
                         alt="Dr. Michael Chen">
 
@@ -494,7 +600,7 @@
 
                 <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in"
                     data-aos-delay="300">
-                    <img src="https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg"
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
                         alt="Dr. Emily Rodriguez">
 
@@ -528,7 +634,7 @@
 
                 <div class="relative rounded-lg overflow-hidden shadow-lg group" data-aos="zoom-in"
                     data-aos-delay="400">
-                    <img src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg"
+                    <img src="https://plus.unsplash.com/premium_photo-1661764878654-3d0fc2eefcca?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
                         alt="Dr. James Wilson">
 
@@ -563,96 +669,359 @@
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-gradient-to-b from-blue-50 to-white">
+
+
+
+
+    <section id="gallery" class="py-24 bg-gradient-to-b from-blue-100 to-white">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                <div class="w-full lg:w-5/12" data-aos="fade-right" data-aos-duration="800">
-                    <div class="relative">
-                        <img src="/Main Files/assets/img/dentist.jpg" alt="Patient in dental chair"
-                            class="rounded-2xl shadow-2xl w-full h-auto object-cover">
-                        <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-2 sm:p-4 rounded-xl shadow-lg flex items-center gap-2 sm:gap-4"
-                            data-aos="fade-up" data-aos-delay="200">
-                            <div
-                                class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 text-white rounded-full flex items-center justify-center">
-                                <i class="fas fa-award text-xl sm:text-2xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-gray-800 text-sm sm:text-base">Top-Rated Clinic</p>
-                                <p class="text-xs sm:text-sm text-gray-600 ">Awarded for Excellence</p>
-                            </div>
-                        </div>
+
+            <!-- Heading -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                    Our Clinic & <span class="text-blue-600">Happy Smiles</span>
+                </h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    A glimpse into our state-of-the-art facility and the beautiful smiles we've helped create.
+                </p>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="columns-2 md:columns-3 gap-6 space-y-6">
+
+                <!-- Image 1 -->
+                <a data-fancybox="gallery" href="assets/img/dentist.jpg"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/photo-smiling-dentist-standing-with-arms-crossed-with-her-colleague-showing-okay-sign.jpg"
+                        class="w-full rounded-lg group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Dentist at work">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl font-bold text-center px-4">Dentist at work</p>
                     </div>
+                </a>
+
+                <!-- Image 2 -->
+                <a data-fancybox="gallery" href="assets/img/beautiful-woman-happy-dentist.jpg"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/beautiful-woman-happy-dentist.jpg"
+                        class="w-full rounded-lg group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Happy patient with dentist">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl font-bold text-center px-4">Happy patient with dentist</p>
+                    </div>
+                </a>
+
+                <!-- Image 3 -->
+                <a data-fancybox="gallery" href="assets/img/dental-cabinet-with-various-medical-equipment.jpg"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/dental-cabinet-with-various-medical-equipment.jpg"
+                        class="w-full rounded-lg group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Modern dental clinic">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl font-bold text-center px-4">Modern dental clinic</p>
+                    </div>
+                </a>
+
+                <!-- Image 4 -->
+                <a data-fancybox="gallery" href="assets/img/dentist-doing-check-up-patient.jpg"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/dentist-doing-check-up-patient.jpg"
+                        class="w-full rounded-lg group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Dentist performing a check-up">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl font-bold text-center px-4">Dentist performing a check-up</p>
+                    </div>
+                </a>
+
+                <!-- Image 5 -->
+                <a data-fancybox="gallery" href="assets/img/happy-male-dentist-holding-big-teeth-model-clinic.jpg"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/happy-male-dentist-holding-big-teeth-model-clinic.jpg"
+                        class="w-full rounded-lg group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Dentist with a teeth model">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl font-bold text-center px-4">Dentist with a teeth model</p>
+                    </div>
+                </a>
+
+                <!-- Image 6 -->
+                <a data-fancybox="gallery" href="assets/img/heroImage.png"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/portrait-happy-male-doctor-with-female-patient.jpg"
+                        class="w-full h-full group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Smile gallery">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl font-bold text-center px-4">Smile gallery</p>
+                    </div>
+                </a>
+
+                <!-- Image 7 -->
+                <a data-fancybox="gallery" href="assets/img/medicine-health-female-aged-sheltered.jpg"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/medicine-health-female-aged-sheltered.jpg"
+                        class="w-full rounded-lg group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Caring for a senior patient">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl font-bold text-center px-4">Caring for a senior patient</p>
+                    </div>
+                </a>
+
+                <!-- Image 8 -->
+                <a data-fancybox="gallery" href="assets/img/medium-shot-smiley-women-high-five.jpg"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/medium-shot-smiley-women-high-five.jpg"
+                        class="w-full rounded-lg group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Happy team members">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl font-bold text-center px-4">Happy team members</p>
+                    </div>
+                </a>
+
+                <!-- Image 9 -->
+                <a data-fancybox="gallery" href="assets/img/patient-looking-her-face-mirror.jpg"
+                    class="group block overflow-hidden rounded-lg relative shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <img src="assets/img/patient-looking-her-face-mirror.jpg"
+                        class="w-full rounded-lg group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        alt="Patient admiring her new smile">
+                    <div
+                        class="absolute inset-0 bg-blue-700/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                        <p class="text-white text-2xl
+                         font-bold text-center px-4">Patient admiring her new smile</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="work-process" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                        Our Work <span class="text-blue-600">Process</span>
+                    </h2>
+                </div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="200">A streamlined and efficient journey to your perfect smile.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Dotted line connector -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5">
+                    <svg width="100%" height="100%">
+                        <line x1="0" y1="0" x2="100%" y2="0" stroke-width="2" stroke-dasharray="10,10"
+                            class="stroke-blue-300" />
+                    </svg>
                 </div>
 
-                <div class="w-full lg:w-6/12" data-aos="fade-left" data-aos-duration="800">
-                    <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
-                        <h2 class="text-4xl font-extrabold text-gray-900">Your Smile, Our Passion</h2>
-                    </div>
-                    <p class="text-gray-600 text-lg mb-6">
-                        For over 15 years, Dentic has been the cornerstone of exceptional dental care in our community.
-                        We blend cutting-edge technology with a personal touch to create a dental experience that's both
-                        comfortable and effective.
-                    </p>
-
-                    <div class="space-y-5 mb-8">
-                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <!-- Step 1 -->
+                    <div class="work-step text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <div class="relative inline-block">
                             <div
-                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-microscope text-xl text-blue-600" ></i>
+                                class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-lg mb-4 step-icon border-4 border-blue-200">
+                                <i class="fas fa-calendar-check text-4xl"></i>
                             </div>
-                            <div>
-                                <h3 class="font-extrabold text-gray-800">Advanced Technology</h3>
-                                <p class="text-gray-600">Utilizing state-of-the-art equipment for precise diagnostics
-                                    and treatment.</p>
-                            </div>
+                            <span
+                                class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</span>
                         </div>
-                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
-                            <div
-                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-user-friends text-xl text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-extrabold text-gray-800">Patient-Centered Care</h3>
-                                <p class="text-gray-600 ">Your comfort and health are our top priorities, from start to
-                                    finish.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
-                            <div
-                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-graduation-cap text-xl text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-extrabold text-gray-800">Expert Team</h3>
-                                <p class="text-gray-600">Our professionals are continuously trained to provide the best
-                                    care.</p>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-extrabold text-gray-800 mb-2">Book an Appointment</h3>
+                        <p class="text-gray-600">Easily schedule your visit online or by phone.</p>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-6 items-center">
-                        <div class="flex -space-x-4">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patient 1"
-                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Patient 2"
-                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient 3"
-                                class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                    <!-- Step 2 -->
+                    <div class="work-step text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="relative inline-block">
+                            <div
+                                class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-lg mb-4 step-icon border-4 border-blue-200">
+                                <i class="fas fa-stethoscope text-4xl"></i>
+                            </div>
+                            <span
+                                class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</span>
                         </div>
-                        <div>
-                            <p class="font-bold text-gray-800">Join 10,000+ Happy Patients</p>
-                            <p class="text-gray-600">Start your journey to a healthier smile today.</p>
+                        <h3 class="text-xl font-extrabold text-gray-800 mb-2">Consultation</h3>
+                        <p class="text-gray-600">Meet our experts for a thorough examination.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="work-step text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                        <div class="relative inline-block">
+                            <div
+                                class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-lg mb-4 step-icon border-4 border-blue-200">
+                                <i class="fas fa-tooth text-4xl"></i>
+                            </div>
+                            <span
+                                class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</span>
                         </div>
+                        <h3 class="text-xl font-extrabold text-gray-800 mb-2">Treatment</h3>
+                        <p class="text-gray-600">Receive personalized and gentle dental care.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="work-step text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                        <div class="relative inline-block">
+                            <div
+                                class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-lg mb-4 step-icon border-4 border-blue-200">
+                                <i class="fas fa-smile-beam text-4xl"></i>
+                            </div>
+                            <span
+                                class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-gray-800 mb-2">A Perfect Smile</h3>
+                        <p class="text-gray-600">Enjoy your healthy and beautiful new smile.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="py-24 bg-blue-50">
+    <section id="pricing" class="py-24 bg-gradient-to-t from-blue-50 to-white">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                    <span class="text-blue-600">Affordable</span> Pricing for a <span
+                        class="text-blue-600">Priceless</span> Smile
+                </h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                    We offer a range of plans to suit your needs and budget. All our plans are designed to provide you
+                    with the best dental care possible.
+                </p>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-12">
+
+                <!-- Basic Plan -->
+                <div
+                    class="relative flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-8 transition-all duration-300 hover:border-blue-500 hover:shadow-2xl group transform hover:scale-105">
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-800">Basic Care</h3>
+                        <p class="text-gray-500 mt-2">For essential dental maintenance.</p>
+                        <div class="my-8">
+                            <span class="text-5xl font-extrabold text-gray-900">$49</span>
+                            <span class="text-lg text-gray-500">/visit</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Comprehensive Exam
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Professional Cleaning
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Annual X-Rays
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times-circle mr-3"></i> Cosmetic Procedures
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times-circle mr-3"></i> Orthodontic Treatment
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <a href="book-appointment.html"
+                            class="w-full text-center bg-gray-200 text-gray-800 font-bold py-4 px-8 rounded-lg transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">Get
+                            Started</a>
+                    </div>
+                </div>
+
+                <!-- Standard Plan (Most Popular) -->
+                <div
+                    class="relative flex flex-col bg-blue-600 text-white rounded-2xl p-8 shadow-2xl transform lg:scale-105 group">
+                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
+                        <div class="bg-yellow-400 text-gray-900 font-bold text-sm px-4 py-1 rounded-full uppercase">Most
+                            Popular</div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold">Pro Care</h3>
+                        <p class="text-blue-200 mt-2">The perfect balance of care and value.</p>
+                        <div class="my-8">
+                            <span class="text-5xl font-extrabold">$99</span>
+                            <span class="text-lg text-blue-200">/visit</span>
+                        </div>
+                        <ul class="space-y-4 text-blue-100">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-white mr-3"></i> Everything in Basic
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-white mr-3"></i> Teeth Whitening
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-white mr-3"></i> Minor Restorations
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-white mr-3"></i> Emergency Visit
+                            </li>
+                            <li class="flex items-center text-blue-300">
+                                <i class="fas fa-times-circle mr-3"></i> Orthodontic Treatment
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <a href="book-appointment.html"
+                            class="w-full text-center bg-white text-blue-600 font-bold py-4 px-8 rounded-lg hover:bg-blue-50 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 transform">Book
+                            Appointment</a>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div
+                    class="relative flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-8 transition-all duration-300 hover:border-blue-500 hover:shadow-2xl group transform hover:scale-105">
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-800">Total Care</h3>
+                        <p class="text-gray-500 mt-2">For comprehensive dental needs.</p>
+                        <div class="my-8">
+                            <span class="text-5xl font-extrabold text-gray-900">$149</span>
+                            <span class="text-lg text-gray-500">/visit</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Everything in Pro
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Major Restorations
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Dental Implants
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Orthodontic Consultation
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Priority Scheduling
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <a href="book-appointment.html"
+                            class="w-full text-center bg-gray-200 text-gray-800 font-bold py-4 px-8 rounded-lg transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">Go
+                            Premium</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="testimonials" class="py-24 bg-blue-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-extrabold text-gray-800">What Our Patients Say</h2>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                    What Our <span class="text-blue-600">Patients</span> Say
+                </h2>
                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
                     Hear from our satisfied patients and see why they trust us with their smiles.
                 </p>
@@ -662,12 +1031,12 @@
                 <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-700 transition-all duration-300 group"
                     data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center mb-6">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
-                            class="w-16 h-16 rounded-full shadow-md" alt="Robert Johnson">
+                        <img src="assets/img/testimonials/testimonial-1.jpg"
+                            class="w-16 h-16 rounded-full shadow-md object-cover" alt="Jessica Smith">
                         <div class="ml-4">
                             <h4
                                 class="text-lg font-extrabold text-gray-800 group-hover:text-white transition-colors duration-300">
-                                Robert Johnson</h4>
+                                Jessica Smith</h4>
                             <div class="flex text-yellow-400 mt-1">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -739,195 +1108,85 @@
         </div>
     </section>
 
-    <section id="work-process" class="py-24 bg-gray-50">
+
+
+
+    <section id="faq" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
-                <div class="inline-block border-b-4 border-blue-500 pb-2 mb-4">
-                    <h2 class="text-4xl font-extrabold text-gray-900">Our Work Process</h2>
-                </div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A streamlined and efficient journey to your perfect smile.</p>
-            </div>
-
-            <div class="relative">
-                <!-- Dotted line connector -->
-                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5">
-                    <svg width="100%" height="100%">
-                        <line x1="0" y1="0" x2="100%" y2="0" stroke-width="2" stroke-dasharray="10,10" class="stroke-blue-300" />
-                    </svg>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                    <!-- Step 1 -->
-                    <div class="work-step text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                        <div class="relative inline-block">
-                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-lg mb-4 step-icon border-4 border-blue-200">
-                                <i class="fas fa-calendar-check text-4xl"></i>
-                            </div>
-                            <span class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-gray-800 mb-2">Book an Appointment</h3>
-                        <p class="text-gray-600">Easily schedule your visit online or by phone.</p>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="work-step text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                        <div class="relative inline-block">
-                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-lg mb-4 step-icon border-4 border-blue-200">
-                                <i class="fas fa-stethoscope text-4xl"></i>
-                            </div>
-                            <span class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-gray-800 mb-2">Consultation</h3>
-                        <p class="text-gray-600">Meet our experts for a thorough examination.</p>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="work-step text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-                        <div class="relative inline-block">
-                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-lg mb-4 step-icon border-4 border-blue-200">
-                                <i class="fas fa-tooth text-4xl"></i>
-                            </div>
-                            <span class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-gray-800 mb-2">Treatment</h3>
-                        <p class="text-gray-600">Receive personalized and gentle dental care.</p>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="work-step text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-                        <div class="relative inline-block">
-                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-lg mb-4 step-icon border-4 border-blue-200">
-                                <i class="fas fa-smile-beam text-4xl"></i>
-                            </div>
-                            <span class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-gray-800 mb-2">A Perfect Smile</h3>
-                        <p class="text-gray-600">Enjoy your healthy and beautiful new smile.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-      <section id="pricing" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                    <span class="text-blue-600">Affordable</span> Pricing for a <span class="text-blue-600">Priceless</span> Smile
+                    Frequently Asked <span class="text-blue-600">Questions</span>
                 </h2>
-                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
-                    We offer a range of plans to suit your needs and budget. All our plans are designed to provide you with the best dental care possible.
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Have questions? We've got answers. Here are some of the most common questions we receive.
                 </p>
             </div>
-    
-            <!-- Pricing Cards -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-12">
-    
-                <!-- Basic Plan -->
-                <div class="relative flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-8 transition-all duration-300 hover:border-blue-500 hover:shadow-2xl group transform hover:scale-105">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-800">Basic Care</h3>
-                        <p class="text-gray-500 mt-2">For essential dental maintenance.</p>
-                        <div class="my-8">
-                            <span class="text-5xl font-extrabold text-gray-900">$49</span>
-                            <span class="text-lg text-gray-500">/visit</span>
-                        </div>
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Comprehensive Exam
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Professional Cleaning
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Annual X-Rays
-                            </li>
-                            <li class="flex items-center text-gray-400">
-                                <i class="fas fa-times-circle mr-3"></i> Cosmetic Procedures
-                            </li>
-                             <li class="flex items-center text-gray-400">
-                                <i class="fas fa-times-circle mr-3"></i> Orthodontic Treatment
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mt-8">
-                        <a href="book-appointment.html" class="w-full text-center bg-gray-200 text-gray-800 font-bold py-4 px-8 rounded-lg transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">Get Started</a>
+
+            <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border-b border-gray-200 py-6">
+                    <button
+                        class="faq-question w-full text-left flex justify-between items-center text-gray-800 hover:text-blue-600 focus:outline-none">
+                        <span class="text-xl font-semibold">What are your office hours?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600 pl-2">
+                        <p>Our office is open Monday to Friday from 9:00 AM to 6:00 PM, and on Saturday from 10:00 AM to
+                            4:00 PM. We are closed on Sundays.</p>
                     </div>
                 </div>
-    
-                <!-- Standard Plan (Most Popular) -->
-                <div class="relative flex flex-col bg-blue-600 text-white rounded-2xl p-8 shadow-2xl transform lg:scale-105 group">
-                     <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
-                        <div class="bg-yellow-400 text-gray-900 font-bold text-sm px-4 py-1 rounded-full uppercase">Most Popular</div>
-                    </div>
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold">Pro Care</h3>
-                        <p class="text-blue-200 mt-2">The perfect balance of care and value.</p>
-                        <div class="my-8">
-                            <span class="text-5xl font-extrabold">$99</span>
-                            <span class="text-lg text-blue-200">/visit</span>
-                        </div>
-                        <ul class="space-y-4 text-blue-100">
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-white mr-3"></i> Everything in Basic
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-white mr-3"></i> Teeth Whitening
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-white mr-3"></i> Minor Restorations
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-white mr-3"></i> Emergency Visit
-                            </li>
-                             <li class="flex items-center text-blue-300">
-                                <i class="fas fa-times-circle mr-3"></i> Orthodontic Treatment
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mt-8">
-                        <a href="book-appointment.html" class="w-full text-center bg-white text-blue-600 font-bold py-4 px-8 rounded-lg hover:bg-blue-50 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 transform">Book Appointment</a>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border-b border-gray-200 py-6">
+                    <button
+                        class="faq-question w-full text-left flex justify-between items-center text-gray-800 hover:text-blue-600 focus:outline-none">
+                        <span class="text-xl font-semibold">Do you accept dental insurance?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600 pl-2">
+                        <p>Yes, we accept a wide range of dental insurance plans. Please contact our office with your
+                            insurance information, and we'll be happy to verify your coverage.</p>
                     </div>
                 </div>
-    
-                <!-- Premium Plan -->
-                <div class="relative flex flex-col bg-white border-2 border-gray-200 rounded-2xl p-8 transition-all duration-300 hover:border-blue-500 hover:shadow-2xl group transform hover:scale-105">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-800">Total Care</h3>
-                        <p class="text-gray-500 mt-2">For comprehensive dental needs.</p>
-                        <div class="my-8">
-                            <span class="text-5xl font-extrabold text-gray-900">$149</span>
-                            <span class="text-lg text-gray-500">/visit</span>
-                        </div>
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Everything in Pro
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Major Restorations
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Dental Implants
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Orthodontic Consultation
-                            </li>
-                             <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i> Priority Scheduling
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mt-8">
-                        <a href="book-appointment.html" class="w-full text-center bg-gray-200 text-gray-800 font-bold py-4 px-8 rounded-lg transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">Go Premium</a>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border-b border-gray-200 py-6">
+                    <button
+                        class="faq-question w-full text-left flex justify-between items-center text-gray-800 hover:text-blue-600 focus:outline-none">
+                        <span class="text-xl font-semibold">What should I do in a dental emergency?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600 pl-2">
+                        <p>If you have a dental emergency, please call our office immediately. We offer same-day
+                            appointments for urgent cases. If it's after hours, our answering service will direct you to
+                            the on-call dentist.</p>
                     </div>
                 </div>
-    
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border-b border-gray-200 py-6">
+                    <button
+                        class="faq-question w-full text-left flex justify-between items-center text-gray-800 hover:text-blue-600 focus:outline-none">
+                        <span class="text-xl font-semibold">How often should I visit the dentist?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600 pl-2">
+                        <p>We recommend a routine check-up and cleaning at least every six months. Depending on your
+                            oral health, more frequent visits may be advised.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
 
     <section id="contact" class="relative py-20 bg-blue-900"
         style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
