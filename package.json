@@ -1,0 +1,24 @@
+{
+  "name": "dentica",
+  "version": "1.0.0",
+  "description": "Welcome to the Dentica Dental Clinic Website Template! This template is designed to provide a clean and modern interface for dental clinics looking to establish an online presence. Below you will find information on how to set up, customize, and use this template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezzyraouy/dentica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ezzyraouy/dentica/issues"
+  },
+  "homepage": "https://github.com/ezzyraouy/dentica#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.17"
+  }
+}
