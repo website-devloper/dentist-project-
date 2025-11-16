@@ -166,9 +166,9 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="flex flex-col lg:flex-row gap-12">
                     <!-- Left/Main Column: Form -->
-                    <div class="lg:col-span-2">
+                    <div class="w-full lg:w-2/3">
                         <h2 class="text-3xl font-bold text-gray-800 mb-6">Select a Date & Time</h2>
                         
                         <!-- Calendar -->
@@ -243,12 +243,13 @@
                                 <div class="time-slot border rounded-lg py-3 text-center cursor-pointer transition hover:bg-blue-100 hover:border-blue-500 hover:shadow-md">2:30 PM</div>
                             </div>
                         </div>
+                    </div>
 
                     <!-- Right Column: Summary -->
-                    <div class="lg:col-span-1" data-aos="fade-left" data-aos-delay="300">
-                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl p-8 sticky top-24 shadow-xl">
+                    <div class="w-full lg:w-1/3" data-aos="fade-left" data-aos-delay="300">
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl p-8 shadow-xl h-full flex flex-col">
                             <h3 class="text-2xl font-bold mb-6 border-b border-blue-400 pb-4">Summary</h3>
-                            <div class="space-y-4 text-blue-100">
+                            <div class="space-y-4 text-blue-100 flex-grow">
                                 <div class="flex justify-between">
                                     <span>Service:</span>
                                     <span class="font-semibold text-white">Dental Cleaning</span>
@@ -262,14 +263,16 @@
                                     <span class="font-semibold text-white">10:00 AM</span>
                                 </div>
                             </div>
-                            <div class="border-t border-blue-400 my-6"></div>
-                            <div class="flex justify-between text-xl font-bold">
-                                <span>Total</span>
-                                <span>$130</span>
+                            <div>
+                                <div class="border-t border-blue-400 my-6"></div>
+                                <div class="flex justify-between text-xl font-bold">
+                                    <span>Total</span>
+                                    <span>$130</span>
+                                </div>
+                                <button class="w-full mt-6 bg-white text-blue-600 font-bold px-6 py-3 rounded-lg transition transform hover:scale-105 hover:bg-blue-50 shadow-md">
+                                    Proceed to Details
+                                </button>
                             </div>
-                            <button class="w-full mt-6 bg-white text-blue-600 font-bold px-6 py-3 rounded-lg transition transform hover:scale-105 hover:bg-blue-50 shadow-md">
-                                Proceed to Details
-                            </button>
                         </div>
                     </div>
                 </div>
