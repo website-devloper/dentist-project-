@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Blog - Dentic - Premium Dental Care</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-tooth me-2"></i>Dentic
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#doctors">Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html" aria-current="page">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="appointments.html">Appointments</a>
+                        </li>
+                    </ul>
+
+                    <div class="ms-lg-3">
+                        <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+
+        <div class="container">
+            <div class="blog-hero-content" data-aos="fade-up">
+                <h1>Dental Health <span class="text-primary">Blog</span></h1>
+                <p class="lead">Expert insights, tips, and latest news about dental care and oral health</p>
+
+                <div class="search-box">
+                    <input type="text" class="form-control" placeholder="Search articles...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Filters -->
+                    <div class="blog-filters" data-aos="fade-up">
+                        <h4 class="mb-3">Filter by Category</h4>
+                        <div class="filter-tags">
+                            <button class="filter-tag active">All</button>
+                            <button class="filter-tag">Oral Hygiene</button>
+                            <button class="filter-tag">Dental Treatments</button>
+                            <button class="filter-tag">Cosmetic Dentistry</button>
+                            <button class="filter-tag">Children's Dental</button>
+                            <button class="filter-tag">Preventive Care</button>
+                        </div>
+                    </div>
+
+                    <!-- Blog Grid -->
+                    <div class="blog-grid">
+                        <!-- Blog Post 1 -->
+                        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="blog-card-image">
+                                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                    alt="Teeth Cleaning">
+                                <div class="blog-card-category">Oral Hygiene</div>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar"></i> March 15, 2024</span>
+                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3 class="blog-card-title">
+                                    <a href="blog-details.html">The Ultimate Guide to Proper Teeth Cleaning
+                                        Techniques</a>
+                                </h3>
+                                <p class="blog-card-excerpt">
+                                    Discover the right way to brush and floss your teeth for optimal oral health. Learn
+                                    about common mistakes and professional tips from our dental experts.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-read-more">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 2 -->
+                        <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="blog-card-image">
+                                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                    alt="Teeth Whitening">
+                                <div class="blog-card-category">Cosmetic Dentistry</div>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar"></i> March 12, 2024</span>
+                                    <span><i class="far fa-clock"></i> 4 min read</span>
+                                </div>
+                                <h3 class="blog-card-title">
+                                    <a href="blog-details.html">Professional Teeth Whitening vs. At-Home Kits: What You
+                                        Need to Know</a>
+                                </h3>
+                                <p class="blog-card-excerpt">
+                                    Compare the effectiveness, safety, and results of professional teeth whitening
+                                    treatments versus over-the-counter products.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-read-more">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 3 -->
+                        <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="blog-card-image">
+                                <img src="https://images.unsplash.com/photo-1606811951341-756f6de7c6e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                    alt="Child Dental Care">
+                                <div class="blog-card-category">Children's Dental</div>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar"></i> March 8, 2024</span>
+                                    <span><i class="far fa-clock"></i> 6 min read</span>
+                                </div>
+                                <h3 class="blog-card-title">
+                                    <a href="blog-details.html">When Should Your Child First Visit the Dentist?</a>
+                                </h3>
+                                <p class="blog-card-excerpt">
+                                    A comprehensive guide for parents on pediatric dental care, including the right age
+                                    for first visits and how to prepare your child.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-read-more">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 4 -->
+                        <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="blog-card-image">
+                                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                    alt="Dental Implants">
+                                <div class="blog-card-category">Dental Treatments</div>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar"></i> March 5, 2024</span>
+                                    <span><i class="far fa-clock"></i> 7 min read</span>
+                                </div>
+                                <h3 class="blog-card-title">
+                                    <a href="blog-details.html">Dental Implants: A Permanent Solution for Missing
+                                        Teeth</a>
+                                </h3>
+                                <p class="blog-card-excerpt">
+                                    Everything you need to know about dental implants - from the procedure and recovery
+                                    to long-term benefits and care.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-read-more">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 5 -->
+                        <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="blog-card-image">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                    alt="Gum Disease">
+                                <div class="blog-card-category">Preventive Care</div>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar"></i> March 1, 2024</span>
+                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3 class="blog-card-title">
+                                    <a href="blog-details.html">Early Signs of Gum Disease and How to Prevent It</a>
+                                </h3>
+                                <p class="blog-card-excerpt">
+                                    Learn to recognize the warning signs of gum disease and discover effective
+                                    prevention strategies to maintain healthy gums.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-read-more">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 6 -->
+                        <article class="blog-card" data-aos="fade-up" data-aos-delay="600">
+                            <div class="blog-card-image">
+                                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                    alt="Braces">
+                                <div class="blog-card-category">Dental Treatments</div>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar"></i> February 26, 2024</span>
+                                    <span><i class="far fa-clock"></i> 8 min read</span>
+                                </div>
+                                <h3 class="blog-card-title">
+                                    <a href="blog-details.html">Modern Orthodontics: Beyond Traditional Braces</a>
+                                </h3>
+                                <p class="blog-card-excerpt">
+                                    Explore the latest advancements in orthodontic treatments, including clear aligners,
+                                    lingual braces, and accelerated options.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-read-more">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="blog-pagination" data-aos="fade-up">
+                        <nav aria-label="Blog pagination">
+                            <ul class="pagination">
+                                <li><a href="#" class="page-link prev"><i class="fas fa-chevron-left me-2"></i>
+                                        Previous</a></li>
+                                <li><a href="#" class="page-link active">1</a></li>
+                                <li><a href="#" class="page-link">2</a></li>
+                                <li><a href="#" class="page-link">3</a></li>
+                                <li><span class="page-link">...</span></li>
+                                <li><a href="#" class="page-link">8</a></li>
+                                <li><a href="#" class="page-link next">Next <i
+                                            class="fas fa-chevron-right ms-2"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+                        <!-- About Widget -->
+                        <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="100">
+                            <h4>About Our Blog</h4>
+                            <p>Welcome to the Dentic dental health blog, where our team of experienced dentists shares
+                                valuable insights, tips, and the latest advancements in dental care.</p>
+                            <a href="index.html#about" class="btn btn-outline-primary w-100">Learn More About Us</a>
+                        </div>
+
+                        <!-- Recent Posts Widget -->
+                        <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
+                            <h4>Recent Posts</h4>
+                            <div class="recent-post">
+                                <div class="recent-post-image">
+                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                        alt="Recent Post">
+                                </div>
+                                <div class="recent-post-content">
+                                    <h5><a href="blog-details.html">The Ultimate Guide to Proper Teeth Cleaning</a></h5>
+                                    <span class="recent-post-date"><i class="far fa-calendar"></i> Mar 15, 2024</span>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <div class="recent-post-image">
+                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                        alt="Recent Post">
+                                </div>
+                                <div class="recent-post-content">
+                                    <h5><a href="blog-details.html">Professional vs. At-Home Teeth Whitening</a></h5>
+                                    <span class="recent-post-date"><i class="far fa-calendar"></i> Mar 12, 2024</span>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <div class="recent-post-image">
+                                    <img src="https://images.unsplash.com/photo-1606811951341-756f6de7c6e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                        alt="Recent Post">
+                                </div>
+                                <div class="recent-post-content">
+                                    <h5><a href="blog-details.html">First Dental Visit for Children</a></h5>
+                                    <span class="recent-post-date"><i class="far fa-calendar"></i> Mar 8, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="300">
+                            <h4>Categories</h4>
+                            <ul class="category-list">
+                                <li><a href="#">Oral Hygiene <span class="category-count">12</span></a></li>
+                                <li><a href="#">Dental Treatments <span class="category-count">8</span></a></li>
+                                <li><a href="#">Cosmetic Dentistry <span class="category-count">6</span></a></li>
+                                <li><a href="#">Children's Dental <span class="category-count">5</span></a></li>
+                                <li><a href="#">Preventive Care <span class="category-count">9</span></a></li>
+                                <li><a href="#">Dental Technology <span class="category-count">4</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="400">
+                            <h4>Popular Tags</h4>
+                            <div class="tags-cloud">
+                                <a href="#" class="tag">Teeth Cleaning</a>
+                                <a href="#" class="tag">Whitening</a>
+                                <a href="#" class="tag">Implants</a>
+                                <a href="#" class="tag">Braces</a>
+                                <a href="#" class="tag">Gum Health</a>
+                                <a href="#" class="tag">Prevention</a>
+                                <a href="#" class="tag">Children</a>
+                                <a href="#" class="tag">Root Canal</a>
+                                <a href="#" class="tag">Veneers</a>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Widget -->
+                        <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="500">
+                            <h4>Newsletter</h4>
+                            <p>Subscribe to our newsletter for the latest dental health tips and updates.</p>
+                            <form class="newsletter-form">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your email address" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-tooth me-2"></i>Dentic
+                    </a>
+                    <p class="mb-4">Your trusted partner for dental health and beautiful smiles.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="index.html#doctors">Doctors</a></li>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h5>Services</h5>
+                        <ul>
+                            <li><a href="#">General Dentistry</a></li>
+                            <li><a href="#">Cosmetic Dentistry</a></li>
+                            <li><a href="#">Orthodontics</a></li>
+                            <li><a href="#">Implants</a></li>
+                            <li><a href="#">Teeth Whitening</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h5>Contact Info</h5>
+                        <ul>
+                            <li class="mb-3">
+                                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                123 Dental Street, City
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-phone me-2 text-primary"></i>
+                                (123) 456-7890
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope me-2 text-primary"></i>
+                                info@dentic.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Dentic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Filter tags functionality
+        document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.addEventListener('click', function () {
+                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Newsletter form submission
+        document.querySelector('.newsletter-form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Filter tags functionality
+    document.querySelectorAll('.filter-tag').forEach(tag => {
+        tag.addEventListener('click', function () {
+            document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Newsletter form submission
+    document.querySelector('.newsletter-form')?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thank you for subscribing to our newsletter!');
+        this.reset();
+    });
+</script>
+</body>
+
+</html>
