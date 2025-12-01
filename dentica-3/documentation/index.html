@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentica - Theme Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style-position: inside;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="section">
+        <h1>Dentica - Dental Clinic HTML Template</h1>
+        <p>Thank you for purchasing Dentica. If you have any questions that are beyond the scope of this help file,
+            please feel free to email via my user page contact form. Thanks so much!</p>
+    </div>
+
+    <div class="section">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#structure">Folder Structure</a></li>
+            <li><a href="#html">HTML Structure</a></li>
+            <li><a href="#css">CSS Files</a></li>
+            <li><a href="#js">JavaScript Files</a></li>
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#credits">Sources and Credits</a></li>
+        </ul>
+    </div>
+
+    <div class="section" id="structure">
+        <h2>Folder Structure</h2>
+        <pre>
+dentica/
+├── assets/
+│   ├── css/          # Stylesheets
+│   ├── js/           # JavaScript files
+│   ├── images/       # Images
+│   └── webfonts/     # Icons fonts
+├── index.html        # Home page
+├── about.html        # About page
+├── services.html     # Services page
+└── ...
+        </pre>
+    </div>
+
+    <div class="section" id="html">
+        <h2>HTML Structure</h2>
+        <p>This theme uses a standard HTML5 structure with semantic tags. The layout is based on the Bootstrap 5 grid
+            system.</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;!-- Meta Tags --&gt;
+    &lt;!-- CSS Links --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Header --&gt;
+    &lt;header&gt;...&lt;/header&gt;
+
+    &lt;!-- Main Content --&gt;
+    &lt;main&gt;...&lt;/main&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer&gt;...&lt;/footer&gt;
+
+    &lt;!-- JS Scripts --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </div>
+
+    <div class="section" id="css">
+        <h2>CSS Files</h2>
+        <p>We use standard CSS files located in <code>assets/css</code>.</p>
+        <ul>
+            <li><code>bootstrap.min.css</code> - Bootstrap 5 framework</li>
+            <li><code>style.css</code> - Main theme styles</li>
+            <li><code>responsive.css</code> - Responsive adjustments (if applicable, or included in style.css)</li>
+        </ul>
+    </div>
+
+    <div class="section" id="js">
+        <h2>JavaScript Files</h2>
+        <p>JavaScript files are located in <code>assets/js</code>.</p>
+        <ul>
+            <li><code>jquery.min.js</code> - jQuery library</li>
+            <li><code>bootstrap.bundle.min.js</code> - Bootstrap JS</li>
+            <li><code>main.js</code> - Theme custom scripts</li>
+        </ul>
+    </div>
+
+    <div class="section" id="customization">
+        <h2>Customization</h2>
+        <h3>Changing Colors</h3>
+        <p>You can change the main colors by editing the CSS variables in <code>assets/css/style.css</code>:</p>
+        <pre>
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+}
+        </pre>
+    </div>
+
+    <div class="section" id="credits">
+        <h2>Sources and Credits</h2>
+        <ul>
+            <li><strong>Bootstrap 5</strong> - <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></li>
+            <li><strong>FontAwesome</strong> - <a href="https://fontawesome.com/">https://fontawesome.com/</a></li>
+            <li><strong>Google Fonts</strong> - <a href="https://fonts.google.com/">https://fonts.google.com/</a></li>
+            <li><strong>Unsplash</strong> (Images) - <a href="https://unsplash.com/">https://unsplash.com/</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

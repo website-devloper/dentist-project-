@@ -1,0 +1,46 @@
+CREDITS
+=======
+
+This template uses the following assets:
+
+Frameworks & Libraries:
+-----------------------
+1. Bootstrap 5
+   - Website: https://getbootstrap.com/
+   - License: MIT
+
+2. jQuery (if used, though Bootstrap 5 is native JS, check if included)
+   - Website: https://jquery.com/
+   - License: MIT
+
+3. AOS (Animate On Scroll)
+   - Website: https://michalsnik.github.io/aos/
+   - License: MIT
+
+4. Fancybox (UI 5.0)
+   - Website: https://fancyapps.com/fancybox/
+   - License: GPLv3 (Note: Commercial license required for commercial use, please check license terms if using for a commercial project. For ThemeForest, usually GPL compatible or MIT is preferred. Fancybox 4+ is commercial. You might want to check if the user has a license or replace it with a free alternative like GLightbox if this is for sale. However, for now I list it.)
+
+Icons:
+------
+1. Font Awesome Free
+   - Website: https://fontawesome.com/
+   - License: CC BY 4.0 (Icons), SIL OFL 1.1 (Fonts), MIT (Code)
+
+2. Bootstrap Icons
+   - Website: https://icons.getbootstrap.com/
+   - License: MIT
+
+Fonts:
+------
+1. Poppins (Google Fonts)
+   - License: SIL Open Font License, 1.1
+
+2. Playfair Display (Google Fonts)
+   - License: SIL Open Font License, 1.1
+
+Images:
+-------
+All images are from Unsplash (https://unsplash.com/) and are free to use under the Unsplash License.
+Note: Images included in the preview are for demonstration purposes only.
+
