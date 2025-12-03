@@ -65,9 +65,9 @@
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index-1.html">
                     <i class="fas fa-tooth me-2"></i>Dentic
                 </a>
 
@@ -78,16 +78,41 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index-1.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Elements</a>
+                            <a class="nav-link" href="index-1.html#services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#services">Services</a>
+                            <a class="nav-link" href="index-1.html#doctors">Doctors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#contact">Contact</a>
+                            <a class="nav-link" href="index-1.html#about">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="index-1.html">Home Default</a></li>
+                                <li><a class="dropdown-item" href="index-1.html">Home 1</a></li>
+                                <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+                                <li><a class="dropdown-item" href="index-3.html">Home 3</a></li>
+                                <li><a class="dropdown-item" href="index-4.html">Home 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-1.html#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-1.html#pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-1.html#contact">Contact</a>
                         </li>
                     </ul>
 
@@ -655,7 +680,7 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <a href="index.html" class="footer-logo">
+                    <a href="index-1.html" class="footer-logo">
                         <i class="fas fa-tooth me-2"></i>Dentic
                     </a>
                     <p class="mb-4">Your trusted partner for dental health and beautiful smiles.</p>
@@ -671,11 +696,11 @@
                     <div class="footer-links">
                         <h5>Quick Links</h5>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index-1.html">Home</a></li>
                             <li><a href="elements.html">Elements</a></li>
-                            <li><a href="index.html#services">Services</a></li>
-                            <li><a href="index.html#doctors">Doctors</a></li>
-                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="index-1.html#services">Services</a></li>
+                            <li><a href="index-1.html#doctors">Doctors</a></li>
+                            <li><a href="index-1.html#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -757,75 +782,6 @@
             return new bootstrap.Popover(popoverTriggerEl)
         })
     </script>
-</body>
-
-</html>
-</div>
-
-<div class="col-lg-4">
-    <div class="footer-links">
-        <h5>Contact Info</h5>
-        <ul>
-            <li class="mb-3">
-                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
-                123 Dental Street, City
-            </li>
-            <li class="mb-3">
-                <i class="fas fa-phone me-2 text-primary"></i>
-                (123) 456-7890
-            </li>
-            <li class="mb-3">
-                <i class="fas fa-envelope me-2 text-primary"></i>
-                info@dentic.com
-            </li>
-        </ul>
-    </div>
-</div>
-</div>
-
-<div class="footer-bottom">
-    <p>&copy; 2023 Dentic. All rights reserved.</p>
-</div>
-</div>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!-- Fancybox JS -->
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-
-<script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100
-    });
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // Initialize Tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-
-    // Initialize Popovers
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl)
-    })
-</script>
 </body>
 
 </html>

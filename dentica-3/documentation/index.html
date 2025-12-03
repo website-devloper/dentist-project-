@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentica - Theme Documentation</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,6 +21,8 @@
             max-width: 960px;
             margin: 0 auto;
             padding: 20px;
+            padding-top: 100px;
+            /* Added for fixed header */
         }
 
         h1,
@@ -51,6 +61,66 @@
 </head>
 
 <body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="../index-1.html">
+                    <i class="fas fa-tooth me-2"></i>Dentic
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index-1.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index-1.html#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index-1.html#doctors">Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index-1.html#about">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="../index-1.html">Home Default</a></li>
+                                <li><a class="dropdown-item" href="../index-1.html">Home 1</a></li>
+                                <li><a class="dropdown-item" href="../index-2.html">Home 2</a></li>
+                                <li><a class="dropdown-item" href="../index-3.html">Home 3</a></li>
+                                <li><a class="dropdown-item" href="../index-4.html">Home 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index-1.html#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index-1.html#pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index-1.html#contact">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="ms-lg-3">
+                        <a href="../appointments.html" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <div class="section">
         <h1>Dentica - Dental Clinic HTML Template</h1>
@@ -79,7 +149,7 @@ dentica/
 │   ├── js/           # JavaScript files
 │   ├── images/       # Images
 │   └── webfonts/     # Icons fonts
-├── index.html        # Home page
+├── index-1.html        # Home page
 ├── about.html        # About page
 ├── services.html     # Services page
 └── ...
@@ -155,6 +225,8 @@ dentica/
         </ul>
     </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
