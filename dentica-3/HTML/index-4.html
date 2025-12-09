@@ -27,55 +27,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-        /* Custom Styles for Index-4 */
-        .hero-carousel-item {
-            height: 80vh;
-            min-height: 600px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
 
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-        }
-
-        .zig-zag-section .row {
-            margin-bottom: 4rem;
-        }
-
-        .zig-zag-section .row:last-child {
-            margin-bottom: 0;
-        }
-
-        .zig-zag-img {
-            border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .zig-zag-img:hover {
-            transform: translateY(-10px);
-        }
-
-        .accordion-button:not(.collapsed) {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .accordion-button:focus {
-            box-shadow: none;
-            border-color: rgba(0, 0, 0, 0.125);
-        }
-    </style>
 </head>
 
 <body>
@@ -217,232 +169,195 @@
     </section>
 
     <!-- Features Section (Zig-Zag) -->
-    <section class="py-5 zig-zag-section" id="about">
-        <div class="container py-5">
+    <!-- Features Section (Premium Zig-Zag) -->
+    <section class="zig-zag-section-premium" id="about">
+        <div class="container">
             <!-- Row 1: Text Left, Image Right -->
             <div class="row align-items-center">
-                <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                <div class="col-lg-6 pe-lg-5 zig-zag-content-premium" data-aos="fade-right">
                     <h2 class="section-title mb-4">State-of-the-Art <span class="text-primary">Technology</span></h2>
                     <p class="lead text-muted mb-4">We invest in the latest dental technology to ensure precise
                         diagnoses and comfortable treatments.</p>
                     <p class="mb-4">Our clinic is equipped with 3D imaging, digital X-rays, and intraoral cameras. This
                         allows us to detect issues early and plan treatments with unmatched accuracy.</p>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Digital Impressions</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Laser Dentistry</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Low-Radiation X-Rays</li>
+                    <ul class="premium-feature-list">
+                        <li><i class="fas fa-check"></i> Digital Impressions</li>
+                        <li><i class="fas fa-check"></i> Laser Dentistry</li>
+                        <li><i class="fas fa-check"></i> Low-Radiation X-Rays</li>
                     </ul>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        class="img-fluid zig-zag-img" alt="Dental Technology">
+                    <div class="zig-zag-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="zig-zag-img" alt="Dental Technology">
+                    </div>
                 </div>
             </div>
 
             <!-- Row 2: Image Left, Text Right -->
             <div class="row align-items-center flex-row-reverse">
-                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                <div class="col-lg-6 ps-lg-5 zig-zag-content-premium" data-aos="fade-left">
                     <h2 class="section-title mb-4">Expert Team of <span class="text-primary">Specialists</span></h2>
                     <p class="lead text-muted mb-4">Our doctors are leaders in their fields, committed to continuous
                         learning and excellence.</p>
                     <p class="mb-4">With specialists in orthodontics, periodontics, and oral surgery all under one roof,
                         you can receive comprehensive care without being referred out.</p>
-                    <a href="#doctors" class="btn btn-outline-primary">Meet The Team</a>
+                    <a href="#doctors" class="btn-premium-outline">
+                        Meet The Team
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        class="img-fluid zig-zag-img" alt="Dental Team">
+                    <div class="zig-zag-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="zig-zag-img" alt="Dental Team">
+                    </div>
                 </div>
             </div>
 
             <!-- Row 3: Text Left, Image Right -->
             <div class="row align-items-center">
-                <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                <div class="col-lg-6 pe-lg-5 zig-zag-content-premium" data-aos="fade-right">
                     <h2 class="section-title mb-4">Patient-Centered <span class="text-primary">Comfort</span></h2>
                     <p class="lead text-muted mb-4">Your comfort is our top priority. We've designed our clinic to be a
                         relaxing sanctuary.</p>
                     <p class="mb-4">From our cozy waiting area to our sedation options for anxious patients, we ensure
                         your visit is as stress-free as possible.</p>
-                    <div class="d-flex gap-3">
-                        <div class="text-center">
-                            <i class="fas fa-couch fa-2x text-primary mb-2"></i>
-                            <p class="small fw-bold">Lounge Area</p>
+                    <div class="comfort-icons-premium">
+                        <div class="comfort-icon-item">
+                            <i class="fas fa-couch"></i>
+                            <p>Lounge Area</p>
                         </div>
-                        <div class="text-center">
-                            <i class="fas fa-music fa-2x text-primary mb-2"></i>
-                            <p class="small fw-bold">Calming Music</p>
+                        <div class="comfort-icon-item">
+                            <i class="fas fa-music"></i>
+                            <p>Calming Music</p>
                         </div>
-                        <div class="text-center">
-                            <i class="fas fa-wifi fa-2x text-primary mb-2"></i>
-                            <p class="small fw-bold">Free Wi-Fi</p>
+                        <div class="comfort-icon-item">
+                            <i class="fas fa-wifi"></i>
+                            <p>Free Wi-Fi</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        class="img-fluid zig-zag-img" alt="Patient Comfort">
+                    <div class="zig-zag-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="zig-zag-img" alt="Patient Comfort">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section (Accordion) -->
-    <section class="bg-light py-5" id="services">
-        <div class="container py-5">
+    <!-- Services Section (Premium Grid) -->
+    <section class="services-grid-premium" id="services">
+        <div class="container">
             <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title center">Comprehensive <span class="text-primary">Services</span></h2>
-                    <p class="lead">Explore our wide range of dental treatments designed for your health and beauty.</p>
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <span class="sub-title-premium">Our Services</span>
+                    <h2 class="section-title center">Comprehensive <span class="text-primary">Dental</span> Services
+                    </h2>
+                    <p class="lead">Discover our complete range of dental treatments designed for your health, beauty,
+                        and confidence.</p>
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="accordion" id="servicesAccordion">
-                        <!-- Item 1 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden" data-aos="fade-up"
-                            data-aos-delay="100">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button fw-bold py-4" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fas fa-tooth me-3"></i> General Dentistry
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body p-4">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-8">
-                                            <p>Our general dentistry services form the foundation of your oral health.
-                                                We focus on prevention, early diagnosis, and treatment of common dental
-                                                issues.</p>
-                                            <ul class="row">
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Routine Checkups</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Professional Cleaning</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Fillings & Sealants</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Oral Cancer Screening</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <i class="fas fa-shield-alt fa-5x text-primary opacity-25"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-grid">
+                        <div class="service-number-badge">01</div>
+                        <div class="service-icon-circle">
+                            <i class="fas fa-tooth"></i>
                         </div>
+                        <h3 class="service-title-grid">General Dentistry</h3>
+                        <p class="service-desc-grid">
+                            Foundation of your oral health with prevention, early diagnosis, and treatment of common
+                            dental issues.
+                        </p>
+                        <ul class="service-features-grid">
+                            <li><i class="fas fa-check"></i> Routine Checkups</li>
+                            <li><i class="fas fa-check"></i> Professional Cleaning</li>
+                            <li><i class="fas fa-check"></i> Fillings & Sealants</li>
+                            <li><i class="fas fa-check"></i> Oral Cancer Screening</li>
+                        </ul>
+                        <a href="#" class="service-learn-more">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
 
-                        <!-- Item 2 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed fw-bold py-4" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    <i class="fas fa-magic me-3"></i> Cosmetic Dentistry
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body p-4">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-8">
-                                            <p>Enhance the appearance of your smile with our cosmetic treatments. We
-                                                combine art and science to give you the smile you've always dreamed of.
-                                            </p>
-                                            <ul class="row">
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Teeth Whitening</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Porcelain Veneers</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Dental Bonding</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Smile Makeovers</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <i class="fas fa-star fa-5x text-primary opacity-25"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- Service 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-grid">
+                        <div class="service-number-badge">02</div>
+                        <div class="service-icon-circle">
+                            <i class="fas fa-magic"></i>
                         </div>
+                        <h3 class="service-title-grid">Cosmetic Dentistry</h3>
+                        <p class="service-desc-grid">
+                            Enhance your smile's appearance with our cosmetic treatments combining art and science.
+                        </p>
+                        <ul class="service-features-grid">
+                            <li><i class="fas fa-check"></i> Teeth Whitening</li>
+                            <li><i class="fas fa-check"></i> Porcelain Veneers</li>
+                            <li><i class="fas fa-check"></i> Dental Bonding</li>
+                            <li><i class="fas fa-check"></i> Smile Makeovers</li>
+                        </ul>
+                        <a href="#" class="service-learn-more">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
 
-                        <!-- Item 3 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden" data-aos="fade-up"
-                            data-aos-delay="300">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed fw-bold py-4" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    <i class="fas fa-tools me-3"></i> Restorative Dentistry
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body p-4">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-8">
-                                            <p>Repair damaged or missing teeth to restore function and aesthetics. We
-                                                use durable, natural-looking materials.</p>
-                                            <ul class="row">
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Dental Implants</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Crowns & Bridges</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Dentures</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Root Canal Therapy</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <i class="fas fa-hammer fa-5x text-primary opacity-25"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- Service 3 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-grid">
+                        <div class="service-number-badge">03</div>
+                        <div class="service-icon-circle">
+                            <i class="fas fa-tools"></i>
                         </div>
+                        <h3 class="service-title-grid">Restorative Dentistry</h3>
+                        <p class="service-desc-grid">
+                            Repair damaged or missing teeth to restore function and aesthetics with durable materials.
+                        </p>
+                        <ul class="service-features-grid">
+                            <li><i class="fas fa-check"></i> Dental Implants</li>
+                            <li><i class="fas fa-check"></i> Crowns & Bridges</li>
+                            <li><i class="fas fa-check"></i> Dentures</li>
+                            <li><i class="fas fa-check"></i> Root Canal Therapy</li>
+                        </ul>
+                        <a href="#" class="service-learn-more">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
 
-                        <!-- Item 4 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden" data-aos="fade-up"
-                            data-aos-delay="400">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed fw-bold py-4" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                                    aria-controls="collapseFour">
-                                    <i class="fas fa-child me-3"></i> Orthodontics
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#servicesAccordion">
-                                <div class="accordion-body p-4">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-8">
-                                            <p>Straighten your teeth and correct bite issues. We offer solutions for
-                                                children, teens, and adults.</p>
-                                            <ul class="row">
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Traditional Braces</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Invisalign Clear Aligners</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Retainers</li>
-                                                <li class="col-md-6 mb-2"><i class="fas fa-check text-success me-2"></i>
-                                                    Early Intervention</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <i class="fas fa-smile fa-5x text-primary opacity-25"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- Service 4 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card-grid">
+                        <div class="service-number-badge">04</div>
+                        <div class="service-icon-circle">
+                            <i class="fas fa-child"></i>
                         </div>
+                        <h3 class="service-title-grid">Orthodontics</h3>
+                        <p class="service-desc-grid">
+                            Straighten your teeth and correct bite issues with solutions for children, teens, and
+                            adults.
+                        </p>
+                        <ul class="service-features-grid">
+                            <li><i class="fas fa-check"></i> Traditional Braces</li>
+                            <li><i class="fas fa-check"></i> Invisalign Clear Aligners</li>
+                            <li><i class="fas fa-check"></i> Retainers</li>
+                            <li><i class="fas fa-check"></i> Early Intervention</li>
+                        </ul>
+                        <a href="#" class="service-learn-more">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -450,161 +365,231 @@
     </section>
 
     <!-- Testimonials Section (Carousel) -->
-    <section class="py-5 bg-primary text-white" id="testimonials">
-        <div class="container py-5">
+    <!-- Testimonials Section (Premium Carousel) -->
+    <section class="testimonials-carousel-premium" id="testimonials">
+        <div class="container">
             <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title center text-white">Patient <span class="text-light">Stories</span></h2>
-                    <p class="lead text-white-50">Real experiences from our valued patients.</p>
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <span class="sub-title-premium text-white">Testimonials</span>
+                    <h2 class="section-title center text-white">Patient <span
+                            style="color: rgba(255,255,255,0.8);">Stories</span></h2>
+                    <p class="lead" style="color: rgba(255,255,255,0.9);">Real experiences from our valued patients.</p>
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner text-center">
+                        <div class="carousel-inner">
                             <!-- Item 1 -->
                             <div class="carousel-item active">
-                                <div class="p-4">
+                                <div class="testimonial-card-carousel text-center">
+                                    <div class="testimonial-quote-icon-carousel">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
                                     <img src="https://randomuser.me/api/portraits/women/44.jpg"
-                                        class="rounded-circle border border-3 border-white mb-4" width="100"
-                                        alt="Patient">
-                                    <p class="lead fst-italic mb-4">"I was terrified of the dentist until I came here.
-                                        The staff is so gentle and understanding. I actually look forward to my
-                                        appointments now!"</p>
-                                    <h5 class="fw-bold">Sarah Jenkins</h5>
-                                    <p class="small text-white-50">Invisalign Patient</p>
+                                        class="testimonial-patient-img" alt="Sarah Jenkins">
+                                    <div class="testimonial-stars-carousel">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="testimonial-text-carousel">
+                                        "I was terrified of the dentist until I came here. The staff is so gentle and
+                                        understanding. I actually look forward to my appointments now!"
+                                    </p>
+                                    <h5 class="testimonial-patient-name">Sarah Jenkins</h5>
+                                    <p class="testimonial-patient-type">Invisalign Patient</p>
                                 </div>
                             </div>
 
                             <!-- Item 2 -->
                             <div class="carousel-item">
-                                <div class="p-4">
+                                <div class="testimonial-card-carousel text-center">
+                                    <div class="testimonial-quote-icon-carousel">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
                                     <img src="https://randomuser.me/api/portraits/men/32.jpg"
-                                        class="rounded-circle border border-3 border-white mb-4" width="100"
-                                        alt="Patient">
-                                    <p class="lead fst-italic mb-4">"The results of my teeth whitening are amazing. I
-                                        can't stop smiling! Professional, clean, and efficient service."</p>
-                                    <h5 class="fw-bold">David Miller</h5>
-                                    <p class="small text-white-50">Cosmetic Patient</p>
+                                        class="testimonial-patient-img" alt="David Miller">
+                                    <div class="testimonial-stars-carousel">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="testimonial-text-carousel">
+                                        "The results of my teeth whitening are amazing. I can't stop smiling!
+                                        Professional, clean, and efficient service."
+                                    </p>
+                                    <h5 class="testimonial-patient-name">David Miller</h5>
+                                    <p class="testimonial-patient-type">Cosmetic Patient</p>
                                 </div>
                             </div>
 
                             <!-- Item 3 -->
                             <div class="carousel-item">
-                                <div class="p-4">
+                                <div class="testimonial-card-carousel text-center">
+                                    <div class="testimonial-quote-icon-carousel">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
                                     <img src="https://randomuser.me/api/portraits/women/68.jpg"
-                                        class="rounded-circle border border-3 border-white mb-4" width="100"
-                                        alt="Patient">
-                                    <p class="lead fst-italic mb-4">"Dr. Johnson did an incredible job with my implants.
-                                        They feel just like my natural teeth. Highly recommended!"</p>
-                                    <h5 class="fw-bold">Emily Chen</h5>
-                                    <p class="small text-white-50">Implant Patient</p>
+                                        class="testimonial-patient-img" alt="Emily Chen">
+                                    <div class="testimonial-stars-carousel">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="testimonial-text-carousel">
+                                        "Dr. Johnson did an incredible job with my implants. They feel just like my
+                                        natural teeth. Highly recommended!"
+                                    </p>
+                                    <h5 class="testimonial-patient-name">Emily Chen</h5>
+                                    <p class="testimonial-patient-type">Implant Patient</p>
                                 </div>
                             </div>
                         </div>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                        <div class="testimonial-carousel-controls">
+                            <button class="testimonial-carousel-btn" type="button" data-bs-target="#testimonialCarousel"
+                                data-bs-slide="prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="testimonial-carousel-btn" type="button" data-bs-target="#testimonialCarousel"
+                                data-bs-slide="next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section-2" id="contact">
+    <!-- CTA Section (Premium) -->
+    <section class="cta-section-premium" id="contact">
+        <div class="cta-bg-pattern"></div>
+        <div class="cta-floating-shape"></div>
+        <div class="cta-floating-shape"></div>
+
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mb-4">Ready to Transform Your Smile?</h2>
-                    <p class="mb-5 lead">Schedule your appointment today and take the first step towards better dental
-                        health.</p>
-                    <a href="appointments.html" class="btn btn-light btn-lg px-5 py-3">Book Your Visit Now</a>
+                <div class="col-lg-10">
+                    <div class="cta-content-premium">
+                        <span class="cta-badge-premium">Limited Time Offer</span>
+                        <h2 class="cta-title-premium">Ready to Transform Your Smile?</h2>
+                        <p class="cta-description-premium">
+                            Schedule your appointment today and take the first step towards better dental health.
+                            New patients receive a complimentary consultation!
+                        </p>
+                        <div class="cta-buttons-premium">
+                            <a href="appointments.html" class="btn-cta-primary">
+                                Book Your Visit Now
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="tel:+1234567890" class="btn-cta-secondary">
+                                <i class="fas fa-phone"></i>
+                                Call Us Today
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer (Premium) -->
+    <footer class="footer-premium">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <a href="index-1.html" class="footer-logo">
-                        <i class="fas fa-tooth me-2"></i>Dentic
+                    <a href="index-1.html" class="footer-brand-premium">
+                        <i class="fas fa-tooth"></i>
+                        Dentic
                     </a>
-                    <p class="mb-4">Your trusted partner for dental health and beautiful smiles.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white-50"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white-50"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white-50"><i class="fab fa-linkedin-in"></i></a>
+                    <p class="footer-description">
+                        Your trusted partner for dental health and beautiful smiles. Providing exceptional care with
+                        state-of-the-art technology.
+                    </p>
+                    <div class="footer-social-premium">
+                        <a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-6">
-                    <div class="footer-links">
-                        <h5>Quick Links</h5>
-                        <ul>
-                            <li><a href="index-1.html">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#doctors">Doctors</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#process">Process</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
+                    <h5 class="footer-section-title">Quick Links</h5>
+                    <ul class="footer-links-premium">
+                        <li><a href="index-1.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-6">
-                    <div class="footer-links">
-                        <h5>Services</h5>
-                        <ul>
-                            <li><a href="#">General Dentistry</a></li>
-                            <li><a href="#">Cosmetic Dentistry</a></li>
-                            <li><a href="#">Orthodontics</a></li>
-                            <li><a href="#">Implants</a></li>
-                            <li><a href="#">Teeth Whitening</a></li>
-                        </ul>
-                    </div>
+                    <h5 class="footer-section-title">Services</h5>
+                    <ul class="footer-links-premium">
+                        <li><a href="#">General Dentistry</a></li>
+                        <li><a href="#">Cosmetic Dentistry</a></li>
+                        <li><a href="#">Orthodontics</a></li>
+                        <li><a href="#">Implants</a></li>
+                        <li><a href="#">Teeth Whitening</a></li>
+                    </ul>
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="footer-links">
-                        <h5>Contact Info</h5>
-                        <ul>
-                            <li class="mb-3">
-                                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
-                                123 Dental Street, City
-                            </li>
-                            <li class="mb-3">
-                                <i class="fas fa-phone me-2 text-primary"></i>
-                                (123) 456-7890
-                            </li>
-                            <li class="mb-3">
-                                <i class="fas fa-envelope me-2 text-primary"></i>
-                                info@dentic.com
-                            </li>
-                        </ul>
+                    <h5 class="footer-section-title">Contact Info</h5>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            123 Dental Street, City, State 12345
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            (123) 456-7890
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            info@dentic.com
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2023 Dentic. All rights reserved.</p>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="footer-newsletter">
+                        <h5>Subscribe to Our Newsletter</h5>
+                        <p>Stay updated with our latest news, offers, and dental health tips.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address">
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-premium">
+                <p>&copy; 2023 Dentic. All rights reserved. | Designed with care for your smile.</p>
             </div>
         </div>
     </footer>
