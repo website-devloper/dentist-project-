@@ -224,6 +224,34 @@ function init() {
     initTooltips();
 }
 
+// Service Tab Switcher (Premium)
+window.openServiceTab = function(evt, tabName) {
+    // Get all elements with class="premium-tab-pane" and hide them
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("premium-tab-pane");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove("active");
+    }
+
+    // Get all elements with class="premium-tab-link" and remove the class "active"
+    tablinks = document.getElementsByClassName("premium-tab-link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    var selectedTab = document.getElementById(tabName);
+    selectedTab.style.display = "block";
+    
+    // Small delay to allow display:block to apply before adding active class for animation
+    setTimeout(() => {
+        selectedTab.classList.add("active");
+    }, 10);
+    
+    evt.currentTarget.classList.add("active");
+};
+
 // Initialize when DOM is loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
