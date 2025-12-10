@@ -171,9 +171,9 @@ function initNavbarScroll() {
     
     function updateNavbar() {
         if (window.scrollY > 100) {
-            navbar.classList.add('navbar-scrolled');
+            navbar.classList.add('scrolled');
         } else {
-            navbar.classList.remove('navbar-scrolled');
+            navbar.classList.remove('scrolled');
         }
     }
     
