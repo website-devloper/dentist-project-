@@ -88,20 +88,60 @@
         </nav>
     </header>
 
-    <!-- Blog Hero Section -->
-    <section class="blog-hero">
+    <!-- Blog Hero Section Premium -->
+    <section class="blog-hero-premium">
+        <div class="hero-gradient-overlay"></div>
         <div class="bg-shape bg-shape-1"></div>
         <div class="bg-shape bg-shape-2"></div>
         <div class="bg-shape bg-shape-3"></div>
 
         <div class="container">
-            <div class="blog-hero-content" data-aos="fade-up">
-                <h1>Dental Health <span class="text-primary">Blog</span></h1>
-                <p class="lead">Expert insights, tips, and latest news about dental care and oral health</p>
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto">
+                    <div class="blog-hero-content-premium text-center" data-aos="fade-up">
+                        <div class="hero-badge-premium mb-3">
+                            <i class="fas fa-book-medical"></i>
+                            <span>Dental Health Insights</span>
+                        </div>
+                        <h1 class="hero-title-premium">Explore Our <span class="text-primary">Dental Blog</span></h1>
+                        <p class="hero-subtitle-premium">Expert insights, professional tips, and the latest news about
+                            dental care and oral health from our experienced team</p>
 
-                <div class="search-box">
-                    <input type="text" class="form-control" placeholder="Search articles...">
-                    <i class="fas fa-search"></i>
+                        <!-- Enhanced Search Box -->
+                        <div class="search-box-premium" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control"
+                                placeholder="Search for articles, tips, treatments...">
+                            <button class="search-btn">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="blog-stats-premium" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-item-premium">
+                                <i class="fas fa-newspaper"></i>
+                                <div>
+                                    <strong>150+</strong>
+                                    <span>Articles</span>
+                                </div>
+                            </div>
+                            <div class="stat-item-premium">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>50K+</strong>
+                                    <span>Readers</span>
+                                </div>
+                            </div>
+                            <div class="stat-item-premium">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <strong>4.9/5</strong>
+                                    <span>Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,171 +153,372 @@
             <div class="row">
                 <!-- Main Content -->
                 <div class="col-lg-8">
-                    <!-- Filters -->
-                    <div class="blog-filters" data-aos="fade-up">
-                        <h4 class="mb-3">Filter by Category</h4>
-                        <div class="filter-tags">
-                            <button class="filter-tag active">All</button>
-                            <button class="filter-tag">Oral Hygiene</button>
-                            <button class="filter-tag">Dental Treatments</button>
-                            <button class="filter-tag">Cosmetic Dentistry</button>
-                            <button class="filter-tag">Children's Dental</button>
-                            <button class="filter-tag">Preventive Care</button>
+                    <!-- Filters Premium -->
+                    <div class="blog-filters-premium" data-aos="fade-up">
+                        <div class="filters-header">
+                            <div class="filters-left">
+                                <h4 class="mb-0"><i class="fas fa-filter me-2"></i>Filter by Category</h4>
+                                <span class="results-count">Showing 48 articles</span>
+                            </div>
+                            <div class="filters-right">
+                                <div class="view-toggle">
+                                    <button class="view-btn active" data-view="grid">
+                                        <i class="fas fa-th"></i>
+                                    </button>
+                                    <button class="view-btn" data-view="list">
+                                        <i class="fas fa-list"></i>
+                                    </button>
+                                </div>
+                                <select class="sort-select">
+                                    <option>Latest First</option>
+                                    <option>Oldest First</option>
+                                    <option>Most Popular</option>
+                                    <option>Most Viewed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-tags-premium">
+                            <button class="filter-tag-premium active" data-category="all">
+                                <i class="fas fa-th-large"></i>
+                                <span>All Articles</span>
+                            </button>
+                            <button class="filter-tag-premium" data-category="oral-hygiene">
+                                <i class="fas fa-tooth"></i>
+                                <span>Oral Hygiene</span>
+                            </button>
+                            <button class="filter-tag-premium" data-category="treatments">
+                                <i class="fas fa-user-md"></i>
+                                <span>Dental Treatments</span>
+                            </button>
+                            <button class="filter-tag-premium" data-category="cosmetic">
+                                <i class="fas fa-smile-beam"></i>
+                                <span>Cosmetic Dentistry</span>
+                            </button>
+                            <button class="filter-tag-premium" data-category="children">
+                                <i class="fas fa-child"></i>
+                                <span>Children's Dental</span>
+                            </button>
+                            <button class="filter-tag-premium" data-category="preventive">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Preventive Care</span>
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Blog Grid -->
-                    <div class="blog-grid">
-                        <!-- Blog Post 1 -->
-                        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
-                            <div class="blog-card-image">
-                                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    <!-- Blog Grid Premium -->
+                    <div class="blog-grid-premium">
+                        <!-- Blog Post 1 - Featured -->
+                        <article class="blog-card-premium featured" data-aos="fade-up" data-aos-delay="100">
+                            <div class="blog-card-image-premium">
+                                <img src="https://images.pexels.com/photos/6528867/pexels-photo-6528867.jpeg"
                                     alt="Teeth Cleaning">
-                                <div class="blog-card-category">Oral Hygiene</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span><i class="far fa-calendar"></i> March 15, 2024</span>
-                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                <div class="blog-card-badge trending">
+                                    <i class="fas fa-fire"></i> Trending
                                 </div>
-                                <h3 class="blog-card-title">
+                                <div class="blog-card-category-premium">
+                                    <i class="fas fa-tooth"></i> Oral Hygiene
+                                </div>
+                            </div>
+                            <div class="blog-card-content-premium">
+                                <div class="blog-card-meta-premium">
+                                    <div class="author-info-mini">
+                                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=50&h=50&fit=crop"
+                                            alt="Dr. Sarah Johnson">
+                                        <div>
+                                            <span class="author-name-mini">Dr. Sarah Johnson</span>
+                                            <span class="author-verified"><i class="fas fa-check-circle"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-calendar"></i> March 15, 2024</span>
+                                        <span><i class="far fa-clock"></i> 5 min read</span>
+                                        <span><i class="far fa-eye"></i> 2.4k views</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-card-title-premium">
                                     <a href="blog-details.html">The Ultimate Guide to Proper Teeth Cleaning
                                         Techniques</a>
                                 </h3>
-                                <p class="blog-card-excerpt">
+                                <p class="blog-card-excerpt-premium">
                                     Discover the right way to brush and floss your teeth for optimal oral health. Learn
                                     about common mistakes and professional tips from our dental experts.
                                 </p>
-                                <a href="blog-details.html" class="blog-card-read-more">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <div class="blog-card-footer-premium">
+                                    <a href="blog-details.html" class="read-more-premium">
+                                        Read Full Article <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="engagement-buttons">
+                                        <button class="engagement-btn">
+                                            <i class="far fa-heart"></i> <span>124</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-comment"></i> <span>12</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </article>
 
                         <!-- Blog Post 2 -->
-                        <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
-                            <div class="blog-card-image">
-                                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        <article class="blog-card-premium" data-aos="fade-up" data-aos-delay="200">
+                            <div class="blog-card-image-premium">
+                                <img src="https://images.pexels.com/photos/4269689/pexels-photo-4269689.jpeg"
                                     alt="Teeth Whitening">
-                                <div class="blog-card-category">Cosmetic Dentistry</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span><i class="far fa-calendar"></i> March 12, 2024</span>
-                                    <span><i class="far fa-clock"></i> 4 min read</span>
+                                <div class="blog-card-category-premium">
+                                    <i class="fas fa-smile-beam"></i> Cosmetic Dentistry
                                 </div>
-                                <h3 class="blog-card-title">
+                            </div>
+                            <div class="blog-card-content-premium">
+                                <div class="blog-card-meta-premium">
+                                    <div class="author-info-mini">
+                                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=50&h=50&fit=crop"
+                                            alt="Dr. Michael Chen">
+                                        <div>
+                                            <span class="author-name-mini">Dr. Michael Chen</span>
+                                            <span class="author-verified"><i class="fas fa-check-circle"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-calendar"></i> March 12, 2024</span>
+                                        <span><i class="far fa-clock"></i> 4 min read</span>
+                                        <span><i class="far fa-eye"></i> 1.8k views</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-card-title-premium">
                                     <a href="blog-details.html">Professional Teeth Whitening vs. At-Home Kits: What You
                                         Need to Know</a>
                                 </h3>
-                                <p class="blog-card-excerpt">
+                                <p class="blog-card-excerpt-premium">
                                     Compare the effectiveness, safety, and results of professional teeth whitening
                                     treatments versus over-the-counter products.
                                 </p>
-                                <a href="blog-details.html" class="blog-card-read-more">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <div class="blog-card-footer-premium">
+                                    <a href="blog-details.html" class="read-more-premium">
+                                        Read Full Article <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="engagement-buttons">
+                                        <button class="engagement-btn">
+                                            <i class="far fa-heart"></i> <span>98</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-comment"></i> <span>8</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </article>
 
                         <!-- Blog Post 3 -->
-                        <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
-                            <div class="blog-card-image">
-                                <img src="https://images.unsplash.com/photo-1606811951341-756f6de7c6e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        <article class="blog-card-premium" data-aos="fade-up" data-aos-delay="300">
+                            <div class="blog-card-image-premium">
+                                <img src="https://images.pexels.com/photos/5355731/pexels-photo-5355731.jpeg"
                                     alt="Child Dental Care">
-                                <div class="blog-card-category">Children's Dental</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span><i class="far fa-calendar"></i> March 8, 2024</span>
-                                    <span><i class="far fa-clock"></i> 6 min read</span>
+                                <div class="blog-card-category-premium">
+                                    <i class="fas fa-child"></i> Children's Dental
                                 </div>
-                                <h3 class="blog-card-title">
+                            </div>
+                            <div class="blog-card-content-premium">
+                                <div class="blog-card-meta-premium">
+                                    <div class="author-info-mini">
+                                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=50&h=50&fit=crop"
+                                            alt="Dr. Emily Roberts">
+                                        <div>
+                                            <span class="author-name-mini">Dr. Emily Roberts</span>
+                                            <span class="author-verified"><i class="fas fa-check-circle"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-calendar"></i> March 8, 2024</span>
+                                        <span><i class="far fa-clock"></i> 6 min read</span>
+                                        <span><i class="far fa-eye"></i> 3.2k views</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-card-title-premium">
                                     <a href="blog-details.html">When Should Your Child First Visit the Dentist?</a>
                                 </h3>
-                                <p class="blog-card-excerpt">
+                                <p class="blog-card-excerpt-premium">
                                     A comprehensive guide for parents on pediatric dental care, including the right age
                                     for first visits and how to prepare your child.
                                 </p>
-                                <a href="blog-details.html" class="blog-card-read-more">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <div class="blog-card-footer-premium">
+                                    <a href="blog-details.html" class="read-more-premium">
+                                        Read Full Article <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="engagement-buttons">
+                                        <button class="engagement-btn">
+                                            <i class="far fa-heart"></i> <span>156</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-comment"></i> <span>23</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </article>
 
                         <!-- Blog Post 4 -->
-                        <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
-                            <div class="blog-card-image">
-                                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        <article class="blog-card-premium" data-aos="fade-up" data-aos-delay="400">
+                            <div class="blog-card-image-premium">
+                                <img src="https://images.pexels.com/photos/4687360/pexels-photo-4687360.jpeg"
                                     alt="Dental Implants">
-                                <div class="blog-card-category">Dental Treatments</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span><i class="far fa-calendar"></i> March 5, 2024</span>
-                                    <span><i class="far fa-clock"></i> 7 min read</span>
+                                <div class="blog-card-category-premium">
+                                    <i class="fas fa-user-md"></i> Dental Treatments
                                 </div>
-                                <h3 class="blog-card-title">
+                            </div>
+                            <div class="blog-card-content-premium">
+                                <div class="blog-card-meta-premium">
+                                    <div class="author-info-mini">
+                                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=50&h=50&fit=crop"
+                                            alt="Dr. James Wilson">
+                                        <div>
+                                            <span class="author-name-mini">Dr. James Wilson</span>
+                                            <span class="author-verified"><i class="fas fa-check-circle"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-calendar"></i> March 5, 2024</span>
+                                        <span><i class="far fa-clock"></i> 7 min read</span>
+                                        <span><i class="far fa-eye"></i> 2.1k views</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-card-title-premium">
                                     <a href="blog-details.html">Dental Implants: A Permanent Solution for Missing
                                         Teeth</a>
                                 </h3>
-                                <p class="blog-card-excerpt">
+                                <p class="blog-card-excerpt-premium">
                                     Everything you need to know about dental implants - from the procedure and recovery
                                     to long-term benefits and care.
                                 </p>
-                                <a href="blog-details.html" class="blog-card-read-more">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <div class="blog-card-footer-premium">
+                                    <a href="blog-details.html" class="read-more-premium">
+                                        Read Full Article <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="engagement-buttons">
+                                        <button class="engagement-btn">
+                                            <i class="far fa-heart"></i> <span>87</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-comment"></i> <span>15</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </article>
 
                         <!-- Blog Post 5 -->
-                        <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
-                            <div class="blog-card-image">
-                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        <article class="blog-card-premium" data-aos="fade-up" data-aos-delay="500">
+                            <div class="blog-card-image-premium">
+                                <img src="https://images.pexels.com/photos/3779706/pexels-photo-3779706.jpeg"
                                     alt="Gum Disease">
-                                <div class="blog-card-category">Preventive Care</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span><i class="far fa-calendar"></i> March 1, 2024</span>
-                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                <div class="blog-card-category-premium">
+                                    <i class="fas fa-shield-alt"></i> Preventive Care
                                 </div>
-                                <h3 class="blog-card-title">
+                            </div>
+                            <div class="blog-card-content-premium">
+                                <div class="blog-card-meta-premium">
+                                    <div class="author-info-mini">
+                                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=50&h=50&fit=crop"
+                                            alt="Dr. Sarah Johnson">
+                                        <div>
+                                            <span class="author-name-mini">Dr. Sarah Johnson</span>
+                                            <span class="author-verified"><i class="fas fa-check-circle"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-calendar"></i> March 1, 2024</span>
+                                        <span><i class="far fa-clock"></i> 5 min read</span>
+                                        <span><i class="far fa-eye"></i> 1.5k views</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-card-title-premium">
                                     <a href="blog-details.html">Early Signs of Gum Disease and How to Prevent It</a>
                                 </h3>
-                                <p class="blog-card-excerpt">
+                                <p class="blog-card-excerpt-premium">
                                     Learn to recognize the warning signs of gum disease and discover effective
                                     prevention strategies to maintain healthy gums.
                                 </p>
-                                <a href="blog-details.html" class="blog-card-read-more">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <div class="blog-card-footer-premium">
+                                    <a href="blog-details.html" class="read-more-premium">
+                                        Read Full Article <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="engagement-buttons">
+                                        <button class="engagement-btn">
+                                            <i class="far fa-heart"></i> <span>112</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-comment"></i> <span>19</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </article>
 
                         <!-- Blog Post 6 -->
-                        <article class="blog-card" data-aos="fade-up" data-aos-delay="600">
-                            <div class="blog-card-image">
-                                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        <article class="blog-card-premium" data-aos="fade-up" data-aos-delay="600">
+                            <div class="blog-card-image-premium">
+                                <img src="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg"
                                     alt="Braces">
-                                <div class="blog-card-category">Dental Treatments</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span><i class="far fa-calendar"></i> February 26, 2024</span>
-                                    <span><i class="far fa-clock"></i> 8 min read</span>
+                                <div class="blog-card-badge new">
+                                    <i class="fas fa-star"></i> New
                                 </div>
-                                <h3 class="blog-card-title">
+                                <div class="blog-card-category-premium">
+                                    <i class="fas fa-user-md"></i> Dental Treatments
+                                </div>
+                            </div>
+                            <div class="blog-card-content-premium">
+                                <div class="blog-card-meta-premium">
+                                    <div class="author-info-mini">
+                                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=50&h=50&fit=crop"
+                                            alt="Dr. Michael Chen">
+                                        <div>
+                                            <span class="author-name-mini">Dr. Michael Chen</span>
+                                            <span class="author-verified"><i class="fas fa-check-circle"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-calendar"></i> February 26, 2024</span>
+                                        <span><i class="far fa-clock"></i> 8 min read</span>
+                                        <span><i class="far fa-eye"></i> 892 views</span>
+                                    </div>
+                                </div>
+                                <h3 class="blog-card-title-premium">
                                     <a href="blog-details.html">Modern Orthodontics: Beyond Traditional Braces</a>
                                 </h3>
-                                <p class="blog-card-excerpt">
+                                <p class="blog-card-excerpt-premium">
                                     Explore the latest advancements in orthodontic treatments, including clear aligners,
                                     lingual braces, and accelerated options.
                                 </p>
-                                <a href="blog-details.html" class="blog-card-read-more">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <div class="blog-card-footer-premium">
+                                    <a href="blog-details.html" class="read-more-premium">
+                                        Read Full Article <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="engagement-buttons">
+                                        <button class="engagement-btn">
+                                            <i class="far fa-heart"></i> <span>64</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-comment"></i> <span>7</span>
+                                        </button>
+                                        <button class="engagement-btn">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -316,7 +557,7 @@
                             <h4>Recent Posts</h4>
                             <div class="recent-post">
                                 <div class="recent-post-image">
-                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                    <img src="https://images.pexels.com/photos/6528867/pexels-photo-6528867.jpeg?w=100&h=100&fit=crop"
                                         alt="Recent Post">
                                 </div>
                                 <div class="recent-post-content">
@@ -326,7 +567,7 @@
                             </div>
                             <div class="recent-post">
                                 <div class="recent-post-image">
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                    <img src="https://images.pexels.com/photos/4269689/pexels-photo-4269689.jpeg?w=100&h=100&fit=crop"
                                         alt="Recent Post">
                                 </div>
                                 <div class="recent-post-content">
@@ -336,7 +577,7 @@
                             </div>
                             <div class="recent-post">
                                 <div class="recent-post-image">
-                                    <img src="https://images.unsplash.com/photo-1606811951341-756f6de7c6e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                    <img src="https://images.pexels.com/photos/5355731/pexels-photo-5355731.jpeg?w=100&h=100&fit=crop"
                                         alt="Recent Post">
                                 </div>
                                 <div class="recent-post-content">
@@ -486,13 +727,87 @@
             }
         });
 
-        // Filter tags functionality
-        document.querySelectorAll('.filter-tag').forEach(tag => {
+        // Filter tags functionality - Premium
+        document.querySelectorAll('.filter-tag-premium').forEach(tag => {
             tag.addEventListener('click', function () {
-                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.filter-tag-premium').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
+
+                // Optional: Add filtering logic here
+                const category = this.dataset.category;
+                console.log('Filter by:', category);
             });
         });
+
+        // View toggle functionality
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const view = this.dataset.view;
+                const blogGrid = document.querySelector('.blog-grid-premium');
+
+                if (view === 'list') {
+                    blogGrid.style.gridTemplateColumns = '1fr';
+                } else {
+                    blogGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(350px, 1fr))';
+                }
+            });
+        });
+
+        // Engagement buttons functionality
+        document.querySelectorAll('.engagement-btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const icon = this.querySelector('i');
+                const count = this.querySelector('span');
+
+                // Toggle active state for like and bookmark
+                if (icon.classList.contains('fa-heart') || icon.classList.contains('fa-bookmark')) {
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        if (count) {
+                            count.textContent = parseInt(count.textContent) + 1;
+                        }
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        if (count) {
+                            count.textContent = parseInt(count.textContent) - 1;
+                        }
+                    }
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-box-premium .form-control');
+        const searchBtn = document.querySelector('.search-btn');
+
+        if (searchBtn) {
+            searchBtn.addEventListener('click', function () {
+                const query = searchInput.value;
+                if (query.trim()) {
+                    console.log('Searching for:', query);
+                    // Add your search logic here
+                }
+            });
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    const query = this.value;
+                    if (query.trim()) {
+                        console.log('Searching for:', query);
+                        // Add your search logic here
+                    }
+                }
+            });
+        }
 
         // Newsletter form submission
         document.querySelector('.newsletter-form')?.addEventListener('submit', function (e) {
