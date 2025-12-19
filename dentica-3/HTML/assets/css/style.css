@@ -225,6 +225,7 @@ img {
     left: 0;
     background: var(--primary);
     transition: var(--transition);
+    border: none !important;
 }
 
 .nav-link:hover::after,
@@ -8904,7 +8905,9 @@ img {
         padding: 10px 18px;
         font-size: 0.9rem;
     }
-}/* ===== BLOG DETAILS PREMIUM STYLES ===== */
+}
+
+/* ===== BLOG DETAILS PREMIUM STYLES ===== */
 
 /* Reading Progress Bar */
 .reading-progress-bar {
@@ -11725,7 +11728,9 @@ img {
     .social-follow-grid {
         grid-template-columns: 1fr;
     }
-}/* ===== BLOG PAGE PREMIUM STYLES ===== */
+}
+
+/* ===== BLOG PAGE PREMIUM STYLES ===== */
 
 /* Blog Hero Premium */
 .blog-hero-premium {
