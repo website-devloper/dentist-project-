@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dentic - UI Elements & Components</title>
+    <title>Dentic - Design System & UI Components</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,51 +21,663 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        .element-section {
-            padding: 60px 0;
-            border-bottom: 1px solid #eee;
+        /* Premium Global Enhancements */
+        :root {
+            --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.05);
+            --transition-premium: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        .element-title {
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--primary-color);
-            display: inline-block;
+        ::selection {
+            background: var(--primary);
+            color: white;
         }
 
-        .example-container {
-            padding: 30px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            background: #fff;
-            margin-bottom: 20px;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
 
-        .color-box {
-            width: 100%;
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--dark);
+        }
+
+        /* Documentation specific styles */
+        .color-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-premium);
+            margin-bottom: 25px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition-premium);
+        }
+
+        .color-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch {
             height: 100px;
-            border-radius: 8px;
-            margin-bottom: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-weight: bold;
+            font-weight: 600;
+        }
+
+        .color-info {
+            padding: 15px;
+            background: white;
+        }
+
+        .color-name {
+            display: block;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .color-hex {
+            font-family: monospace;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .element-section {
+            padding: 80px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .component-preview {
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 24px;
+            padding: 50px;
+            position: relative;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.02);
+            transition: var(--transition-premium);
+        }
+
+        .component-preview:hover {
+            box-shadow: 0 20px 40px rgba(42, 109, 255, 0.05);
+            border-color: rgba(42, 109, 255, 0.1);
+        }
+
+        .component-preview::before {
+            content: 'Module Preview';
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #cbd5e1;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 20px;
+        }
+
+        .icon-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .icon-box:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(42, 109, 255, 0.2);
+        }
+
+        .icon-box i {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .icon-box span {
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        /* Premium Button Enhancements */
+        .btn {
+            transition: var(--transition-premium) !important;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 10px 25px rgba(42, 109, 255, 0.4);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Form Controls Premium */
+        .form-control,
+        .form-select {
+            border-radius: 12px;
+            padding: 12px 18px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            box-shadow: 0 0 0 4px rgba(42, 109, 255, 0.1);
+            border-color: var(--primary);
+        }
+
+        /* Before/After Slider */
+        .ba-slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .ba-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ba-after {
+            width: 50%;
+            z-index: 1;
+            border-right: 3px solid white;
+        }
+
+        .ba-slider .ba-label {
+            position: absolute;
+            bottom: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ba-after .ba-label {
+            left: 20px;
+        }
+
+        .ba-before .ba-label {
+            right: 20px;
+        }
+
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: white;
+            z-index: 3;
+            cursor: ew-resize;
+            margin-left: -2px;
+        }
+
+        .ba-handle::after {
+            content: '\f337';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: white;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item-modern {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: var(--transition-premium);
+        }
+
+        .gallery-item-modern img {
+            transition: var(--transition-premium);
+        }
+
+        .gallery-item-modern:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay-modern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(42, 109, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item-modern:hover .gallery-overlay-modern {
+            opacity: 1;
+        }
+
+        .gallery-icon-modern {
+            color: white;
+            font-size: 2rem;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item-modern:hover .gallery-icon-modern {
+            transform: translateY(0);
+        }
+
+        /* Stats Premium Glassmorphism */
+        .stats-premium {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 20px;
+            transition: var(--transition-premium);
+        }
+
+        .stats-premium:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-10px);
+        }
+
+        /* Card Enhancements */
+        .feature-card,
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition-premium);
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .feature-card:hover,
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary);
+        }
+
+        .feature-icon,
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(42, 109, 255, 0.1);
+            color: var(--primary);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            transition: var(--transition-premium);
+        }
+
+        .feature-card:hover .feature-icon,
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .feature-card::after,
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: var(--primary);
+            opacity: 0.03;
+            border-radius: 50%;
+            transition: var(--transition-premium);
+        }
+
+        .feature-card:hover::after,
+        .service-card:hover::after {
+            transform: scale(2);
+            opacity: 0.05;
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* Enhanced Accordion Styles */
+        .accordion-modern .accordion-item {
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 15px;
+            border-radius: 12px !important;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-modern .accordion-item:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .accordion-modern .accordion-button {
+            padding: 1.25rem 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            background-color: white;
+            box-shadow: none;
+        }
+
+        .accordion-modern .accordion-button:not(.collapsed) {
+            color: var(--primary);
+            background-color: rgba(42, 109, 255, 0.02);
+        }
+
+        .accordion-modern .accordion-button::after {
+            background-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-modern .accordion-body {
+            color: #555;
+            /* Better contrast text color */
+            line-height: 1.7;
+            padding: 0.5rem 1.5rem 1.5rem;
+        }
+
+        /* Enhanced Tab Styles */
+        .tabs-modern .nav-pills .nav-link {
+            color: var(--dark);
+            font-weight: 700;
+            padding: 14px 28px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: white;
+            margin-right: 12px;
+        }
+
+        .tabs-modern .nav-pills .nav-link i {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .tabs-modern .nav-pills .nav-link.active i {
+            color: white;
+        }
+
+        .tabs-modern .nav-pills .nav-link.active {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 10px 25px rgba(42, 109, 255, 0.3);
+            border-color: var(--primary);
+        }
+
+        .tabs-modern .nav-pills .nav-link:hover:not(.active) {
+            background-color: rgba(42, 109, 255, 0.05);
+            color: var(--primary);
+        }
+
+        /* Doctor Card Premium */
+        .doctor-card {
+            border-radius: 24px;
+            overflow: hidden;
+            background: white;
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition-premium);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            height: 100%;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .doctor-image {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .doctor-overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(to top, var(--primary), transparent);
+            transition: var(--transition-premium);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .doctor-card:hover .doctor-overlay {
+            bottom: 0;
+        }
+
+        .doctor-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .doctor-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .doctor-social a:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .doctor-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .doctor-info h5 {
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .doctor-info p {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Modern Process Steps */
+        .process-steps-container {
+            position: relative;
+        }
+
+        .process-steps-container::before {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: #e2e8f0;
+            z-index: 0;
+        }
+
+        @media (max-width: 767px) {
+            .process-steps-container::before {
+                display: none;
+            }
+        }
+
+        .process-step-modern {
+            position: relative;
+            z-index: 1;
+            padding: 0 15px;
+        }
+
+        .step-num {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 25px;
+            box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 5px solid #fff;
+        }
+
+        .process-step-modern:hover .step-num {
+            transform: translateY(-10px) scale(1.1);
+            color: white !important;
+            box-shadow: 0 15px 30px rgba(42, 109, 255, 0.2);
+        }
+
+        .step-num-1 {
+            color: var(--primary);
+            border-top: 5px solid var(--primary);
+        }
+
+        .process-step-modern:hover .step-num-1 {
+            background: var(--primary);
+        }
+
+        .step-num-2 {
+            color: var(--secondary);
+            border-top: 5px solid var(--secondary);
+        }
+
+        .process-step-modern:hover .step-num-2 {
+            background: var(--secondary);
+        }
+
+        .step-num-3 {
+            color: var(--accent);
+            border-top: 5px solid var(--accent);
+        }
+
+        .process-step-modern:hover .step-num-3 {
+            background: var(--accent);
+        }
+
+        .process-step-modern h5 {
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .process-step-modern p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #475569;
         }
     </style>
 </head>
 
 <body>
+    <div id="scroll-progress"></div>
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
             <div class="container">
                 <a class="navbar-brand" href="index-1.html">
                     <i class="fas fa-tooth me-2"></i>Dentic
@@ -132,45 +744,162 @@
         </nav>
     </header>
 
-    <!-- Page Header -->
-    <section class="bg-light py-5 mt-5">
-        <div class="container mt-4">
+    <!-- Page Hero -->
+    <section class="page-hero pb-0">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="hero-badge mb-3">
+                        <i class="fas fa-layer-group"></i> Design System
+                    </div>
+                    <h1 class="display-4 fw-bold mb-4">UI Elements & <span class="text-primary">Components</span></h1>
+                    <p class="lead text-muted mb-5">A comprehensive guide to the design system, components, and elements
+                        used throughout the Dentic dental clinic theme.</p>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="display-4 fw-bold">UI Elements</h1>
-                    <p class="lead text-muted">A comprehensive guide to the components and styles used in the Dentic
-                        theme.</p>
+                <div class="col-12 text-center mb-5">
+                    <div class="d-flex flex-wrap justify-content-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#colors" class="btn btn-sm btn-outline-primary rounded-pill">Colors</a>
+                        <a href="#typography" class="btn btn-sm btn-outline-primary rounded-pill">Typography</a>
+                        <a href="#buttons" class="btn btn-sm btn-outline-primary rounded-pill">Buttons</a>
+                        <a href="#forms" class="btn btn-sm btn-outline-primary rounded-pill">Forms</a>
+                        <a href="#components" class="btn btn-sm btn-outline-primary rounded-pill">UI Modules</a>
+                        <a href="#pricing" class="btn btn-sm btn-outline-primary rounded-pill">Pricing</a>
+                        <a href="#modals" class="btn btn-sm btn-outline-primary rounded-pill">Modals</a>
+                        <a href="#blog-cards" class="btn btn-sm btn-outline-primary rounded-pill">Cards</a>
+                        <a href="#comparison" class="btn btn-sm btn-outline-primary rounded-pill">Before/After</a>
+                        <a href="#medical-components" class="btn btn-sm btn-outline-primary rounded-pill">Medical</a>
+                        <a href="#social-share" class="btn btn-sm btn-outline-primary rounded-pill">Social</a>
+                        <a href="#gallery-variants" class="btn btn-sm btn-outline-primary rounded-pill">Gallery</a>
+                        <a href="#tables" class="btn btn-sm btn-outline-primary rounded-pill">Tables</a>
+                        <a href="#partners" class="btn btn-sm btn-outline-primary rounded-pill">Partners</a>
+                        <a href="#newsletter" class="btn btn-sm btn-outline-primary rounded-pill">Newsletter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative waves at bottom -->
+        <div style="height: 60px; overflow: hidden; position: relative;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Color Palette Section -->
+    <section class="element-section" id="colors">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Foundation</span>
+                    <h2 class="fw-bold">Color Palette</h2>
+                    <p class="text-muted">The core colors used to create the visual identity.</p>
+                </div>
+            </div>
+
+            <div class="row" data-aos="fade-up">
+                <div class="col-md-3 col-6">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: var(--primary);">Primary</div>
+                        <div class="color-info">
+                            <span class="color-name">Blue</span>
+                            <span class="color-hex">#2A6DFF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: var(--secondary);">Secondary</div>
+                        <div class="color-info">
+                            <span class="color-name">Coral</span>
+                            <span class="color-hex">#FF6B6B</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: var(--accent);">Accent</div>
+                        <div class="color-info">
+                            <span class="color-name">Teal</span>
+                            <span class="color-hex">#4ECDC4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: var(--dark);">Dark</div>
+                        <div class="color-info">
+                            <span class="color-name">Navy</span>
+                            <span class="color-hex">#0f172a</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Typography Section -->
-    <section class="element-section" id="typography">
+    <section class="element-section bg-light" id="typography">
         <div class="container">
-            <h2 class="element-title">Typography</h2>
-            <div class="example-container">
-                <div class="row">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Content</span>
+                    <h2 class="fw-bold">Typography</h2>
+                    <p class="text-muted">Headings, body text, and styled content elements.</p>
+                </div>
+            </div>
+
+            <div class="component-preview" data-aos="fade-up">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h1>Heading 1</h1>
-                        <h2>Heading 2</h2>
-                        <h3>Heading 3</h3>
-                        <h4>Heading 4</h4>
-                        <h5>Heading 5</h5>
-                        <h6>Heading 6</h6>
+                        <div class="mb-5">
+                            <h1>Heading 1 <small class="text-muted fs-6 d-block mt-1">DM Sans Bold 48px</small></h1>
+                            <hr class="my-3 opacity-25">
+                            <h2>Heading 2 <small class="text-muted fs-6 d-block mt-1">DM Sans Bold 32px</small></h2>
+                            <hr class="my-3 opacity-25">
+                            <h3>Heading 3 <small class="text-muted fs-6 d-block mt-1">DM Sans Bold 28px</small></h3>
+                            <hr class="my-3 opacity-25">
+                            <h4>Heading 4 <small class="text-muted fs-6 d-block mt-1">DM Sans Bold 24px</small></h4>
+                            <hr class="my-3 opacity-25">
+                            <h5>Heading 5 <small class="text-muted fs-6 d-block mt-1">DM Sans Bold 20px</small></h5>
+                        </div>
                     </div>
                     <div class="col-lg-6">
-                        <p class="lead">This is a lead paragraph. It stands out from regular text.</p>
-                        <p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <p class="text-muted">This is muted text for less important information.</p>
-                        <p class="text-primary">This is primary colored text.</p>
+                        <p class="lead">Lead paragraph text. Used for introductory text designed to stand out (Lato
+                            1.25rem).</p>
+                        <p><span class="dropcap bg-primary text-white rounded-circle me-2 d-flex align-items-center justify-content-center float-start"
+                                style="width: 50px; height: 50px; font-size: 24px; font-weight: bold;">D</span>rop caps
+                            for a classic editorial look. This style is perfect for starting long blog articles or
+                            professional service descriptions. It creates a visual anchor for the reader's eye when they
+                            first land on the page.</p>
+                        <p>Standard body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><small class="text-muted">Small muted text for captions or fine print.</small></p>
 
-                        <blockquote class="blockquote mt-4">
-                            <p>A well-known quote, contained in a blockquote element.</p>
-                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
-                                    Title</cite></footer>
+                        <blockquote class="blockquote border-start border-4 border-primary ps-4 mt-4">
+                            <p class="mb-2 fst-italic">"A beautiful smile constitutes a happy life. We are dedicated to
+                                providing the best dental care."</p>
+                            <footer class="blockquote-footer mt-2">Dr. Sarah Johnson</footer>
                         </blockquote>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-6 border-end pe-md-4">
+                        <h6 class="fw-bold text-primary mb-3 text-uppercase">Two Column Layout (Left)</h6>
+                        <p class="text-muted">Multi-column text layouts are great for summarizing complex information or
+                            presenting comparisons in a compact space. They mirror the professional look of medical
+                            journals or high-end news publications.</p>
+                    </div>
+                    <div class="col-md-6 ps-md-4 mt-4 mt-md-0">
+                        <h6 class="fw-bold text-primary mb-3 text-uppercase">Two Column Layout (Right)</h6>
+                        <p class="text-muted">By splitting the content, you reduce line length and improve readability
+                            on large screens. This approach is highly effective for 'Why Choose Us' sections or service
+                            details where density of information is high.</p>
                     </div>
                 </div>
             </div>
@@ -180,96 +909,543 @@
     <!-- Buttons Section -->
     <section class="element-section" id="buttons">
         <div class="container">
-            <h2 class="element-title">Buttons</h2>
-            <div class="example-container">
-                <h4 class="mb-3">Solid Buttons</h4>
-                <div class="mb-4">
-                    <button type="button" class="btn btn-primary">Primary</button>
-                    <button type="button" class="btn btn-secondary">Secondary</button>
-                    <button type="button" class="btn btn-success">Success</button>
-                    <button type="button" class="btn btn-danger">Danger</button>
-                    <button type="button" class="btn btn-warning">Warning</button>
-                    <button type="button" class="btn btn-info">Info</button>
-                    <button type="button" class="btn btn-light">Light</button>
-                    <button type="button" class="btn btn-dark">Dark</button>
-                    <button type="button" class="btn btn-link">Link</button>
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Interactables</span>
+                    <h2 class="fw-bold">Buttons & Actions</h2>
+                    <p class="text-muted">Custom button styles with hover effects and variations.</p>
+                </div>
+            </div>
+
+            <div class="component-preview" data-aos="fade-up">
+                <h5 class="mb-4">Solid Buttons</h5>
+                <div class="d-flex flex-wrap gap-2 mb-5">
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                    <button class="btn btn-dark">Dark Button</button>
+                    <button class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i> With Icon</button>
+                    <button class="btn btn-primary rounded-circle p-0"
+                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"><i
+                            class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <h4 class="mb-3">Outline Buttons</h4>
-                <div class="mb-4">
-                    <button type="button" class="btn btn-outline-primary">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                    <button type="button" class="btn btn-outline-success">Success</button>
-                    <button type="button" class="btn btn-outline-danger">Danger</button>
-                    <button type="button" class="btn btn-outline-dark">Dark</button>
+                <h5 class="mb-4">Outline Buttons</h5>
+                <div class="d-flex flex-wrap gap-2 mb-5">
+                    <button class="btn btn-outline-primary">Primary Outline</button>
+                    <button class="btn btn-outline-secondary">Secondary Outline</button>
+                    <button class="btn btn-outline-dark">Dark Outline</button>
                 </div>
 
-                <h4 class="mb-3">Sizes</h4>
-                <div>
-                    <button type="button" class="btn btn-primary btn-lg">Large Button</button>
-                    <button type="button" class="btn btn-primary">Default Button</button>
-                    <button type="button" class="btn btn-primary btn-sm">Small Button</button>
+                <h5 class="mb-4">Sizes</h5>
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    <button class="btn btn-primary btn-lg">Large Button</button>
+                    <button class="btn btn-primary">Default Button</button>
+                    <button class="btn btn-primary btn-sm px-3 py-2">Small</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Alerts Section -->
-    <section class="element-section" id="alerts">
+    <!-- Forms Section -->
+    <section class="element-section bg-light" id="forms">
         <div class="container">
-            <h2 class="element-title">Alerts & Notifications</h2>
-            <div class="example-container">
-                <div class="alert alert-primary" role="alert">
-                    A simple primary alert—check it out!
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Data Entry</span>
+                    <h2 class="fw-bold">Form Elements</h2>
+                    <p class="text-muted">Modern inputs, selects, and controls.</p>
                 </div>
-                <div class="alert alert-secondary" role="alert">
-                    A simple secondary alert—check it out!
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="component-preview h-100" data-aos="fade-up">
+                        <h5 class="mb-4">Inputs & Dropdowns</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Standard Input</label>
+                                <input type="text" class="form-control" placeholder="Enter your name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Select Menu</label>
+                                <select class="form-select">
+                                    <option selected>Choose a service...</option>
+                                    <option value="1">Teeth Whitening</option>
+                                    <option value="2">Dental Implants</option>
+                                    <option value="3">Regular Checkup</option>
+                                </select>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Floating Label Input</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                                    style="height: 100px"></textarea>
+                                <label for="floatingTextarea">Floating Textarea</label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="alert alert-success" role="alert">
-                    <i class="fas fa-check-circle me-2"></i> A simple success alert—check it out!
-                </div>
-                <div class="alert alert-danger" role="alert">
-                    <i class="fas fa-exclamation-circle me-2"></i> A simple danger alert—check it out!
-                </div>
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <div class="col-lg-6">
+                    <div class="component-preview h-100" data-aos="fade-up" data-aos-delay="100">
+                        <h5 class="mb-4">Checks & Toggles</h5>
+                        <div class="mb-4">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Default Checkbox
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Checked Checkbox
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Default Radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Selected Radio
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Default Switch
+                                    Toggle</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Active Switch
+                                    Toggle</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modals Section -->
+    <!-- Components Section -->
+    <section class="element-section" id="components">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Modules</span>
+                    <h2 class="fw-bold">UI Components</h2>
+                    <p class="text-muted">Interactive and visual components for varied content.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Accordion -->
+                <div class="col-lg-6">
+                    <div class="component-preview h-100" data-aos="fade-up">
+                        <h5 class="mb-4">Modern Accordion</h5>
+                        <div class="accordion accordion-modern" id="accordionExample">
+                            <div class="accordion-item shadow-none">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Why is regular checkup important?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Regular checkups help in early detection of dental issues, preventing costly
+                                        treatments later. Our experts recommend a visit every 6 months for optimal oral
+                                        health.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item shadow-none">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What services do you offer?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        We offer a wide range of services including cosmetic dentistry, implants,
+                                        orthodontics, and emergency care with state-of-the-art technology.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="col-lg-6">
+                    <div class="component-preview h-100" data-aos="fade-up" data-aos-delay="100">
+                        <h5 class="mb-4">Premium Tabs with Icons</h5>
+                        <div class="tabs-modern">
+                            <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active rounded-pill px-4" id="pills-home-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"
+                                        aria-controls="pills-home" aria-selected="true">
+                                        <i class="fas fa-info-circle me-2"></i>Overview
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link rounded-pill px-4" id="pills-profile-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
+                                        aria-controls="pills-profile" aria-selected="false">
+                                        <i class="fas fa-layer-group me-2"></i>Benefits
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link rounded-pill px-4" id="pills-contact-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">
+                                        <i class="fas fa-comments me-2"></i>Reviews
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+                                    <h6 class="fw-bold text-dark mb-3">Service Overview</h6>
+                                    <p class="mb-0 text-muted" style="line-height: 1.8;">Our dental clinic provides
+                                        comprehensive care using modern diagnostics. This tab system helps patients
+                                        quickly find relevant information about their desired treatments with clear
+                                        visual navigation icons.</p>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab">
+                                    <h6 class="fw-bold text-dark mb-3">Patient Benefits</h6>
+                                    <ul class="text-muted mb-0 ps-3" style="line-height: 1.8;">
+                                        <li>Digital smile design visualization</li>
+                                        <li>Minimally invasive therapy approach</li>
+                                        <li>Extended warranty on all implants</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                    aria-labelledby="pills-contact-tab">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="text-warning me-2">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <span class="text-dark fw-bold">4.9/5 Based on 200+ Reviews</span>
+                                    </div>
+                                    <p class="mb-0 text-muted fst-italic">"Excellent staff and very clean facility. They
+                                        explained every step of the root canal procedure which really helped my dental
+                                        anxiety."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alerts & Badges -->
+                <div class="col-lg-6">
+                    <div class="component-preview h-100" data-aos="fade-up">
+                        <h5 class="mb-4">Alerts & Notifications</h5>
+                        <div class="alert alert-success border-0 shadow-sm d-flex align-items-center" role="alert">
+                            <i class="fas fa-check-circle fs-4 me-3"></i>
+                            <div>Successfully updated your profile!</div>
+                        </div>
+                        <div class="alert alert-warning border-0 shadow-sm d-flex align-items-center" role="alert">
+                            <i class="fas fa-exclamation-triangle fs-4 me-3"></i>
+                            <div>Warning: Please check your internet connection.</div>
+                        </div>
+                        <div class="alert alert-info border-0 shadow-sm d-flex align-items-center" role="alert">
+                            <i class="fas fa-info-circle fs-4 me-3"></i>
+                            <div>Note: Our office will be closed on Friday.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges & Progress -->
+                <div class="col-lg-6">
+                    <div class="component-preview h-100" data-aos="fade-up" data-aos-delay="100">
+                        <h5 class="mb-4">Badges & Progress</h5>
+                        <div class="mb-4">
+                            <span class="badge bg-primary rounded-pill px-3 py-2">Primary</span>
+                            <span class="badge bg-secondary rounded-pill px-3 py-2">Secondary</span>
+                            <span class="badge bg-success rounded-pill px-3 py-2">Success</span>
+                            <span class="badge bg-warning text-dark rounded-pill px-3 py-2">Warning</span>
+                            <span class="badge bg-light text-dark border rounded-pill px-3 py-2">Light</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold small">Customer Satisfaction</span>
+                                <span class="fw-bold small text-primary">95%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 95%"
+                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold small">Project Completion</span>
+                                <span class="fw-bold small text-secondary">70%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%"
+                                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Preview Section -->
+    <section class="element-section bg-light" id="cards">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Layouts</span>
+                    <h2 class="fw-bold">Card Designs</h2>
+                    <p class="text-muted">Premium card components used for services, features, and teams.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Feature Card -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <h4>Dental Implants</h4>
+                        <p class="text-muted mb-0">High-quality implants to restore your perfect smile with
+                            natural-looking results.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h4>Cosmetic Dentistry</h4>
+                        <p>Detailed cosmetic procedures to enhance your smile's aesthetics and boost confidence.</p>
+                    </div>
+                </div>
+
+                <!-- Pricing Card Preview (Simple) -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="h-100 bg-white p-4 rounded-4 shadow-sm border position-relative overflow-hidden text-center">
+                        <h5 class="fw-bold text-uppercase text-primary letter-spacing-1 mb-3">Standard</h5>
+                        <div class="display-5 fw-bold mb-1">$49</div>
+                        <span class="text-muted small">Per Visit</span>
+                        <hr class="my-4">
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Consultation</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Standard Cleaning</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 1 X-Ray Image</li>
+                            <li class="text-muted"><i class="fas fa-times text-muted me-2"></i> Whitening</li>
+                        </ul>
+                        <button class="btn btn-outline-primary w-100 rounded-pill">Choose Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icons Section -->
+    <section class="element-section" id="icons">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Visual Assets</span>
+                    <h2 class="fw-bold">Icons Grid</h2>
+                    <p class="text-muted">A sample of the medical and UI icons available via FontAwesome.</p>
+                </div>
+            </div>
+
+            <div class="component-preview" data-aos="fade-up">
+                <div class="icon-grid">
+                    <div class="icon-box"><i class="fas fa-tooth"></i> <span>Tooth</span></div>
+                    <div class="icon-box"><i class="fas fa-heart-pulse"></i> <span>Heart</span></div>
+                    <div class="icon-box"><i class="fas fa-user-md"></i> <span>Doctor</span></div>
+                    <div class="icon-box"><i class="fas fa-hospital"></i> <span>Hospital</span></div>
+                    <div class="icon-box"><i class="fas fa-ambulance"></i> <span>Ambulance</span></div>
+                    <div class="icon-box"><i class="fas fa-syringe"></i> <span>Syringe</span></div>
+                    <div class="icon-box"><i class="fas fa-pills"></i> <span>Pills</span></div>
+                    <div class="icon-box"><i class="fas fa-x-ray"></i> <span>X-Ray</span></div>
+                    <div class="icon-box"><i class="fas fa-calendar-check"></i> <span>Calendar</span></div>
+                    <div class="icon-box"><i class="fas fa-phone"></i> <span>Phone</span></div>
+                    <div class="icon-box"><i class="fas fa-envelope"></i> <span>Email</span></div>
+                    <div class="icon-box"><i class="fas fa-map-marker-alt"></i> <span>Location</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Advanced Pricing Section -->
+    <section class="element-section bg-light" id="pricing">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Business Layers</span>
+                    <h2 class="fw-bold">Pricing Tables</h2>
+                    <p class="text-muted">Flexible pricing options with highlighted best-value tiers.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Basic Plan -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div
+                        class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden text-center transition-all hover-translate-up">
+                        <div class="card-header bg-transparent border-0 pt-5 pb-0">
+                            <h5 class="fw-bold text-uppercase text-muted letter-spacing-1 mb-0">Basic</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="display-4 fw-bold text-dark mb-0">$29</h2>
+                            <p class="text-muted small">per month</p>
+                            <ul class="list-unstyled mt-4 mb-5 text-start d-inline-block">
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Routine Checkups</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>1 Dental Cleaning</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>X-Ray Exams</li>
+                                <li class="text-muted mb-3"><i class="fas fa-times me-3"></i>Teeth Whitening</li>
+                                <li class="text-muted"><i class="fas fa-times me-3"></i>Orthodontics</li>
+                            </ul>
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary rounded-pill">Choose Basic</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Plan (Focus) -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="card border-0 shadow-lg rounded-4 h-100 overflow-hidden text-center position-relative transform-scale-1">
+                        <div
+                            class="position-absolute top-0 start-50 translate-middle-x bg-primary text-white px-3 py-1 rounded-bottom-3 fw-bold small shadow-sm">
+                            Most Popular
+                        </div>
+                        <div class="card-header bg-transparent border-0 pt-5 pb-0">
+                            <h5 class="fw-bold text-uppercase text-primary letter-spacing-1 mb-0">Standard</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="display-4 fw-bold text-dark mb-0">$59</h2>
+                            <p class="text-muted small">per month</p>
+                            <ul class="list-unstyled mt-4 mb-5 text-start d-inline-block">
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Routine Checkups</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>2 Dental Cleanings</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>unlimited X-Rays</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Teeth Whitening (1x)</li>
+                                <li class="text-muted"><i class="fas fa-times me-3"></i>Orthodontics</li>
+                            </ul>
+                            <div class="d-grid">
+                                <button class="btn btn-primary rounded-pill shadow-lg">Choose Standard</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden text-center transition-all hover-translate-up">
+                        <div class="card-header bg-transparent border-0 pt-5 pb-0">
+                            <h5 class="fw-bold text-uppercase text-muted letter-spacing-1 mb-0">Premium</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="display-4 fw-bold text-dark mb-0">$99</h2>
+                            <p class="text-muted small">per month</p>
+                            <ul class="list-unstyled mt-4 mb-5 text-start d-inline-block">
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Priority Booking</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Unlimited Cleanings</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>All X-Rays Included</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Teeth Whitening (4x)</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Orthodontic Discount</li>
+                            </ul>
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary rounded-pill">Choose Premium</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals & Interactive Section -->
     <section class="element-section" id="modals">
         <div class="container">
-            <h2 class="element-title">Modals</h2>
-            <div class="example-container">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch Demo Modal
-                </button>
-                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop">
-                    Launch Static Backdrop Modal
-                </button>
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Overlays</span>
+                    <h2 class="fw-bold">Modals & Popups</h2>
+                    <p class="text-muted">Interactive overlay components for user actions.</p>
+                </div>
+            </div>
+
+            <div class="component-preview" data-aos="fade-up">
+                <div class="d-flex flex-wrap gap-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch Demo Modal
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Launch Static Backdrop
+                    </button>
+                    <!-- Video Modal Trigger -->
+                    <button type="button"
+                        class="btn btn-danger text-white rounded-circle shadow-lg d-flex align-items-center justify-content-center position-relative"
+                        style="width: 50px; height: 50px;" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        <i class="fas fa-play ms-1"></i>
+                        <span
+                            class="position-absolute top-0 start-0 w-100 h-100 rounded-circle border border-danger border-2 opacity-50 animate-ping"></span>
+                    </button>
+                </div>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                        <div class="modal-content rounded-4 border-0 shadow-lg">
+                            <div class="modal-header border-0 pb-0">
+                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Appointment Confirmed</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                <p>This is a standard Bootstrap modal. You can place any content here, including forms,
-                                    images, or text.</p>
+                            <div class="modal-body text-center py-5">
+                                <div class="mb-3 text-success">
+                                    <i class="fas fa-check-circle fa-4x"></i>
+                                </div>
+                                <h4 class="fw-bold">Thank You!</h4>
+                                <p class="text-muted">Your appointment request has been successfully sent. We will
+                                    contact you shortly.</p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                            <div class="modal-footer border-0 pt-0 justify-content-center pb-4">
+                                <button type="button" class="btn btn-secondary rounded-pill px-4"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary rounded-pill px-4">View Details</button>
                             </div>
                         </div>
                     </div>
@@ -279,18 +1455,41 @@
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
+                        <div class="modal-content rounded-4 border-0">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Static Backdrop</h5>
+                                <h5 class="modal-title fw-bold" id="staticBackdropLabel">Terms & Conditions</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>I will not close if you click outside of me. Don't even try to press escape key.</p>
+                                <p>Please read our terms carefully before proceeding. By clicking 'Understood', you
+                                    agree to our privacy policy and service terms.</p>
+                                <hr>
+                                <p class="mb-0 text-muted small">I will not close if you click outside of me. Don't even
+                                    try to press escape key.</p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                            <div class="modal-footer border-0">
+                                <button type="button" class="btn btn-light rounded-pill"
+                                    data-bs-dismiss="modal">Decline</button>
+                                <button type="button" class="btn btn-primary rounded-pill">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Modal -->
+                <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content bg-black border-0 rounded-4 overflow-hidden">
+                            <div class="modal-header border-0 position-absolute top-0 end-0 z-3">
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-0">
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/BadB1z-V_qU" title="YouTube video"
+                                        allowfullscreen></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -299,58 +1498,616 @@
         </div>
     </section>
 
-    <!-- Carousel Section -->
-    <section class="element-section" id="carousel">
+    <!-- Stats Section -->
+    <section class="element-section bg-primary text-white position-relative overflow-hidden" id="stats">
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-20"
+            style="background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);"></div>
+        <div class="container position-relative z-1">
+            <div class="row text-center g-4">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="stats-premium">
+                        <i class="fas fa-history mb-3 fs-1 opacity-50"></i>
+                        <div class="display-3 fw-bold mb-2">15+</div>
+                        <p class="lead mb-0 opacity-75">Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stats-premium">
+                        <i class="fas fa-user-check mb-3 fs-1 opacity-50"></i>
+                        <div class="display-3 fw-bold mb-2">2k+</div>
+                        <p class="lead mb-0 opacity-75">Happy Patients</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stats-premium">
+                        <i class="fas fa-user-md mb-3 fs-1 opacity-50"></i>
+                        <div class="display-3 fw-bold mb-2">50+</div>
+                        <p class="lead mb-0 opacity-75">Expert Doctors</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stats-premium">
+                        <i class="fas fa-headset mb-3 fs-1 opacity-50"></i>
+                        <div class="display-3 fw-bold mb-2">24/7</div>
+                        <p class="lead mb-0 opacity-75">Emergency Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog & News Cards Section -->
+    <section class="element-section" id="blog-cards">
         <div class="container">
-            <h2 class="element-title">Carousel</h2>
-            <div class="example-container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Content</span>
+                    <h2 class="fw-bold">News & Articles</h2>
+                    <p class="text-muted">Layout variants for blog posts and news updates.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Standard Vertical Card -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden group-hover">
+                        <div class="position-relative overflow-hidden" style="height: 240px;">
+                            <!-- Placeholder Image -->
+                            <div
+                                class="bg-light w-100 h-100 d-flex align-items-center justify-content-center text-secondary">
+                                <i class="far fa-image fa-3x"></i>
                             </div>
-                            <div class="carousel-inner rounded overflow-hidden">
-                                <div class="carousel-item active">
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                        class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>First Slide Label</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
+                            <span
+                                class="badge bg-primary position-absolute top-0 start-0 m-3 rounded-pill px-3 py-2">Dental
+                                Care</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3 text-muted small">
+                                <span class="me-3"><i class="far fa-calendar me-1"></i> Oct 24, 2025</span>
+                                <span><i class="far fa-user me-1"></i> Admin</span>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3"><a href="#"
+                                    class="text-dark text-decoration-none hover-primary">Top 10 Tips for Healthy
+                                    Teeth</a></h5>
+                            <p class="card-text text-muted">Maintaining oral hygiene is crucial for overall health. Here
+                                are ten simple tips to keep your smile bright...</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 px-4 pb-4">
+                            <a href="#" class="btn btn-link p-0 text-decoration-none fw-bold">Read More <i
+                                    class="fas fa-arrow-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal Card -->
+                <div class="col-lg-8 col-md-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-5 position-relative overflow-hidden" style="min-height: 280px;">
+                                <div
+                                    class="bg-light w-100 h-100 d-flex align-items-center justify-content-center text-secondary">
+                                    <i class="fas fa-camera fa-3x"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4 p-lg-5 d-flex flex-column justify-content-center h-100">
+                                    <div class="mb-2">
+                                        <span
+                                            class="badge bg-secondary-subtle text-secondary rounded-pill px-3 py-1 fw-bold small">Technology</span>
+                                    </div>
+                                    <h4 class="card-title fw-bold mb-3"><a href="#"
+                                            class="text-dark text-decoration-none hover-primary">New Laser Technology
+                                            for Painless Treatment</a></h4>
+                                    <p class="card-text text-muted">Experience the future of dentistry with our new
+                                        laser treatments. Less pain, faster recovery, and better results for all our
+                                        patients.</p>
+                                    <div class="mt-3">
+                                        <a href="#" class="btn btn-outline-dark rounded-pill btn-sm px-4">Continue
+                                            Reading</a>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                        class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Second Slide Label</h5>
-                                        <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Minimal List Item -->
+                    <div class="list-group list-group-flush rounded-4 shadow-sm">
+                        <a href="#"
+                            class="list-group-item list-group-item-action p-4 border-0 d-flex align-items-center justify-content-between">
+                            <div>
+                                <h6 class="fw-bold mb-1 col-md-10">Why Flossing Should Be Part of Your Daily Routine
+                                </h6>
+                                <small class="text-muted"><i class="far fa-clock me-1"></i> 5 min read</small>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted small"></i>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action p-4 border-top d-flex align-items-center justify-content-between">
+                            <div>
+                                <h6 class="fw-bold mb-1 col-md-10">Foods That Naturally Whiten Your Teeth</h6>
+                                <small class="text-muted"><i class="far fa-clock me-1"></i> 3 min read</small>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted small"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="element-section" id="newsletter">
+        <div class="container">
+            <div class="component-preview p-0 border-0 rounded-4 overflow-hidden shadow-premium" data-aos="zoom-in">
+                <div class="row g-0">
+                    <div class="col-lg-5 p-5 d-flex flex-column justify-content-center text-white"
+                        style="background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);">
+                        <div class="mb-3">
+                            <i class="fas fa-paper-plane fa-3x opacity-20"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Keep Your Smile Bright!</h3>
+                        <p class="mb-0 opacity-90 lead">Join our newsletter to receive the latest dental tips, news, and
+                            exclusive dental care offers.</p>
+                    </div>
+                    <div class="col-lg-7 bg-white p-5 d-flex align-items-center">
+                        <div class="w-100">
+                            <h4 class="fw-bold mb-4 text-dark">Subscribe for Updates</h4>
+                            <form>
+                                <div class="input-group input-group-lg shadow-sm rounded-pill overflow-hidden border">
+                                    <input type="email" class="form-control border-0 ps-4"
+                                        placeholder="Enter your email address..." aria-label="Email address">
+                                    <button class="btn btn-primary px-4 fw-bold" type="submit">Join Now</button>
+                                </div>
+                                <div class="d-flex align-items-center mt-3 text-muted">
+                                    <i class="fas fa-shield-alt me-2 text-success"></i>
+                                    <p class="small mb-0">We protect your data. No spam, just value.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="element-section bg-light" id="cta">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Marketing</span>
+                    <h2 class="fw-bold">Call to Action</h2>
+                    <p class="text-muted">Compelling sections to drive user conversion.</p>
+                </div>
+            </div>
+
+            <div class="component-preview p-0 overflow-hidden" data-aos="fade-up">
+                <div class="bg-primary text-white p-5 position-relative overflow-hidden">
+                    <div class="position-absolute top-0 end-0 p-5 mt-n5 me-n5 opacity-10">
+                        <i class="fas fa-tooth fa-10x"></i>
+                    </div>
+                    <div class="row align-items-center position-relative z-1">
+                        <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+                            <h2 class="fw-bold mb-3 display-6">Ready to Transform Your Smile?</h2>
+                            <p class="lead mb-0 opacity-90">Book your appointment today and get a free consultation with
+                                our expert team.</p>
+                        </div>
+                        <div class="col-lg-4 text-center text-lg-end">
+                            <a href="#"
+                                class="btn btn-light text-primary fw-bold rounded-pill px-5 py-3 shadow-lg btn-lg">Book
+                                Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="element-section bg-light" id="comparison">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Results</span>
+                    <h2 class="fw-bold">Before & After Comparison</h2>
+                    <p class="text-muted">Interactive slider to showcase treatment success stories.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="component-preview p-0 border-0 overflow-hidden">
+                        <div class="ba-slider" id="teethSlider">
+                            <div class="ba-image ba-before"
+                                style="background-image: url('https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg');">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-image ba-after"
+                                style="background-image: url('https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg'); width: 50%;">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-handle" style="left: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Share Section -->
+    <section class="element-section bg-light" id="social-share">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Engagement</span>
+                    <h2 class="fw-bold">Social Sharing</h2>
+                    <p class="text-muted">Interactive social buttons for content distribution.</p>
+                </div>
+            </div>
+
+            <div class="component-preview" data-aos="fade-up">
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#" class="btn btn-primary rounded-pill px-4"><i class="fab fa-facebook-f me-2"></i>Share on
+                        Facebook</a>
+                    <a href="#" class="btn btn-info text-white rounded-pill px-4"><i
+                            class="fab fa-twitter me-2"></i>Share on Twitter</a>
+                    <a href="#" class="btn btn-danger rounded-pill px-4"><i class="fab fa-pinterest-p me-2"></i>Pin
+                        it</a>
+                    <a href="#" class="btn btn-dark rounded-pill px-4"><i
+                            class="fab fa-linkedin-in me-2"></i>LinkedIn</a>
+                    <button
+                        class="btn btn-outline-primary rounded-circle shadow-sm d-flex align-items-center justify-content-center"
+                        style="width: 45px; height: 45px;"><i class="fas fa-link"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="element-section bg-light" id="partners">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Trust</span>
+                    <h2 class="fw-bold">Our Partners</h2>
+                    <p class="text-muted">Collaborating with world-class healthcare brands.</p>
+                </div>
+            </div>
+
+            <div class="component-preview" data-aos="fade-up">
+                <div class="row align-items-center justify-content-center text-center opacity-75">
+                    <div class="col-6 col-md-2 mb-4 mb-md-0">
+                        <div
+                            class="bg-light p-3 rounded-3 d-flex align-items-center justify-content-center min-vh-10 border hover-grayscale-off transition-all">
+                            <i class="fab fa-amazon fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 mb-4 mb-md-0">
+                        <div
+                            class="bg-light p-3 rounded-3 d-flex align-items-center justify-content-center min-vh-10 border hover-grayscale-off transition-all">
+                            <i class="fab fa-apple fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 mb-4 mb-md-0">
+                        <div
+                            class="bg-light p-3 rounded-3 d-flex align-items-center justify-content-center min-vh-10 border hover-grayscale-off transition-all">
+                            <i class="fab fa-microsoft fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 mb-4 mb-md-0">
+                        <div
+                            class="bg-light p-3 rounded-3 d-flex align-items-center justify-content-center min-vh-10 border hover-grayscale-off transition-all">
+                            <i class="fab fa-google fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 mb-4 mb-md-0">
+                        <div
+                            class="bg-light p-3 rounded-3 d-flex align-items-center justify-content-center min-vh-10 border hover-grayscale-off transition-all">
+                            <i class="fab fa-slack fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 mb-4 mb-md-0">
+                        <div
+                            class="bg-light p-3 rounded-3 d-flex align-items-center justify-content-center min-vh-10 border hover-grayscale-off transition-all">
+                            <i class="fab fa-dropbox fa-3x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .hover-grayscale-off {
+                    filter: grayscale(100%);
+                    transition: all 0.3s ease;
+                }
+
+                .hover-grayscale-off:hover {
+                    filter: grayscale(0%);
+                    transform: scale(1.1);
+                }
+
+                .min-vh-10 {
+                    min-height: 100px;
+                }
+            </style>
+        </div>
+    </section>
+
+    <!-- Medical & Team Components Section -->
+    <section class="element-section bg-light" id="medical-components">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Specialized</span>
+                    <h2 class="fw-bold">Medical Elements</h2>
+                    <p class="text-muted">Essential components for healthcare and team presentation.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Doctor Card -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <h5 class="mb-4">Doctor Profile Card</h5>
+                    <div class="doctor-card" style="max-width: 350px;">
+                        <div class="doctor-image">
+                            <!-- Placeholder image using a reliable source or color block -->
+                            <div
+                                style="width: 100%; height: 100%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #64748b;">
+                                <i class="fas fa-user-md fa-4x"></i>
+                            </div>
+                            <div class="doctor-overlay">
+                                <h5>Dr. Sarah Johnson</h5>
+                                <p>Orthodontist Specialist</p>
+                                <div class="doctor-social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctor-info">
+                            <h5>Dr. Sarah Johnson</h5>
+                            <p class="text-primary mb-0">Orthodontist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="mb-4">Testimonial Card</h5>
+                    <div class="card border-0 shadow-sm rounded-4 p-4 h-100 position-relative">
+                        <i
+                            class="fas fa-quote-right position-absolute top-0 end-0 m-4 text-primary opacity-10 fs-1"></i>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center me-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="fas fa-user text-secondary fs-4"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Michael Chen</h6>
+                                <div class="text-warning small">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted mb-0 fst-italic">"The service was absolutely exceptional. The team made me
+                            feel comfortable throughout the entire procedure. Highly recommended!"</p>
+                    </div>
+                </div>
+
+                <!-- Horizontal Doctor/Team Card -->
+                <div class="col-lg-12 mt-5" data-aos="fade-up">
+                    <h5 class="mb-4">Horizontal Team Card</h5>
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden group-hover bg-white">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div
+                                    class="bg-light h-100 d-flex align-items-center justify-content-center text-secondary min-vh-25">
+                                    <i class="fas fa-user-md fa-5x"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-4 p-lg-5">
+                                    <span
+                                        class="badge bg-primary-subtle text-primary rounded-pill mb-3 px-3 py-2 fw-bold">Chief
+                                        Dentist</span>
+                                    <h3 class="fw-bold mb-2">Dr. Alexander Raymond</h3>
+                                    <p class="text-muted mb-4 lead">Over 20 years of experience in restorative and
+                                        cosmetic dentistry. Graduated from Harvard Dental School.</p>
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle text-success me-2"></i>
+                                                <span>Implants Specialist</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle text-success me-2"></i>
+                                                <span>Certified Surgeon</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-primary rounded-pill px-4">Visit Profile</a>
+                                        <a href="#" class="btn btn-outline-dark rounded-pill px-4">Contact Dr.</a>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                        class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third Slide Label</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opening Hours Table -->
+                <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="mb-4">Schedule Widget</h5>
+                    <div class="card bg-primary text-white border-0 rounded-4 overflow-hidden">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-4"><i class="far fa-clock me-2"></i> Opening Hours</h4>
+                            <ul class="list-unstyled mb-0">
+                                <li
+                                    class="d-flex justify-content-between py-2 border-bottom border-white border-opacity-25">
+                                    <span>Mon - Fri</span>
+                                    <span class="fw-bold">09:00 - 19:00</span>
+                                </li>
+                                <li
+                                    class="d-flex justify-content-between py-2 border-bottom border-white border-opacity-25">
+                                    <span>Saturday</span>
+                                    <span class="fw-bold">10:00 - 17:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between py-2">
+                                    <span>Sunday</span>
+                                    <span class="badge bg-white text-primary rounded-pill">Closed</span>
+                                </li>
+                            </ul>
+                            <button class="btn btn-light w-100 rounded-pill mt-4 fw-bold text-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="row mt-5 pt-4">
+                <div class="col-12 mb-5">
+                    <h5 class="mb-4">Modern Process / Timeline Steps</h5>
+                </div>
+                <div class="col-12">
+                    <div class="row process-steps-container">
+                        <div class="col-md-4 mb-5" data-aos="fade-up">
+                            <div class="process-step-modern text-center">
+                                <div class="step-num step-num-1">01</div>
+                                <h5>Easy Booking</h5>
+                                <p class="px-lg-4">Pick a time that works for you via our 24/7 online booking system or
+                                    a quick call to our receptionist.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="process-step-modern text-center">
+                                <div class="step-num step-num-2">02</div>
+                                <h5>Personal Consultation</h5>
+                                <p class="px-lg-4">Meet your doctor to discuss goals and undergo a comprehensive digital
+                                    dental examination.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+                            <div class="process-step-modern text-center">
+                                <div class="step-num step-num-3">03</div>
+                                <h5>Painless Treatment</h5>
+                                <p class="px-lg-4">Relax as we perform your procedure using advanced dental technology
+                                    and the highest hygiene standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination & Breadcrumbs -->
+            <div class="row mt-4">
+                <div class="col-md-6" data-aos="fade-up">
+                    <h5 class="mb-4">Pagination</h5>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a
+                                    class="page-link rounded-circle mx-1 border-0 bg-light text-muted d-flex align-items-center justify-content-center"
+                                    href="#" style="width: 40px; height: 40px;"><i class="fas fa-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item"><a
+                                    class="page-link rounded-circle mx-1 border-0 bg-primary text-white shadow fw-bold d-flex align-items-center justify-content-center"
+                                    href="#" style="width: 40px; height: 40px;">1</a></li>
+                            <li class="page-item"><a
+                                    class="page-link rounded-circle mx-1 border-0 bg-light text-dark fw-bold d-flex align-items-center justify-content-center"
+                                    href="#" style="width: 40px; height: 40px;">2</a></li>
+                            <li class="page-item"><a
+                                    class="page-link rounded-circle mx-1 border-0 bg-light text-dark fw-bold d-flex align-items-center justify-content-center"
+                                    href="#" style="width: 40px; height: 40px;">3</a></li>
+                            <li class="page-item"><a
+                                    class="page-link rounded-circle mx-1 border-0 bg-light text-primary fw-bold d-flex align-items-center justify-content-center"
+                                    href="#" style="width: 40px; height: 40px;"><i class="fas fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="mb-4">Breadcrumbs</h5>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-white p-3 rounded-pill shadow-sm d-inline-flex">
+                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none fw-bold"><i
+                                        class="fas fa-home text-primary"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Library</a>
+                            </li>
+                            <li class="breadcrumb-item active text-primary fw-bold" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Variants Section -->
+    <section class="element-section" id="gallery-variants">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Media Preview</span>
+                    <h2 class="fw-bold">Gallery & Lightbox</h2>
+                    <p class="text-muted">High-quality image presentation with interactive lightbox effects.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="component-preview p-2 border-0 shadow-sm rounded-4 overflow-hidden mb-0">
+                        <a href="https://images.pexels.com/photos/4687360/pexels-photo-4687360.jpeg"
+                            class="gallery-item-modern mb-0" data-fancybox="preview-gallery">
+                            <img src="https://images.pexels.com/photos/4687360/pexels-photo-4687360.jpeg"
+                                alt="Clinic Interior" class="img-fluid rounded-3">
+                            <div class="gallery-overlay-modern">
+                                <div class="gallery-icon-modern"><i class="fas fa-search-plus"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="text-center mt-3 small text-muted">Standard Square Grid</p>
+                </div>
+                <div class="col-md-8" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="component-preview p-2 border-0 shadow-sm rounded-4 overflow-hidden mb-0 h-100">
+                        <div class="row g-2 h-100">
+                            <div class="col-6">
+                                <a href="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg"
+                                    class="gallery-item-modern h-100 mb-0" data-fancybox="preview-gallery">
+                                    <img src="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg"
+                                        alt="Happy Patient" class="img-fluid rounded-3 h-100 object-fit-cover">
+                                    <div class="gallery-overlay-modern">
+                                        <div class="gallery-icon-modern"><i class="fas fa-expand"></i></div>
                                     </div>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex flex-column gap-2 h-100">
+                                    <a href="https://images.pexels.com/photos/4270940/pexels-photo-4270940.jpeg"
+                                        class="gallery-item-modern flex-grow-1 mb-0" data-fancybox="preview-gallery">
+                                        <img src="https://images.pexels.com/photos/4270940/pexels-photo-4270940.jpeg"
+                                            alt="Dental Care" class="img-fluid rounded-3 h-100 object-fit-cover">
+                                        <div class="gallery-overlay-modern">
+                                            <div class="gallery-icon-modern"><i class="fas fa-play"></i></div>
+                                        </div>
+                                    </a>
+                                    <a href="https://images.pexels.com/photos/3881325/pexels-photo-3881325.jpeg"
+                                        class="gallery-item-modern flex-grow-1 mb-0" data-fancybox="preview-gallery">
+                                        <img src="https://images.pexels.com/photos/3881325/pexels-photo-3881325.jpeg"
+                                            alt="Latest Technology" class="img-fluid rounded-3 h-100 object-fit-cover">
+                                        <div
+                                            class="gallery-overlay-modern text-center text-white d-flex align-items-center justify-content-center">
+                                            <div>
+                                                <h4 class="mb-0 fw-bold">+12</h4>
+                                                <p class="small mb-0">More Photos</p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -358,286 +2115,112 @@
         </div>
     </section>
 
-    <!-- Forms Section -->
-    <section class="element-section" id="forms">
+    <!-- Tables Section -->
+    <section class="element-section bg-light" id="tables">
         <div class="container">
-            <h2 class="element-title">Form Elements</h2>
-            <div class="example-container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Default file input example</label>
-                            <input class="form-control" type="file" id="formFile">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="mb-3">
-                            <label class="form-label">Select Menu</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Checkboxes</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Checked checkbox
-                                </label>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Radios</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Default radio
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Default checked radio
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Data Display</span>
+                    <h2 class="fw-bold">Styled Tables</h2>
+                    <p class="text-muted">Clean and readable tables for complex data presentation.</p>
+                </div>
+            </div>
+
+            <div class="component-preview py-0 border-0 shadow-sm" data-aos="fade-up">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th class="ps-4 py-3 border-0">Service Name</th>
+                                <th class="py-3 border-0">Specialist</th>
+                                <th class="py-3 border-0">Avg. Duration</th>
+                                <th class="py-3 border-0">Base Price</th>
+                                <th class="pe-4 py-3 border-0 text-end">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4 py-3 fw-bold text-dark">Dental Whitening</td>
+                                <td class="py-3">Dr. Sarah Johnson</td>
+                                <td class="py-3"><span class="badge bg-light text-dark border"><i
+                                            class="far fa-clock me-1 text-primary"></i> 45 mins</span></td>
+                                <td class="py-3 fw-bold text-primary">$120</td>
+                                <td class="pe-4 py-3 text-end"><a href="#"
+                                        class="btn btn-sm btn-primary rounded-pill">Book</a></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 py-3 fw-bold text-dark">Tooth Extraction</td>
+                                <td class="py-3">Dr. Michael Chen</td>
+                                <td class="py-3"><span class="badge bg-light text-dark border"><i
+                                            class="far fa-clock me-1 text-primary"></i> 30 mins</span></td>
+                                <td class="py-3 fw-bold text-primary">$80</td>
+                                <td class="pe-4 py-3 text-end"><a href="#"
+                                        class="btn btn-sm btn-primary rounded-pill">Book</a></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 py-3 fw-bold text-dark">Dental Implants</td>
+                                <td class="py-3">Dr. Emily Davis</td>
+                                <td class="py-3"><span class="badge bg-light text-dark border"><i
+                                            class="far fa-clock me-1 text-primary"></i> 90 mins</span></td>
+                                <td class="py-3 fw-bold text-primary">$1,500</td>
+                                <td class="pe-4 py-3 text-end"><a href="#"
+                                        class="btn btn-sm btn-primary rounded-pill">Book</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cards Section -->
-    <section class="element-section" id="cards">
-        <div class="container">
-            <h2 class="element-title">Cards</h2>
-            <div class="example-container">
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-0">
-                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-0 text-center">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <i class="fas fa-tooth fa-3x text-primary"></i>
-                                </div>
-                                <h5 class="card-title">Icon Card</h5>
-                                <p class="card-text">This is a simple card with an icon centered in the middle. Great
-                                    for features.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="card-header bg-white fw-bold">
-                                Featured
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                            <div class="card-footer bg-white text-muted">
-                                2 days ago
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Other Utilities -->
+    <!-- Utilities Section -->
     <section class="element-section" id="utilities">
         <div class="container">
-            <h2 class="element-title">Other Utilities</h2>
-            <div class="example-container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4 class="mb-3">Badges</h4>
-                        <div class="mb-4">
-                            <span class="badge bg-primary">Primary</span>
-                            <span class="badge bg-secondary">Secondary</span>
-                            <span class="badge bg-success">Success</span>
-                            <span class="badge bg-danger">Danger</span>
-                            <span class="badge bg-warning text-dark">Warning</span>
-                            <span class="badge bg-info text-dark">Info</span>
-                            <span class="badge bg-light text-dark">Light</span>
-                            <span class="badge bg-dark">Dark</span>
-                        </div>
-
-                        <h4 class="mb-3">Rounded Badges</h4>
-                        <div class="mb-4">
-                            <span class="badge rounded-pill bg-primary">Primary</span>
-                            <span class="badge rounded-pill bg-secondary">Secondary</span>
-                            <span class="badge rounded-pill bg-success">Success</span>
-                            <span class="badge rounded-pill bg-danger">Danger</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="mb-3">Progress Bars</h4>
-                        <div class="mb-4">
-                            <div class="progress mb-3">
-                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
-                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-info" role="progressbar" style="width: 75%"
-                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 100%"
-                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-right">
+                    <span class="section-label">Extras</span>
+                    <h2 class="fw-bold">UI Utilities & Helpers</h2>
+                    <p class="text-muted">Tooltips, popovers, and animated components for details.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Tooltips & Popovers -->
-    <section class="element-section" id="tooltips">
-        <div class="container">
-            <h2 class="element-title">Tooltips & Popovers</h2>
-            <div class="example-container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4 class="mb-3">Tooltips</h4>
-                        <div class="mb-4">
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+            <div class="row g-4 d-flex justify-content-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="component-preview h-100">
+                        <h5 class="mb-4">Tooltips & Popovers</h5>
+                        <p class="text-muted mb-4">Hover or click elements to see contextual information.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <button type="button" class="btn btn-secondary rounded-pill" data-bs-toggle="tooltip"
                                 data-bs-placement="top" title="Tooltip on top">
-                                Tooltip on top
+                                Tooltip Top
                             </button>
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                data-bs-placement="right" title="Tooltip on right">
-                                Tooltip on right
-                            </button>
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                data-bs-placement="bottom" title="Tooltip on bottom">
-                                Tooltip on bottom
-                            </button>
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                data-bs-placement="left" title="Tooltip on left">
-                                Tooltip on left
+                            <button type="button" class="btn btn-dark rounded-pill" data-bs-container="body"
+                                data-bs-toggle="popover" data-bs-placement="right"
+                                data-bs-content="This is an expert help popup that appears on click!">
+                                Click me for Popover
                             </button>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <h4 class="mb-3">Popovers</h4>
-                        <div class="mb-4">
-                            <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover"
-                                title="Popover title"
-                                data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to
-                                toggle popover</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Loading Indicators -->
-    <section class="element-section" id="spinners">
-        <div class="container">
-            <h2 class="element-title">Loading Indicators</h2>
-            <div class="example-container">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <div class="spinner-border text-secondary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <div class="spinner-border text-success" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <div class="spinner-border text-danger" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <div class="spinner-grow text-warning" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <div class="spinner-grow text-info" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <div class="spinner-grow text-dark" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Accordion -->
-    <section class="element-section" id="accordion">
-        <div class="container">
-            <h2 class="element-title">Accordion</h2>
-            <div class="example-container">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Accordion Item #1
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until
-                                the collapse plugin adds the appropriate classes that we use to style each element.
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="component-preview h-100">
+                        <h5 class="mb-4">Spinners & Loaders</h5>
+                        <p class="text-muted mb-4">Visual feedback for loading states and processes.</p>
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Accordion Item #2
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                                until the collapse plugin adds the appropriate classes that we use to style each
-                                element.
+                            <div class="spinner-grow text-secondary" role="status">
+                                <span class="visually-hidden">Loading...</span>
                             </div>
+                            <div class="spinner-grow text-accent" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <button class="btn btn-primary rounded-pill" disabled>
+                                <span class="spinner-border spinner-border-sm me-2" role="status"
+                                    aria-hidden="true"></span>
+                                Processing...
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -645,110 +2228,147 @@
         </div>
     </section>
 
-    <!-- Tables -->
-    <section class="element-section" id="tables">
-        <div class="container">
-            <h2 class="element-title">Tables</h2>
-            <div class="example-container">
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- Floating Widgets -->
+    <div class="floating-widgets position-fixed bottom-0 end-0 m-4 z-3 d-flex flex-column gap-3">
+        <!-- Floating Contact Info (Hidden by default, reveal on hover) -->
+        <div class="floating-contact-info bg-white rounded-pill shadow-lg d-none d-md-flex align-items-center p-2 pe-4 overflow-hidden border border-primary border-opacity-10 transition-all"
+            style="max-width: 55px; height: 55px;">
+            <div class="btn btn-primary rounded-circle p-0 d-flex align-items-center justify-content-center shadow-sm"
+                style="width: 40px; height: 40px; min-width: 40px;">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="ms-3 whitespace-nowrap opacity-0 transition-all info-text">
+                <p class="small mb-0 text-muted">Emergency Call</p>
+                <h6 class="mb-0 fw-bold">+1 (234) 567 890</h6>
             </div>
         </div>
-    </section>
+
+        <style>
+            .floating-contact-info:hover {
+                max-width: 250px !important;
+            }
+
+            .floating-contact-info:hover .info-text {
+                opacity: 1 !important;
+            }
+
+            .whitespace-nowrap {
+                white-space: nowrap;
+            }
+
+            .transition-all {
+                transition: all 0.4s ease;
+            }
+        </style>
+
+        <!-- Scroll to Top -->
+        <a href="#" class="btn btn-dark rounded-circle p-0 d-flex align-items-center justify-content-center shadow-lg"
+            id="backToTop"
+            style="width: 50px; height: 50px; opacity: 0; visibility: hidden; transition: all 0.4s ease;">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-modern bg-dark text-white pt-5 pb-4">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <a href="index-1.html" class="footer-logo">
-                        <i class="fas fa-tooth me-2"></i>Dentic
-                    </a>
-                    <p class="mb-4">Your trusted partner for dental health and beautiful smiles.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white-50"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white-50"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white-50"><i class="fab fa-linkedin-in"></i></a>
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget" data-aos="fade-up">
+                        <a href="index-1.html" class="navbar-brand text-white mb-4 d-inline-block fs-2 fw-bold">
+                            <i class="fas fa-tooth me-2 text-primary"></i>Dentic
+                        </a>
+                        <p class="text-white-50 mb-4">We provide premium dental care services with advanced technology
+                            and expert dentists. Your smile is our priority.</p>
+                        <div class="social-links-modern d-flex gap-2">
+                            <a href="#"
+                                class="btn btn-outline-light rounded-circle btn-sm d-flex align-items-center justify-content-center"
+                                style="width: 35px; height: 35px;"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"
+                                class="btn btn-outline-light rounded-circle btn-sm d-flex align-items-center justify-content-center"
+                                style="width: 35px; height: 35px;"><i class="fab fa-twitter"></i></a>
+                            <a href="#"
+                                class="btn btn-outline-light rounded-circle btn-sm d-flex align-items-center justify-content-center"
+                                style="width: 35px; height: 35px;"><i class="fab fa-instagram"></i></a>
+                            <a href="#"
+                                class="btn btn-outline-light rounded-circle btn-sm d-flex align-items-center justify-content-center"
+                                style="width: 35px; height: 35px;"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
                 </div>
-
                 <div class="col-lg-2 col-md-6">
-                    <div class="footer-links">
-                        <h5>Quick Links</h5>
-                        <ul>
-                            <li><a href="index-1.html">Home</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                            <li><a href="index-1.html#services">Services</a></li>
-                            <li><a href="index-1.html#doctors">Doctors</a></li>
-                            <li><a href="index-1.html#contact">Contact</a></li>
+                    <div class="footer-widget" data-aos="fade-up" data-aos-delay="100">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li class="mb-2"><a href="index-1.html"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Home</a></li>
+                            <li class="mb-2"><a href="about.html"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>About Us</a></li>
+                            <li class="mb-2"><a href="services.html"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Services</a></li>
+                            <li class="mb-2"><a href="doctors.html"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Doctors</a></li>
+                            <li class="mb-2"><a href="blog.html"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Blog</a></li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-links">
-                        <h5>Services</h5>
-                        <ul>
-                            <li><a href="#">General Dentistry</a></li>
-                            <li><a href="#">Cosmetic Dentistry</a></li>
-                            <li><a href="#">Orthodontics</a></li>
-                            <li><a href="#">Implants</a></li>
-                            <li><a href="#">Teeth Whitening</a></li>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget" data-aos="fade-up" data-aos-delay="200">
+                        <h5 class="text-white mb-4">Our Services</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li class="mb-2"><a href="#"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Cosmetic Dentistry</a></li>
+                            <li class="mb-2"><a href="#"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Dental Implants</a></li>
+                            <li class="mb-2"><a href="#"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Root Canal</a></li>
+                            <li class="mb-2"><a href="#"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Teeth Whitening</a></li>
+                            <li class="mb-2"><a href="#"
+                                    class="text-white-50 text-decoration-none transition-all hover-white"><i
+                                        class="fas fa-chevron-right me-2 small"></i>Orthodontics</a></li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-lg-4">
-                    <div class="footer-links">
-                        <h5>Contact Info</h5>
-                        <ul>
-                            <li class="mb-3">
-                                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
-                                123 Dental Street, City
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget" data-aos="fade-up" data-aos-delay="300">
+                        <h5 class="text-white mb-4">Contact Info</h5>
+                        <ul class="list-unstyled footer-info">
+                            <li class="d-flex mb-3 text-white-50">
+                                <i class="fas fa-map-marker-alt mt-1 me-3 text-primary"></i>
+                                <span>123 Dental Avenue, Medical City, New York, NY 10012</span>
                             </li>
-                            <li class="mb-3">
-                                <i class="fas fa-phone me-2 text-primary"></i>
-                                (123) 456-7890
+                            <li class="d-flex mb-3 text-white-50">
+                                <i class="fas fa-phone-alt mt-1 me-3 text-primary"></i>
+                                <span>+1 (234) 567-8900</span>
                             </li>
-                            <li class="mb-3">
-                                <i class="fas fa-envelope me-2 text-primary"></i>
-                                info@dentic.com
+                            <li class="d-flex mb-3 text-white-50">
+                                <i class="fas fa-envelope mt-1 me-3 text-primary"></i>
+                                <span>info@dentic.com</span>
+                            </li>
+                            <li class="d-flex text-white-50">
+                                <i class="far fa-clock mt-1 me-3 text-primary"></i>
+                                <span>Mon - Sat: 9:00 AM - 19:00 PM<br>Sun: Closed</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2023 Dentic. All rights reserved.</p>
+            <div class="border-top border-secondary opacity-25 mb-4"></div>
+
+            <div class="footer-bottom text-center">
+                <p class="mb-0 text-white-50">&copy; 2025 Dentic. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -768,14 +2388,17 @@
             offset: 100
         });
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        // Scroll Progress Bar Logic
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        };
+
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
         });
 
         // Initialize Tooltips
@@ -789,6 +2412,68 @@
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
         })
+
+        // Before/After Slider Logic
+        const slider = document.querySelector('.ba-slider');
+        const handle = document.querySelector('.ba-handle');
+        const afterImg = document.querySelector('.ba-after');
+
+        slider.addEventListener('mousemove', (e) => {
+            const rect = slider.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const width = rect.width;
+            let position = (x / width) * 100;
+
+            if (position < 0) position = 0;
+            if (position > 100) position = 100;
+
+            handle.style.left = `${position}%`;
+            afterImg.style.width = `${position}%`;
+        });
+
+        // Touch support for slider
+        slider.addEventListener('touchmove', (e) => {
+            const rect = slider.getBoundingClientRect();
+            const x = e.touches[0].clientX - rect.left;
+            const width = rect.width;
+            let position = (x / width) * 100;
+
+            if (position < 0) position = 0;
+            if (position > 100) position = 100;
+
+            handle.style.left = `${position}%`;
+            afterImg.style.width = `${position}%`;
+        });
+
+        // Back to Top Button Logic
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                backToTop.style.opacity = '1';
+                backToTop.style.visibility = 'visible';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.visibility = 'hidden';
+            }
+        });
+
+        backToTop.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 
